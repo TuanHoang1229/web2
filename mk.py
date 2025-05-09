@@ -46,18 +46,84 @@ if page == "Trang chủ":
 
 # --- Thiết kế Web ---
 elif page == "Thiết kế Web cơ bản":
-    st.header("💻 Thiết kế Web với HTML/CSS")
+    st.header("🖥️ Thiết kế Web cơ bản với HTML & CSS")
+
+    # Giới thiệu kiến thức
     st.markdown("""
-    #### Ví dụ cơ bản:
-    ```html
+    ### Giới thiệu nhanh:
+    - **HTML**: Dùng để xây dựng cấu trúc trang web.
+    - **CSS**: Dùng để tạo kiểu dáng (màu sắc, font chữ, bố cục).
+    - Một số thẻ HTML cơ bản: `<h1>`, `<p>`, `<a>`, `<img>`, `<div>`
+    - Một số thuộc tính CSS thường gặp: `color`, `font-size`, `margin`, `padding`, `background-color`
+    """)
+
+    # Ví dụ minh hoạ
+    st.markdown("### Ví dụ đơn giản với HTML + CSS:")
+    st.code("""
     <!DOCTYPE html>
     <html>
-    <head><title>Trang của tôi</title></head>
-    <body><h1>Xin chào!</h1></body>
+    <head>
+        <style>
+            h1 { color: blue; }
+            p { font-size: 16px; }
+        </style>
+    </head>
+    <body>
+        <h1>Xin chào!</h1>
+        <p>Đây là trang web đầu tiên của tôi.</p>
+    </body>
     </html>
-    ```
+    """, language="html")
+
+    # Nút tải file mẫu
+    html_file = """
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        h1 { color: blue; }
+        p { font-size: 16px; }
+    </style>
+</head>
+<body>
+    <h1>Xin chào!</h1>
+    <p>Đây là trang web đầu tiên của tôi.</p>
+</body>
+</html>
+"""
+    st.download_button("Tải file HTML mẫu", html_file, file_name="mau_trang_web.html")
+
+    # Thử thách thực hành
+    st.markdown("""
+    ### Thử thách:
+    Tạo một trang web có:
+    - Một tiêu đề lớn
+    - Một đoạn văn mô tả
+    - Một hình ảnh từ Internet
+    - Một liên kết đến Google
+
+    **Gợi ý:** Dùng các thẻ `<h1>`, `<p>`, `<img>`, `<a>`
     """)
-    st.download_button("⬇️ Tải mẫu trang web", "<html><body><h1>Xin chào!</h1></body></html>", file_name="index.html")
+
+    # Học thêm
+    st.markdown("""
+    ### Tài liệu học thêm:
+    - [Video hướng dẫn HTML cơ bản](https://www.youtube.com/watch?v=Ke90Tje7VS0)
+    - [Tài liệu CSS tại W3Schools](https://www.w3schools.com/css/)
+    """)
+
+    # Mini quiz
+    st.markdown("### Trắc nghiệm nhanh:")
+    q1 = st.radio("1. Thẻ nào dùng để tạo tiêu đề lớn nhất?", ["<p>", "<h1>", "<title>", "<div>"], key="web_q1")
+    q2 = st.radio("2. Thuộc tính nào để đổi màu chữ trong CSS?", ["font-size", "color", "background-color", "margin"], key="web_q2")
+    
+    if st.button("Nộp câu trả lời", key="submit_web_quiz"):
+        score = 0
+        if q1 == "<h1>": score += 1
+        if q2 == "color": score += 1
+        st.success(f"✅ Bạn trả lời đúng {score}/2 câu.")
+        if score == 2:
+            st.balloons()
 
 # --- An toàn thông tin ---
 elif page == "An toàn thông tin":
