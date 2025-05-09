@@ -56,7 +56,10 @@ elif page == "An toàn thông tin":
     - Không mở tệp
     - Kiểm tra kỹ địa chỉ email
     """)
-    st.markdown("[Trắc nghiệm ôn tập](https://forms.gle/...)")
+    elif st.button("👉 Trắc nghiệm ôn tập"):
+        st.session_state.page = "Trắc nghiệm tự luyện"
+        st.experimental_rerun()
+
 
 elif page == "Kho tài liệu":
     st.header("Kho tài liệu")
@@ -64,11 +67,64 @@ elif page == "Kho tài liệu":
     st.download_button("Tải PDF bài giảng", "fake_pdf", file_name="baigiang.pdf")
 
 elif page == "Trắc nghiệm tự luyện":
-    st.header("Trắc nghiệm tự luyện")
-    st.markdown("Chọn chuyên đề:")
-    topic = st.selectbox("Chuyên đề", [ "An toàn thông tin","Thiết kế web cơ bản"])
-    st.markdown("Làm bài trắc nghiệm:")
-    st.markdown(f"[Bắt đầu bài trắc nghiệm về {topic}](https://forms.gle/...)")
+    st.header("🧠 Trắc nghiệm tự luyện")
+
+    # Dictionary lưu trữ danh sách câu hỏi cho từng chuyên đề
+    question_bank = {
+        "An toàn thông tin": [
+            {
+                "question": "1. Bạn nên làm gì khi nhận được email từ người lạ kèm tệp đính kèm?",
+                "options": ["Mở ngay tệp để xem nội dung", "Chuyển tiếp cho bạn bè", "Không mở và xoá email", "Trả lời email đó"],
+                "answer": "Không mở và xoá email"
+            },
+            {
+                "question": "2. Mật khẩu mạnh nên bao gồm?",
+                "options": ["Tên và ngày sinh", "Chỉ chữ thường", "Ký tự đặc biệt, số, chữ hoa thường", "Mật khẩu dễ nhớ"],
+                "answer": "Ký tự đặc biệt, số, chữ hoa thường"
+            },
+            {
+                "question": "3. Khi truy cập Wi-Fi công cộng, bạn nên?",
+                "options": ["Truy cập ngân hàng online", "Không dùng các dịch vụ quan trọng", "Gửi mật khẩu qua email", "Cập nhật hệ điều hành"],
+                "answer": "Không dùng các dịch vụ quan trọng"
+            }
+        ],
+        "Thiết kế web cơ bản": [
+            {
+                "question": "1. Thẻ nào dùng để tạo tiêu đề lớn nhất trong HTML?",
+                "options": ["<title>", "<head>", "<h1>", "<header>"],
+                "answer": "<h1>"
+            },
+            {
+                "question": "2. Thuộc tính nào của CSS dùng để đổi màu chữ?",
+                "options": ["font-size", "background-color", "color", "text-align"],
+                "answer": "color"
+            },
+            {
+                "question": "3. Cặp thẻ nào dùng để tạo liên kết đến trang web khác?",
+                "options": ["<img>", "<a>", "<link>", "<div>"],
+                "answer": "<a>"
+            }
+        ]
+    }
+
+    topic = st.selectbox("Chọn chuyên đề:", list(question_bank.keys()))
+    questions = question_bank[topic]
+
+    st.markdown("### Trả lời các câu hỏi:")
+
+    user_answers = []
+    for i, q in enumerate(questions):
+        answer = st.radio(q["question"], q["options"], key=f"{topic}_q_{i}")
+        user_answers.append(answer)
+
+    if st.button("Nộp bài", key=f"{topic}_submit"):
+        score = sum(1 for i, q in enumerate(questions) if user_answers[i] == q["answer"])
+        st.success(f"✅ Bạn được {score}/{len(questions)} điểm")
+
+        st.markdown("### Đáp án đúng:")
+        for i, q in enumerate(questions):
+            st.markdown(f"**Câu {i+1}:** {q['answer']}")
+
 
 elif page == "Góc chia sẻ":
     st.header("Góc chia sẻ - Gửi bài thực hành")
