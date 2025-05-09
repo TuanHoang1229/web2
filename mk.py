@@ -66,7 +66,7 @@ elif page == "Kho tài liệu":
 elif page == "Trắc nghiệm tự luyện":
     st.header("Trắc nghiệm tự luyện")
     st.markdown("Chọn chuyên đề:")
-    topic = st.selectbox("Chuyên đề", ["Scratch", "An toàn thông tin", "Tin học văn phòng"])
+    topic = st.selectbox("Chuyên đề", [ "An toàn thông tin","Thiết kế web cơ bản"])
     st.markdown("Làm bài trắc nghiệm:")
     st.markdown(f"[Bắt đầu bài trắc nghiệm về {topic}](https://forms.gle/...)")
 
