@@ -107,7 +107,7 @@ elif page == "Thiết kế Web cơ bản":
 
     # Học thêm
     st.markdown("""
-    ### Tài liệu học thêm:
+    ### Tài liệu thêm:
     - [Video hướng dẫn HTML cơ bản](https://www.youtube.com/watch?v=Ke90Tje7VS0)
     - [Tài liệu CSS tại W3Schools](https://www.w3schools.com/css/)
     """)
@@ -128,14 +128,60 @@ elif page == "Thiết kế Web cơ bản":
 # --- An toàn thông tin ---
 elif page == "An toàn thông tin":
     st.header("🔐 An toàn Thông tin")
+
+    # Kiến thức cơ bản
     st.markdown("""
-    ### 🧩 Tình huống:
-    **Bạn nhận được email từ người lạ với tệp đính kèm. Bạn nên làm gì?**
-    - ❌ Không mở tệp đính kèm không rõ nguồn gốc.
-    - ✅ Kiểm tra kỹ địa chỉ người gửi.
+    ### Kiến thức cơ bản:
+    - **Mật khẩu mạnh** nên có chữ hoa, chữ thường, số và ký tự đặc biệt.
+    - **Không chia sẻ mật khẩu** qua email hay tin nhắn.
+    - **Không nhấn vào liên kết lạ** trong email từ người lạ.
+    - **Cập nhật phần mềm thường xuyên** để tránh lỗ hổng bảo mật.
     """)
 
+    # Tình huống thực tế
+    st.markdown("""
+    ### Tình huống:
+    Bạn nhận được email từ một địa chỉ lạ với tiêu đề "Bạn đã trúng thưởng!" và tệp đính kèm là file `.exe`.  
+    **Bạn nên làm gì?**
+    - Không mở tệp đính kèm
+    - Kiểm tra địa chỉ người gửi
+    - Báo cáo cho giáo viên hoặc quản trị mạng
+    """)
 
+    # Danh sách mẹo
+    st.markdown("""
+    ### Mẹo an toàn khi dùng Internet:
+    - Sử dụng xác thực 2 yếu tố (2FA)
+    - Không dùng chung một mật khẩu cho nhiều tài khoản
+    - Không dùng Wi-Fi công cộng cho việc quan trọng
+    - Đăng xuất sau khi dùng xong máy tính công cộng
+    """)
+
+    # Học thêm
+    st.markdown("""
+    ### Một số cách để phòng tránh:
+    - [Video: Làm sao để an toàn trên mạng?](https://www.youtube.com/watch?v=1I4FZ6Nkm4A)
+    - [Cẩm nang an toàn thông tin của VNPT](https://attt.vnpt.vn)
+    """)
+
+    # Trắc nghiệm nhỏ
+    st.markdown("### Trắc nghiệm nhanh:")
+    q1 = st.radio("1. Mật khẩu an toàn nên chứa?", [
+        "Ngày sinh", "Chỉ chữ thường", "Ký tự đặc biệt, số, chữ hoa thường", "Tên người thân"
+    ], key="sec_q1")
+
+    q2 = st.radio("2. Khi nhận được email lạ có tệp đính kèm, bạn nên?", [
+        "Mở ngay để xem nội dung", "Xóa email và không mở tệp", "Chuyển tiếp cho bạn bè", "Trả lời email"
+    ], key="sec_q2")
+
+    if st.button("Nộp câu trả lời", key="submit_sec_quiz"):
+        score = 0
+        if q1 == "Ký tự đặc biệt, số, chữ hoa thường": score += 1
+        if q2 == "Xóa email và không mở tệp": score += 1
+        st.success(f"✅ Bạn trả lời đúng {score}/2 câu.")
+
+        if score == 2:
+            st.balloons()
 
 # --- Kho tài liệu ---
 elif page == "Kho tài liệu":
@@ -207,7 +253,7 @@ elif page == "Trắc nghiệm tự luyện":
 # --- Góc chia sẻ ---
 elif page == "Góc chia sẻ":
     st.header("📬 Góc chia sẻ - Gửi bài thực hành")
-    st.markdown("Gửi bài qua Google Forms:")
+    st.markdown("Gửi qua Google Forms dưới đây:")
     st.markdown("[📎 Biểu mẫu gửi bài](https://forms.gle/...)")
 
 # --- Kiểm tra mật khẩu ---
@@ -217,6 +263,7 @@ elif page == "Kiểm tra mật khẩu":
     def calculate_strength(password):
         score = 0
         if len(password) >= 8: score += 1
+        if len(password) >= 12: score += 5
         if any(c.islower() for c in password): score += 1
         if any(c.isupper() for c in password): score += 1
         if any(c.isdigit() for c in password): score += 1
