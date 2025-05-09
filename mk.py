@@ -95,8 +95,7 @@ elif page == "Kiểm tra mật khẩu":
         return strength
     
     # UI
-    st.set_page_config(page_title="Tạo mật khẩu mạnh", page_icon="🔒")
-    st.title("🔐 Trình tạo mật khẩu mạnh")
+    st.header("🔐 Trình tạo mật khẩu mạnh")
     
     length = st.number_input("Độ dài mật khẩu", min_value=6, max_value=100, value=12)
     
