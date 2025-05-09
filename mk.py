@@ -65,8 +65,7 @@ elif page == "An toàn thông tin":
     """)
 
     if st.button("👉 Trắc nghiệm ôn tập"):
-        st.session_state.page = "Trắc nghiệm tự luyện"
-        st.experimental_rerun()
+        st.session_state.page = "Trắc nghiệm tự luyện"  # Chuyển trang
 
 # --- Kho tài liệu ---
 elif page == "Kho tài liệu":
