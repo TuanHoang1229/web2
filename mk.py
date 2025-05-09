@@ -59,7 +59,7 @@ elif page == "An toàn thông tin":
 
     if st.button("👉 Trắc nghiệm ôn tập"):
         st.session_state.page = "Trắc nghiệm tự luyện"
-        st.experimental_rerun()
+        
 
 elif page == "Kho tài liệu":
     st.header("Kho tài liệu")
