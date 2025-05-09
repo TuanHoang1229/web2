@@ -1,79 +1,102 @@
 import streamlit as st
-import string
+from PIL import Image
 
-st.set_page_config(page_title="Kiểm tra mật khẩu", layout="centered")
+st.set_page_config(page_title="Học Tin Học", layout="wide")
 
-# CSS tuỳ chỉnh cho giao diện giống Locker.io
-st.markdown("""
-    <style>
-    .main {
-        background-color: #ffffff;
-        padding: 3rem 2rem;
-        border-radius: 10px;
-        max-width: 600px;
-        margin: auto;
-        box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    .password-input input {
-        font-size: 20px !important;
-        padding: 0.75rem !important;
-    }
-    </style>
-""", unsafe_allow_html=True)
+# Sidebar navigation
+pages = {
+    "Trang chủ": "home",
+    "Lập trình Scratch": "scratch",
+    "Thiết kế Web cơ bản": "web_design",
+    "An toàn thông tin": "cyber_security",
+    "Tin học văn phòng": "office",
+    "Kho tài liệu": "resources",
+    "Liên kết học tập mở": "external_links",
+    "Trắc nghiệm tự luyện": "quiz",
+    "Góc chia sẻ": "sharing"
+}
 
-# Header
-st.markdown("<h1 style='text-align: center;'>🔐 Kiểm tra độ mạnh của mật khẩu</h1>", unsafe_allow_html=True)
-st.markdown("<div class='main'>", unsafe_allow_html=True)
+page = st.sidebar.radio("Chọn chuyên mục:", list(pages.keys()))
 
-# Hàm đánh giá mật khẩu
-def calculate_strength(password):
-    score = 0
-    if len(password) >= 8:
-        score += 1
-    if any(c.islower() for c in password):
-        score += 1
-    if any(c.isupper() for c in password):
-        score += 1
-    if any(c.isdigit() for c in password):
-        score += 1
-    if any(c in string.punctuation for c in password):
-        score += 1
-    return score
+if page == "Trang chủ":
+    st.title("Chào mừng đến với Website Học Tin Học")
+    st.markdown("""
+    ### Mục tiêu:
+    Trang web hỗ trợ học sinh tiếp cận kiến thức Tin học thông qua các chuyên đề học tập, tài liệu, video và bài thực hành.
 
-# Hàm đánh giá chữ + màu
-def get_strength_feedback(score):
-    if score <= 2:
-        return "❌ Mật khẩu yếu", "red"
-    elif score == 3 or score == 4:
-        return "⚠️ Mật khẩu trung bình", "orange"
-    else:
-        return "✅ Mật khẩu mạnh", "green"
+    ### Liên kết nhanh:
+    - [Lập trình Scratch](#)
+    - [Thiết kế Web](#)
+    - [An toàn thông tin](#)
+    - [Văn phòng](#)
 
-# Ô nhập mật khẩu
-password = st.text_input("Nhập mật khẩu của bạn:", type="password", key="password", help="Không lưu trữ mật khẩu bạn nhập")
+    ### Tin mới:
+    - Cập nhật thêm 5 bài trắc nghiệm mới về An toàn thông tin
+    - Thêm file mẫu Word/Excel mới
+    """)
 
-if password:
-    score = calculate_strength(password)
-    feedback, color = get_strength_feedback(score)
+elif page == "Lập trình Scratch":
+    st.header("Lập trình Scratch")
+    st.video("https://www.youtube.com/watch?v=OjV63cPSzco")  # ví dụ
+    st.markdown("### Tải bài thực hành:")
+    st.download_button("Tải bài tập mẫu (.sb3)", "fake_sb3_data", file_name="baitap.sb3")
 
-    # Hiển thị kết quả
-    st.markdown(f"<h4 style='color:{color}'>{feedback}</h4>", unsafe_allow_html=True)
-    st.progress(score * 20)
+    st.markdown("### Trắc nghiệm:")
+    st.markdown("[Làm bài trên Google Forms](https://forms.gle/...)")
 
-    # Mẹo cải thiện
-    if score < 5:
-        st.markdown("**Mẹo để cải thiện mật khẩu:**")
-        tips = []
-        if len(password) < 8:
-            tips.append("- Tăng độ dài lên ít nhất 8 ký tự")
-        if not any(c.islower() for c in password):
-            tips.append("- Thêm chữ thường")
-        if not any(c.isupper() for c in password):
-            tips.append("- Thêm chữ in hoa")
-        if not any(c.isdigit() for c in password):
-            tips.append("- Thêm số")
-        if not any(c in string.punctuation for c in password):
-            tips.append("- Thêm ký tự đặc biệt (!@#$...)")
-        st.markdown("\n".join(tips))
+elif page == "Thiết kế Web cơ bản":
+    st.header("Thiết kế Web với HTML/CSS")
+    st.markdown("""
+    #### Hướng dẫn:
+    ```html
+    <!DOCTYPE html>
+    <html>
+    <head><title>Trang của tôi</title></head>
+    <body><h1>Xin chào!</h1></body>
+    </html>
+    ```
+    """)
+    st.download_button("Tải mẫu trang web", "<html>...</html>", file_name="index.html")
 
-st.markdown("</div>", unsafe_allow_html=True)
+elif page == "An toàn thông tin":
+    st.header("An toàn Thông tin")
+    st.markdown("""
+    ### Tình huống:
+    **Bạn nhận được email từ người lạ với tệp đính kèm. Bạn nên làm gì?**
+    - Không mở tệp
+    - Kiểm tra kỹ địa chỉ email
+    """)
+    st.markdown("[Trắc nghiệm ôn tập](https://forms.gle/...)")
+
+elif page == "Tin học văn phòng":
+    st.header("Tin học Văn phòng")
+    st.markdown("### File mẫu và hướng dẫn")
+    st.download_button("Tải File Word mẫu", "fake_word_data", file_name="baitap.docx")
+    st.download_button("Tải File Excel mẫu", "fake_excel_data", file_name="baitap.xlsx")
+
+elif page == "Kho tài liệu":
+    st.header("Kho tài liệu")
+    st.markdown("### Tài liệu PDF:")
+    st.download_button("Tải PDF bài giảng", "fake_pdf", file_name="baigiang.pdf")
+
+elif page == "Liên kết học tập mở":
+    st.header("Liên kết học tập mở")
+    st.markdown("""
+    - [Kênh YouTube học lập trình](https://www.youtube.com/@codekid)
+    - [Khan Academy](https://www.khanacademy.org/)
+    - [Sách giáo khoa Tin học lớp 6](https://hanhtrangso.nxbgd.vn/)
+    """)
+
+elif page == "Trắc nghiệm tự luyện":
+    st.header("Trắc nghiệm tự luyện")
+    st.markdown("Chọn chuyên đề:")
+    topic = st.selectbox("Chuyên đề", ["Scratch", "An toàn thông tin", "Tin học văn phòng"])
+    st.markdown("Làm bài trắc nghiệm:")
+    st.markdown(f"[Bắt đầu bài trắc nghiệm về {topic}](https://forms.gle/...)")
+
+elif page == "Góc chia sẻ":
+    st.header("Góc chia sẻ - Gửi bài thực hành")
+    st.markdown("Gửi bài qua Google Forms:")
+    st.markdown("[Biểu mẫu gửi bài](https://forms.gle/...)")
+    st.markdown("Hoặc chia sẻ trên Notion (nếu có tài khoản).")
+
