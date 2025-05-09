@@ -53,8 +53,8 @@ elif page == "An toàn thông tin":
     st.markdown("""
     ### Tình huống:
     **Bạn nhận được email từ người lạ với tệp đính kèm. Bạn nên làm gì?**
-    - Không mở tệp
-    - Kiểm tra kỹ địa chỉ email
+    - ❌ Không mở tệp
+    - ✅ Kiểm tra kỹ địa chỉ email
     """)
     elif st.button("👉 Trắc nghiệm ôn tập"):
         st.session_state.page = "Trắc nghiệm tự luyện"
