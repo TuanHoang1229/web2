@@ -1,19 +1,20 @@
 import streamlit as st
 from PIL import Image
+import random
+import string
+import hashlib
 
 st.set_page_config(page_title="Học Tin Học", layout="wide")
 
 # Sidebar navigation
 pages = {
     "Trang chủ": "home",
-    "Lập trình Scratch": "scratch",
     "Thiết kế Web cơ bản": "web_design",
     "An toàn thông tin": "cyber_security",
-    "Tin học văn phòng": "office",
     "Kho tài liệu": "resources",
-    "Liên kết học tập mở": "external_links",
     "Trắc nghiệm tự luyện": "quiz",
-    "Góc chia sẻ": "sharing"
+    "Góc chia sẻ": "sharing",
+    "Kiểm tra mật khẩu": "password_checker"
 }
 
 page = st.sidebar.radio("Chọn chuyên mục:", list(pages.keys()))
@@ -34,15 +35,6 @@ if page == "Trang chủ":
     - Cập nhật thêm 5 bài trắc nghiệm mới về An toàn thông tin
     - Thêm file mẫu Word/Excel mới
     """)
-
-elif page == "Lập trình Scratch":
-    st.header("Lập trình Scratch")
-    st.video("https://www.youtube.com/watch?v=OjV63cPSzco")  # ví dụ
-    st.markdown("### Tải bài thực hành:")
-    st.download_button("Tải bài tập mẫu (.sb3)", "fake_sb3_data", file_name="baitap.sb3")
-
-    st.markdown("### Trắc nghiệm:")
-    st.markdown("[Làm bài trên Google Forms](https://forms.gle/...)")
 
 elif page == "Thiết kế Web cơ bản":
     st.header("Thiết kế Web với HTML/CSS")
@@ -68,24 +60,10 @@ elif page == "An toàn thông tin":
     """)
     st.markdown("[Trắc nghiệm ôn tập](https://forms.gle/...)")
 
-elif page == "Tin học văn phòng":
-    st.header("Tin học Văn phòng")
-    st.markdown("### File mẫu và hướng dẫn")
-    st.download_button("Tải File Word mẫu", "fake_word_data", file_name="baitap.docx")
-    st.download_button("Tải File Excel mẫu", "fake_excel_data", file_name="baitap.xlsx")
-
 elif page == "Kho tài liệu":
     st.header("Kho tài liệu")
     st.markdown("### Tài liệu PDF:")
     st.download_button("Tải PDF bài giảng", "fake_pdf", file_name="baigiang.pdf")
-
-elif page == "Liên kết học tập mở":
-    st.header("Liên kết học tập mở")
-    st.markdown("""
-    - [Kênh YouTube học lập trình](https://www.youtube.com/@codekid)
-    - [Khan Academy](https://www.khanacademy.org/)
-    - [Sách giáo khoa Tin học lớp 6](https://hanhtrangso.nxbgd.vn/)
-    """)
 
 elif page == "Trắc nghiệm tự luyện":
     st.header("Trắc nghiệm tự luyện")
@@ -100,3 +78,76 @@ elif page == "Góc chia sẻ":
     st.markdown("[Biểu mẫu gửi bài](https://forms.gle/...)")
     st.markdown("Hoặc chia sẻ trên Notion (nếu có tài khoản).")
 
+elif page == "Kiểm tra mật khẩu":
+    # Tính độ mạnh mật khẩu
+    def calculate_strength(password):
+        strength = 0
+        if len(password) >= 8:
+            strength += 1
+        if any(c.islower() for c in password):
+            strength += 1
+        if any(c.isupper() for c in password):
+            strength += 1
+        if any(c.isdigit() for c in password):
+            strength += 1
+        if any(c in string.punctuation for c in password):
+            strength += 1
+        return strength
+    
+    # UI
+    st.set_page_config(page_title="Tạo mật khẩu mạnh", page_icon="🔒")
+    st.title("🔐 Trình tạo mật khẩu mạnh")
+    
+    length = st.number_input("Độ dài mật khẩu", min_value=6, max_value=100, value=12)
+    
+    if st.button("Tạo mật khẩu"):
+        chars = string.ascii_letters + string.digits + string.punctuation
+        password = ''.join(random.choice(chars) for _ in range(length))
+        st.text_input("Mật khẩu của bạn", password)
+        
+        strength = calculate_strength(password)
+        strength_labels = ["Rất yếu", "Yếu", "Trung bình", "Mạnh", "Rất mạnh"]
+        st.progress(strength * 20)
+        st.success(f"Độ mạnh: {strength_labels[strength - 1] if strength else 'Rất yếu'}")
+    
+        if st.button("Lưu mật khẩu (SHA-256)"):
+            hashed = hashlib.sha256(password.encode()).hexdigest()
+            with open("saved_passwords.txt", "a") as f:
+                f.write(hashed + "\n")
+            st.success("Đã lưu mật khẩu (dạng SHA-256) vào file.")
+            
+    def calculate_strength(password):
+        strength = 0
+        if len(password) >= 8:
+            strength += 1
+        if any(c.islower() for c in password):
+            strength += 1
+        if any(c.isupper() for c in password):
+            strength += 1
+        if any(c.isdigit() for c in password):
+            strength += 1
+        if any(c in string.punctuation for c in password):
+            strength += 1
+        return strength
+    
+    def password_strength_text(score):
+        if score <= 2:
+            return "❌ Yếu", "red"
+        elif score == 3 or score == 4:
+            return "⚠️ Trung bình", "orange"
+        else:
+            return "✅ Mạnh", "green"
+    
+    st.title("🔐 Kiểm tra độ mạnh của mật khẩu")
+    
+    password = st.text_input("Nhập mật khẩu:", type="password")
+    
+    if password:
+        score = calculate_strength(password)
+        strength_text, color = password_strength_text(score)
+        
+        st.markdown(f"**Đánh giá:** <span style='color:{color}'>{strength_text}</span>", unsafe_allow_html=True)
+        st.progress(score * 20)
+    
+        
+        
