@@ -11,8 +11,6 @@ st.set_page_config(page_title="Học Tin Học", layout="wide")
 col1, col2 = st.columns([10, 1])
 with col1:
     st.image("https://github.com/TuanHoang1229/web2/blob/main/IMG_2935.JPG", width=80)
-with col2:
-    st.markdown("# ")  # Để giữ chiều cao phù hợp
 
 # --- Khởi tạo session ---
 if "page" not in st.session_state:
