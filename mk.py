@@ -8,9 +8,9 @@ from PIL import Image
 st.set_page_config(page_title="Học Tin Học", layout="wide")
 
 # Hiển thị ảnh góc trên bên trái
-col1, col2 = st.columns([1, 10])
+col1, col2 = st.columns([10, 1])
 with col1:
-    st.image("IMG_2935.JPG", width=80)
+    st.image("https://github.com/TuanHoang1229/web2/blob/main/IMG_2935.JPG", width=80)
 with col2:
     st.markdown("# ")  # Để giữ chiều cao phù hợp
 
