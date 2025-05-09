@@ -32,17 +32,54 @@ page = st.sidebar.radio("Chọn chuyên mục:", list(pages.keys()))
 if page == "Trang chủ":
     st.title("📘 Chào mừng đến với Góc Tự Học Tin học")
     st.markdown("""
-    ### 🎯 Mục tiêu:
-    Trang web hỗ trợ học sinh tiếp cận kiến thức Tin học thông qua các chuyên đề học tập, tài liệu, video và bài thực hành.
+### 💡 Giới thiệu:
+Trang web này được xây dựng nhằm hỗ trợ học sinh THCS và THPT học tập và thực hành các kỹ năng **Tin học hiện đại** như:
 
-    ### 🔗 Liên kết nhanh:
-    - [Thiết kế Web](https://www.youtube.com/watch?v=f_YT3hqi6hc)
-    - [An toàn thông tin](#)
+- Lập trình Scratch
+- Thiết kế Web cơ bản với HTML/CSS
+- Tin học văn phòng (Word, Excel, PowerPoint)
+- An toàn thông tin
 
-    ### 📰 Tin mới:
-    - ✅ Cập nhật thêm 5 bài trắc nghiệm mới về An toàn thông tin
-    - ✅ Thêm file mẫu Word/Excel mới
-    """)
+---
+
+### 🎯 Mục tiêu:
+- Học qua thực hành
+- Nâng cao tư duy logic và kỹ năng sử dụng máy tính
+- Tự tin ứng dụng công nghệ trong học tập và đời sống
+
+---
+
+### 🗺️ Gợi ý phương pháp học tập:
+1. **Bắt đầu với lý thuyết cơ bản**
+2. **Xem video và làm bài tập**
+3. **Làm trắc nghiệm ôn tập**
+4. **Chia sẻ bài thực hành của bạn**
+5. **Luyện kỹ các năng an toàn**
+6. **Tăng cường mặt khẩu của bạn**
+   **Lưu ý:** Bạn có thể chia sẻ các ý kiến cá nhân trong form nhaa!
+
+---
+
+### 🚀 Chuyên mục nổi bật:
+- [🔧 Thiết kế Web cơ bản](#)
+- [🔐 An toàn thông tin](#)
+- [📁 Kho tài liệu thực hành](#)
+- [🧠 Trắc nghiệm tự luyện](#)
+- [💬 Góc chia sẻ bài làm](#)
+- [🔑 Kiểm tra mặt khẩu](#)
+
+---
+
+### 🧭 Hướng dẫn:
+- Dùng thanh bên trái để chọn chuyên mục.
+- Mỗi mục có video, tài liệu và bài tập kèm theo.
+- Đừng quên làm trắc nghiệm để kiểm tra kiến thức nhé!
+
+---
+
+> **“Công nghệ sẽ không thay thế giáo viên, nhưng giáo viên biết công nghệ sẽ thay thế người không biết.”**  
+> – **Ray Clifford**
+""")
 
 # --- Thiết kế Web ---
 elif page == "Thiết kế Web cơ bản":
