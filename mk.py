@@ -49,17 +49,17 @@ elif page == "Thiết kế Web cơ bản":
     st.download_button("Tải mẫu trang web", "<html>...</html>", file_name="index.html")
 
 elif page == "An toàn thông tin":
-    st.header("An toàn Thông tin")
+    st.header("🔐 An toàn Thông tin")
     st.markdown("""
-    ### Tình huống:
+    ### 🧩 Tình huống:
     **Bạn nhận được email từ người lạ với tệp đính kèm. Bạn nên làm gì?**
-    - ❌ Không mở tệp
-    - ✅ Kiểm tra kỹ địa chỉ email
+    - ❌ Không mở tệp đính kèm không rõ nguồn gốc.
+    - ✅ Kiểm tra kỹ địa chỉ người gửi.
     """)
-    elif st.button("👉 Trắc nghiệm ôn tập"):
+
+    if st.button("👉 Trắc nghiệm ôn tập"):
         st.session_state.page = "Trắc nghiệm tự luyện"
         st.experimental_rerun()
-
 
 elif page == "Kho tài liệu":
     st.header("Kho tài liệu")
