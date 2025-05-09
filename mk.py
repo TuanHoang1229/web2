@@ -26,10 +26,8 @@ if page == "Trang chủ":
     Trang web hỗ trợ học sinh tiếp cận kiến thức Tin học thông qua các chuyên đề học tập, tài liệu, video và bài thực hành.
 
     ### Liên kết nhanh:
-    - [Lập trình Scratch](#)
-    - [Thiết kế Web](#)
+    - [Thiết kế Web](https://www.youtube.com/watch?v=f_YT3hqi6hc)
     - [An toàn thông tin](#)
-    - [Văn phòng](#)
 
     ### Tin mới:
     - Cập nhật thêm 5 bài trắc nghiệm mới về An toàn thông tin
