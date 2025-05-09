@@ -79,34 +79,34 @@ elif page == "Trắc nghiệm tự luyện":
     question_bank = {
         "An toàn thông tin": [
             {
-                "question": "1. Bạn nên làm gì khi nhận được email từ người lạ kèm tệp đính kèm?",
+                "question": "Câu hỏi 1: Bạn nên làm gì khi nhận được email từ người lạ kèm tệp đính kèm?",
                 "options": ["Mở ngay tệp để xem", "Chuyển tiếp", "Không mở và xoá email", "Trả lời email"],
                 "answer": "Không mở và xoá email"
             },
             {
-                "question": "2. Mật khẩu mạnh nên bao gồm?",
+                "question": "Câu hỏi 2: Mật khẩu mạnh nên bao gồm?",
                 "options": ["Tên", "Chữ thường", "Ký tự đặc biệt, số, chữ hoa thường", "Dễ nhớ"],
                 "answer": "Ký tự đặc biệt, số, chữ hoa thường"
             },
             {
-                "question": "3. Khi truy cập Wi-Fi công cộng, bạn nên?",
+                "question": "Câu hỏi 3. Khi truy cập Wi-Fi công cộng, bạn nên?",
                 "options": ["Ngân hàng online", "Không dùng dịch vụ quan trọng", "Gửi mật khẩu", "Cập nhật hệ điều hành"],
                 "answer": "Không dùng dịch vụ quan trọng"
             }
         ],
         "Thiết kế web cơ bản": [
             {
-                "question": "1. Thẻ nào tạo tiêu đề lớn nhất trong HTML?",
+                "question": "Câu hỏi 1: Thẻ nào tạo tiêu đề lớn nhất trong HTML?",
                 "options": ["<title>", "<head>", "<h1>", "<header>"],
                 "answer": "<h1>"
             },
             {
-                "question": "2. CSS thuộc tính nào đổi màu chữ?",
+                "question": "Câu hỏi 2: CSS thuộc tính nào đổi màu chữ?",
                 "options": ["font-size", "background-color", "color", "text-align"],
                 "answer": "color"
             },
             {
-                "question": "3. Thẻ nào tạo liên kết web?",
+                "question": "Câu hỏi 3: Thẻ nào tạo liên kết web?",
                 "options": ["<img>", "<a>", "<link>", "<div>"],
                 "answer": "<a>"
             }
