@@ -25,7 +25,7 @@ page = st.sidebar.radio("Chọn chuyên mục:", list(pages.keys()))
 
 # --- Trang Chủ ---
 if page == "Trang chủ":
-    st.title("📘 Chào mừng đến với Website Học Tin Học")
+    st.title("📘 Chào mừng đến với Góc Tự Học Tin học")
     st.markdown("""
     ### 🎯 Mục tiêu:
     Trang web hỗ trợ học sinh tiếp cận kiến thức Tin học thông qua các chuyên đề học tập, tài liệu, video và bài thực hành.
