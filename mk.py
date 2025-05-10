@@ -7,38 +7,34 @@ from PIL import Image
 # --- Cấu hình trang ---
 st.set_page_config(page_title="Học Tin Học", layout="wide")
 
-# --- Logo + tiêu đề ---
+# --- Logo & Tiêu đề ---
 logo_url = "https://raw.githubusercontent.com/TuanHoang1229/web2/refs/heads/main/IMG_2935.JPG"
-
 st.markdown(f"""
     <div style="display: flex; align-items: center; justify-content: space-between; padding: 10px 0;">
         <div style="display: flex; align-items: center;">
             <img src="{logo_url}" alt="Logo" width="60" style="margin-right: 10px;">
-            <h2 style="margin: 0; color: #ff6600;">Học Tin Học</h2>
-        </div>
-        <div>
-            <a href="#" style="margin-right: 15px;">Đăng ký</a>
-            <a href="#"><b>Đăng nhập</b></a>
+            <h2 style="margin: 0; color: #40E0D0;">Tin Học Online</h2>
         </div>
     </div>
     <hr style="margin-top: 0;">
 """, unsafe_allow_html=True)
 
-# --- Thanh menu ngang ---
-menu_items = {
-    "Trang chủ": "home",
-    "Thiết kế Web cơ bản": "web",
-    "An toàn thông tin": "security",
-    "Kho tài liệu": "docs",
-    "Trắc nghiệm": "quiz",
-    "Góc chia sẻ": "share",
-    "Kiểm tra mật khẩu": "password"
-}
+
+# --- Tabs ---
+tabs = st.tabs([
+    "🏠 Trang chủ", 
+    "🌐 Thiết kế Web cơ bản", 
+    "🔐 An toàn thông tin",
+    "📂 Kho tài liệu",
+    "🧠 Trắc nghiệm",
+    "💬 Góc chia sẻ",
+    "🔑 Kiểm tra mật khẩu"
+])
 
 selected = st.selectbox("📚 Chọn chuyên mục", list(menu_items.keys()), label_visibility="collapsed")
 
 # --- Trang Chủ ---
-if selected == "Trang chủ":
+with tabs[0]:
     st.title("📘 Chào mừng đến với Góc Tự Học Tin học")
     st.markdown("""
 ### 💡 Giới thiệu:
@@ -91,7 +87,7 @@ Trang web này được xây dựng nhằm hỗ trợ học sinh THCS và THPT h
 """)
 
 # --- Thiết kế Web ---
-elif page == "Thiết kế Web cơ bản":
+with tabs[1]:
     st.header("🖥️ Thiết kế Web cơ bản với HTML & CSS")
 
     # Giới thiệu kiến thức
@@ -172,7 +168,7 @@ elif page == "Thiết kế Web cơ bản":
             st.balloons()
 
 # --- An toàn thông tin ---
-elif page == "An toàn thông tin":
+with tabs[2]:
     st.header("🔐 An toàn Thông tin")
 
     # Kiến thức cơ bản
@@ -230,13 +226,13 @@ elif page == "An toàn thông tin":
             st.balloons()
 
 # --- Kho tài liệu ---
-elif page == "Kho tài liệu":
+with tabs[3]:
     st.header("📚 Kho tài liệu")
     st.markdown("### Tài liệu PDF:")
     st.download_button("⬇️ Tải PDF bài giảng", "Nội dung giả định", file_name="baigiang.pdf")
 
 # --- Trắc nghiệm tự luyện ---
-elif page == "Trắc nghiệm tự luyện":
+with tabs[4]:
     st.header("🧠 Trắc nghiệm tự luyện")
 
     question_bank = {
@@ -297,13 +293,13 @@ elif page == "Trắc nghiệm tự luyện":
             st.markdown(f"**Câu {i+1}:** {q['answer']}")
 
 # --- Góc chia sẻ ---
-elif page == "Góc chia sẻ":
+with tabs[5]:
     st.header("📬 Góc chia sẻ - Gửi bài thực hành")
     st.markdown("Gửi qua Google Forms dưới đây:")
     st.markdown("[📎 Biểu mẫu gửi bài](https://forms.gle/...)")
 
 # --- Kiểm tra mật khẩu ---
-elif page == "Kiểm tra mật khẩu":
+with tabs[6]:
     st.header("🔐 Kiểm tra & Tạo mật khẩu mạnh")
 
     def calculate_strength(password):
