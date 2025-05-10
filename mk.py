@@ -7,29 +7,38 @@ from PIL import Image
 # --- Cấu hình trang ---
 st.set_page_config(page_title="Học Tin Học", layout="wide")
 
-# Hiển thị ảnh góc trên bên trái
-col1, col2 = st.columns([10, 1])
-with col1:
-    st.image("https://raw.githubusercontent.com/TuanHoang1229/web2/refs/heads/main/IMG_2935.JPG", width=80)
+# --- Logo + tiêu đề ---
+logo_url = "https://raw.githubusercontent.com/TuanHoang1229/web2/refs/heads/main/IMG_2935.JPG"
 
-# --- Khởi tạo session ---
-if "page" not in st.session_state:
-    st.session_state.page = "Trang chủ"
+st.markdown(f"""
+    <div style="display: flex; align-items: center; justify-content: space-between; padding: 10px 0;">
+        <div style="display: flex; align-items: center;">
+            <img src="{logo_url}" alt="Logo" width="60" style="margin-right: 10px;">
+            <h2 style="margin: 0; color: #ff6600;">Học Tin Học</h2>
+        </div>
+        <div>
+            <a href="#" style="margin-right: 15px;">Đăng ký</a>
+            <a href="#"><b>Đăng nhập</b></a>
+        </div>
+    </div>
+    <hr style="margin-top: 0;">
+""", unsafe_allow_html=True)
 
-# --- Sidebar Navigation ---
-pages = {
+# --- Thanh menu ngang ---
+menu_items = {
     "Trang chủ": "home",
-    "Thiết kế Web cơ bản": "web_design",
-    "An toàn thông tin": "cyber_security",
-    "Kho tài liệu": "resources",
-    "Trắc nghiệm tự luyện": "quiz",
-    "Góc chia sẻ": "sharing",
-    "Kiểm tra mật khẩu": "password_checker"
+    "Thiết kế Web cơ bản": "web",
+    "An toàn thông tin": "security",
+    "Kho tài liệu": "docs",
+    "Trắc nghiệm": "quiz",
+    "Góc chia sẻ": "share",
+    "Kiểm tra mật khẩu": "password"
 }
-page = st.sidebar.radio("Chọn chuyên mục:", list(pages.keys()))
+
+selected = st.selectbox("📚 Chọn chuyên mục", list(menu_items.keys()), label_visibility="collapsed")
 
 # --- Trang Chủ ---
-if page == "Trang chủ":
+if selected == "Trang chủ":
     st.title("📘 Chào mừng đến với Góc Tự Học Tin học")
     st.markdown("""
 ### 💡 Giới thiệu:
