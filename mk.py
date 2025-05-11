@@ -199,6 +199,9 @@ Bạn nhận được email từ một địa chỉ lạ với tiêu đề "Bạ
 # --- Kho tài liệu ---
 with tabs[4]:
     st.header("📚 Kho tài liệu")
+    st.markdown("""
+    - [Sách lật trang](https://online.fliphtml5.com/irxmh/xiua/)
+    """)
     st.download_button("⬇️ Tải PDF bài giảng", "Nội dung giả định", file_name="baigiang.pdf")
 
 # --- Trắc nghiệm tự luyện ---
