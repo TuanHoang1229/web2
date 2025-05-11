@@ -344,17 +344,4 @@ with tabs[1]:
 
                 with open("saved_passwords.txt", "r") as f:
                     st.download_button("📥 Tải file SHA-256", f.read(), file_name="saved_passwords.txt")
-    password = st.text_input("Nhập mật khẩu của bạn để kiểm tra:", type="password")
-    if password:
-        strength = calculate_strength(password)
-        if strength <= 2:
-            st.warning("⚠️ Mật khẩu yếu")
-        elif strength <= 4:
-            st.info("🔐 Mật khẩu trung bình")
-        else:
-            st.success("💪 Mật khẩu mạnh")
-
-    # Tạo mật khẩu ngẫu nhiên
-    if st.button("Tạo mật khẩu ngẫu nhiên"):
-        generated_password = ''.join(random.choices(string.ascii_letters + string.digits + string.punctuation, k=12))
-        st.write(f"🔑 Mật khẩu ngẫu nhiên: {generated_password}")
+    
