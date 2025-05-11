@@ -5,7 +5,7 @@ import hashlib
 from PIL import Image
 
 # --- Cấu hình trang ---
-st.set_page_config(page_title="Học Tin Học", layout="wide")
+st.set_page_config(page_title="Tin Học Online", layout="wide")
 
 # --- Logo & Tiêu đề ---
 logo_url = "https://raw.githubusercontent.com/TuanHoang1229/web2/refs/heads/main/IMG_2935.JPG"
@@ -19,31 +19,27 @@ st.markdown(f"""
     <hr style="margin-top: 0;">
 """, unsafe_allow_html=True)
 
-
 # --- Tabs ---
 tabs = st.tabs([
-    "🏠 Trang chủ", 
+    "🏠 Trang chủ",
+    "🔑 Kiểm tra mật khẩu",
     "🌐 Thiết kế Web cơ bản", 
     "🔐 An toàn thông tin",
     "📂 Kho tài liệu",
     "🧠 Trắc nghiệm",
     "💬 Góc chia sẻ",
-    "🔑 Kiểm tra mật khẩu"
 ])
-
-selected = st.selectbox("📚 Chọn chuyên mục", list(menu_items.keys()), label_visibility="collapsed")
 
 # --- Trang Chủ ---
 with tabs[0]:
-    st.title("📘 Chào mừng đến với Góc Tự Học Tin học")
+    st.title("📘 Chào mừng bạn đến với Góc Tự Học Tin học")
     st.markdown("""
 ### 💡 Giới thiệu:
-Trang web này được xây dựng nhằm hỗ trợ học sinh THCS và THPT học tập và thực hành các kỹ năng **Tin học hiện đại** như:
+Trang web này được xây dựng nhằm hỗ trợ học sinh THPT học tập và thực hành các kỹ năng **Tin học hiện đại** như:
 
-- Lập trình Scratch
 - Thiết kế Web cơ bản với HTML/CSS
-- Tin học văn phòng (Word, Excel, PowerPoint)
 - An toàn thông tin
+- Kiểm tra mật khẩu
 
 ---
 
@@ -60,23 +56,22 @@ Trang web này được xây dựng nhằm hỗ trợ học sinh THCS và THPT h
 3. **Làm trắc nghiệm ôn tập**
 4. **Chia sẻ bài thực hành của bạn**
 5. **Luyện kỹ các năng an toàn**
-6. **Tăng cường mặt khẩu của bạn**
-   **Lưu ý:** Bạn có thể chia sẻ các ý kiến cá nhân trong form nhaa!
+6. **Tăng cường mặt khẩu của bạn**\n**Lưu ý:** Bạn có thể chia sẻ các ý kiến cá nhân trong form nhaa!
 
 ---
 
-### 🚀 Chuyên mục nổi bật:
-- [🔧 Thiết kế Web cơ bản](#)
-- [🔐 An toàn thông tin](#)
-- [📁 Kho tài liệu thực hành](#)
-- [🧠 Trắc nghiệm tự luyện](#)
-- [💬 Góc chia sẻ bài làm](#)
-- [🔑 Kiểm tra mặt khẩu](#)
+### 🚀 Các chuyên mục nổi bật:
+- [🔑 Kiểm tra mặt khẩu]
+- [🔧 Thiết kế Web cơ bản]
+- [🔐 An toàn thông tin]
+- [📁 Kho tài liệu thực hành]
+- [🧠 Trắc nghiệm tự luyện]
+- [💬 Góc chia sẻ bài làm]
 
 ---
 
-### 🧭 Hướng dẫn:
-- Dùng thanh bên trái để chọn chuyên mục.
+###  Hướng dẫn:
+- Chọn các chuyên mục ở đầu trang.
 - Mỗi mục có video, tài liệu và bài tập kèm theo.
 - Đừng quên làm trắc nghiệm để kiểm tra kiến thức nhé!
 
@@ -87,7 +82,7 @@ Trang web này được xây dựng nhằm hỗ trợ học sinh THCS và THPT h
 """)
 
 # --- Thiết kế Web ---
-with tabs[1]:
+with tabs[2]:
     st.header("🖥️ Thiết kế Web cơ bản với HTML & CSS")
 
     # Giới thiệu kiến thức
@@ -158,7 +153,7 @@ with tabs[1]:
     st.markdown("### Trắc nghiệm nhanh:")
     q1 = st.radio("1. Thẻ nào dùng để tạo tiêu đề lớn nhất?", ["<p>", "<h1>", "<title>", "<div>"], key="web_q1")
     q2 = st.radio("2. Thuộc tính nào để đổi màu chữ trong CSS?", ["font-size", "color", "background-color", "margin"], key="web_q2")
-
+    
     if st.button("Nộp câu trả lời", key="submit_web_quiz"):
         score = 0
         if q1 == "<h1>": score += 1
@@ -168,7 +163,7 @@ with tabs[1]:
             st.balloons()
 
 # --- An toàn thông tin ---
-with tabs[2]:
+with tabs[3]:
     st.header("🔐 An toàn Thông tin")
 
     # Kiến thức cơ bản
@@ -226,13 +221,13 @@ with tabs[2]:
             st.balloons()
 
 # --- Kho tài liệu ---
-with tabs[3]:
+with tabs[4]:
     st.header("📚 Kho tài liệu")
     st.markdown("### Tài liệu PDF:")
     st.download_button("⬇️ Tải PDF bài giảng", "Nội dung giả định", file_name="baigiang.pdf")
 
 # --- Trắc nghiệm tự luyện ---
-with tabs[4]:
+with tabs[5]:
     st.header("🧠 Trắc nghiệm tự luyện")
 
     question_bank = {
@@ -293,13 +288,13 @@ with tabs[4]:
             st.markdown(f"**Câu {i+1}:** {q['answer']}")
 
 # --- Góc chia sẻ ---
-with tabs[5]:
+with tabs[6]:
     st.header("📬 Góc chia sẻ - Gửi bài thực hành")
     st.markdown("Gửi qua Google Forms dưới đây:")
     st.markdown("[📎 Biểu mẫu gửi bài](https://forms.gle/...)")
 
 # --- Kiểm tra mật khẩu ---
-with tabs[6]:
+with tabs[1]:
     st.header("🔐 Kiểm tra & Tạo mật khẩu mạnh")
 
     def calculate_strength(password):
