@@ -8,31 +8,53 @@ from PIL import Image
 # --- Cấu hình trang ---
 st.set_page_config(page_title="Tin Học Online", layout="wide")
 
-# --- Logo & Tiêu đề ---
-logo_url = "https://raw.githubusercontent.com/TuanHoang1229/web2/refs/heads/main/IMG_2935.JPG"
-st.markdown(f"""
-    <div style="display: flex; align-items: center; justify-content: space-between; padding: 10px 0;">
-        <div style="display: flex; align-items: center;">
-            <img src="{logo_url}" alt="Logo" width="60" style="margin-right: 10px;">
-            <h2 style="margin: 0; color: #40E0D0;">Tin Học Online</h2>
+# --- Header + Nút chọn chuyên đề ---
+col1, col2 = st.columns([7, 1.5])
+with col1:
+    st.markdown(f"""
+        <div style="display: flex; align-items: center; height: 60px;">
+            <img src="https://raw.githubusercontent.com/TuanHoang1229/web2/refs/heads/main/IMG_2935.JPG" width="50" style="margin-right: 12px;">
+            <h2 style="color: #40E0D0; margin: 0;">Tin Học Online</h2>
         </div>
-    </div>
-    <hr style="margin-top: 0;">
-""", unsafe_allow_html=True)
+    """, unsafe_allow_html=True)
 
-# --- Tabs ---
-tabs = st.tabs([
+with col2:
+    st.markdown("<div style='height: 24px;'></div>", unsafe_allow_html=True)
+    if "show_topics" not in st.session_state:
+        st.session_state.show_topics = True  # Hiển thị luôn chọn chuyên đề lúc đầu
+
+    if st.button("📚 Chọn chuyên đề"):
+        st.session_state.show_topics = not st.session_state.show_topics
+
+# --- Gạch ngang ---
+st.markdown("<hr style='margin-top: 0;'>", unsafe_allow_html=True)
+
+# --- Ảnh banner ---
+st.image(
+    "https://scontent.fhan3-2.fna.fbcdn.net/v/t39.30808-6/304851178_540789087851004_9097165287000760892_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=gHy6kXCaw2AQ7kNvwE-PviU&_nc_oc=Admrg-I1Ihfs1OeVmhVMDCN2WjDhY-G92J9d7FWnfMrm3PH2DaIHFPtWsp3spMJ7lTA&_nc_zt=23&_nc_ht=scontent.fhan3-2.fna&_nc_gid=zUR1Tl_81MyfEa2IiZydTg&oh=00_AfJdAFQuQ6pb2wh4fVJ3RBHgdKJnQDRy9rhd0jvLBUbplQ&oe=6825F9BA",
+    use_container_width=True,
+    caption="📸 Trường THPT Lương Văn Tri"
+)
+
+# --- Danh sách chuyên đề ---
+topic_list = [
     "🏠 Trang chủ",
     "🔑 Kiểm tra mật khẩu",
     "🌐 Thiết kế Web cơ bản", 
     "🔐 An toàn thông tin",
     "📂 Kho tài liệu",
     "🧠 Trắc nghiệm",
-    "💬 Góc chia sẻ",
-])
+    "💬 Góc chia sẻ"
+]
 
-# --- Trang Chủ ---
-with tabs[0]:
+# --- Chọn chuyên đề ---
+if st.session_state.show_topics:
+    selected_topic = st.selectbox("📌 Chọn chuyên đề:", topic_list, index=0)
+else:
+    selected_topic = "🏠 Trang chủ"
+
+# --- Hiển thị nội dung từng phần ---
+if selected_topic == "🏠 Trang chủ":
     st.title("📘 Chào mừng bạn đến với Góc Tự Học Tin học")
     st.markdown("""
 ### 💡 Giới thiệu:
@@ -63,7 +85,7 @@ Trang web này được xây dựng nhằm hỗ trợ học sinh THPT học tậ
 ---
 
 ### 🚀 Các chuyên mục nổi bật:
-- [🔑 Kiểm tra mặt khẩu]
+- [🔑 Kiểm tra mật khẩu]
 - [🔧 Thiết kế Web cơ bản]
 - [🔐 An toàn thông tin]
 - [📁 Kho tài liệu thực hành]
@@ -83,8 +105,79 @@ Trang web này được xây dựng nhằm hỗ trợ học sinh THPT học tậ
 > – **Ray Clifford**
 """)
 
-# --- Thiết kế Web ---
-with tabs[2]:
+    # --- Gạch ngang ---
+    st.markdown("<hr style='margin-top: 0;'>", unsafe_allow_html=True)
+
+    # Nội dung "Liên hệ + Góp ý"
+    st.markdown('<div class="box">', unsafe_allow_html=True)
+    
+    # Thông tin liên hệ
+    st.markdown("<h3>Liên hệ</h3>", unsafe_allow_html=True)
+    st.markdown('<div class="contact-item">📍 <strong>Địa chỉ:</strong> Trường THPT Lương Văn Tri</div>', unsafe_allow_html=True)
+    st.markdown('<div class="contact-item">📧 <strong>Email:</strong> ContactLVT@edu.vn</div>', unsafe_allow_html=True)
+    st.markdown('<div class="contact-item">📞 <strong>Số điện thoại:</strong> 0966 813 528</div>', unsafe_allow_html=True)
+    st.markdown('<div class="contact-item">👤 <strong>Người thực hiện:</strong> Hoàng Minh Tuấn</div>', unsafe_allow_html=True)
+    
+    # Góp ý kiến
+    st.markdown("<h3 style='margin-top:40px;'>Góp ý kiến</h3>", unsafe_allow_html=True)
+    feedback = st.text_area("Nhập ý kiến của bạn", height=120, label_visibility="collapsed")
+    
+    if st.button("Gửi"):
+        if feedback.strip():
+            st.success("✅ Cảm ơn bạn đã góp ý!")
+        else:
+            st.warning("⚠️ Vui lòng nhập nội dung góp ý.")
+    
+    st.markdown('</div>', unsafe_allow_html=True)
+
+
+# --- Kiểm tra mật khẩu ---
+elif selected_topic == "🔑 Kiểm tra mật khẩu":
+    st.header("🔐 Kiểm tra & Tạo mật khẩu mạnh")
+
+    def calculate_strength(password):
+        score = 0
+        if len(password) >= 8: score += 1
+        if len(password) >= 12: score += 2
+        if any(c.isdigit() for c in password): score += 1
+        if any(c.islower() for c in password): score += 1
+        if any(c.isupper() for c in password): score += 1
+        if any(c in string.punctuation for c in password): score += 1
+        return score
+
+    def strength_text(score):
+        if score <= 2: return "❌ Yếu", "red"
+        elif score <= 4: return "⚠️ Trung bình", "orange"
+        else: return "✅ Mạnh", "green"
+
+    tab1, tab2 = st.tabs(["🔎 Kiểm tra mật khẩu", "⚙️ Tạo mật khẩu mới"])
+    with tab1:
+        pwd = st.text_input("Nhập mật khẩu:", type="password")
+        if pwd:
+            score = calculate_strength(pwd)
+            text, color = strength_text(score)
+            st.markdown(f"**Đánh giá:** <span style='color:{color}'>{text}</span>", unsafe_allow_html=True)
+            st.progress(score * 20)
+    with tab2:
+        length = st.slider("Chọn độ dài mật khẩu", 6, 50, 12)
+        if st.button("🎲 Tạo mật khẩu"):
+            chars = string.ascii_letters + string.digits + string.punctuation
+            gen_pwd = ''.join(random.choice(chars) for _ in range(length))
+            st.text_input("🔑 Mật khẩu đã tạo:", gen_pwd)
+            score = calculate_strength(gen_pwd)
+            text, color = strength_text(score)
+            st.markdown(f"**Độ mạnh:** <span style='color:{color}'>{text}</span>", unsafe_allow_html=True)
+            st.progress(min(score * 20, 100))  # Hoặc st.progress(min(score / 8.0, 1.0)) nếu cần tỷ lệ từ 0 đến 1.
+            if st.button("💾 Lưu mật khẩu SHA-256"):
+                hashed = hashlib.sha256(gen_pwd.encode()).hexdigest()
+                buffer = io.StringIO()
+                buffer.write(hashed + "\n")
+                buffer.seek(0)
+                st.success("Đã lưu mật khẩu dưới dạng SHA-256!")
+                st.download_button("📥 Tải file SHA-256", buffer, file_name="saved_passwords.txt")
+
+# --- Thiết kế web ---
+elif selected_topic == "🌐 Thiết kế Web cơ bản":
     st.header("🖥️ Thiết kế Web cơ bản với HTML & CSS")
     st.markdown("""
 ### Giới thiệu nhanh:
@@ -154,7 +247,7 @@ Tạo một trang web có:
         if score == 2: st.balloons()
 
 # --- An toàn thông tin ---
-with tabs[3]:
+elif selected_topic == "🔐 An toàn thông tin":
     st.header("🔐 An toàn Thông tin")
     st.markdown("""
 ### Kiến thức cơ bản:
@@ -197,15 +290,16 @@ Bạn nhận được email từ một địa chỉ lạ với tiêu đề "Bạ
         if score == 2: st.balloons()
 
 # --- Kho tài liệu ---
-with tabs[4]:
+elif selected_topic == "📂 Kho tài liệu":
     st.header("📚 Kho tài liệu")
     st.markdown("""
     - [Sách lật trang](https://online.fliphtml5.com/irxmh/xiua/)
     """)
     st.download_button("⬇️ Tải PDF bài giảng", "Nội dung giả định", file_name="baigiang.pdf")
+    
 
-# --- Trắc nghiệm tự luyện ---
-with tabs[5]:
+# --- Câu hỏi trắc nghiệm ---
+elif selected_topic == "🧠 Trắc nghiệm tự luyện":
     st.header("🧠 Trắc nghiệm tự luyện")
     question_bank = {
     "An toàn thông tin": [
@@ -257,52 +351,7 @@ with tabs[5]:
         for i, q in enumerate(questions):
             st.markdown(f"**Câu {i+1}:** {q['answer']}")
 
-# --- Góc chia sẻ ---
-with tabs[6]:
+# --- Ý kiến chia sẻ ---
+elif selected_topic == "💬 Góc chia sẻ":
     st.header("📬 Góc chia sẻ - Gửi bài thực hành")
     st.markdown("📎 **Biểu mẫu sẽ được cập nhật sớm tại đây.**")
-
-# --- Kiểm tra mật khẩu ---
-with tabs[1]:
-    st.header("🔐 Kiểm tra & Tạo mật khẩu mạnh")
-
-    def calculate_strength(password):
-        score = 0
-        if len(password) >= 8: score += 1
-        if len(password) >= 12: score += 2
-        if any(c.isdigit() for c in password): score += 1
-        if any(c.islower() for c in password): score += 1
-        if any(c.isupper() for c in password): score += 1
-        if any(c in string.punctuation for c in password): score += 1
-        return score
-
-    def strength_text(score):
-        if score <= 2: return "❌ Yếu", "red"
-        elif score <= 4: return "⚠️ Trung bình", "orange"
-        else: return "✅ Mạnh", "green"
-
-    tab1, tab2 = st.tabs(["🔎 Kiểm tra mật khẩu", "⚙️ Tạo mật khẩu mới"])
-    with tab1:
-        pwd = st.text_input("Nhập mật khẩu:", type="password")
-        if pwd:
-            score = calculate_strength(pwd)
-            text, color = strength_text(score)
-            st.markdown(f"**Đánh giá:** <span style='color:{color}'>{text}</span>", unsafe_allow_html=True)
-            st.progress(score * 20)
-    with tab2:
-        length = st.slider("Chọn độ dài mật khẩu", 6, 50, 12)
-        if st.button("🎲 Tạo mật khẩu"):
-            chars = string.ascii_letters + string.digits + string.punctuation
-            gen_pwd = ''.join(random.choice(chars) for _ in range(length))
-            st.text_input("🔑 Mật khẩu đã tạo:", gen_pwd)
-            score = calculate_strength(gen_pwd)
-            text, color = strength_text(score)
-            st.markdown(f"**Độ mạnh:** <span style='color:{color}'>{text}</span>", unsafe_allow_html=True)
-            st.progress(min(score * 20, 100))  # Hoặc st.progress(min(score / 8.0, 1.0)) nếu cần tỷ lệ từ 0 đến 1.
-            if st.button("💾 Lưu mật khẩu SHA-256"):
-                hashed = hashlib.sha256(gen_pwd.encode()).hexdigest()
-                buffer = io.StringIO()
-                buffer.write(hashed + "\n")
-                buffer.seek(0)
-                st.success("Đã lưu mật khẩu dưới dạng SHA-256!")
-                st.download_button("📥 Tải file SHA-256", buffer, file_name="saved_passwords.txt")
