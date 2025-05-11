@@ -600,7 +600,9 @@ with tabs[1]:
         st.markdown("### 🔍 Kiểm tra độ mạnh mật khẩu:")
         st.markdown("""
         Mật khẩu mạnh là mật khẩu có độ dài tối thiểu 8 ký tự, bao gồm chữ hoa, chữ thường, số và ký tự đặc biệt.
+        
                                      Vậy mật khẩu của bạn đã đủ mạnh chưa?
+                                     
                            Nhập mật khẩu của bạn vào ô bên dưới để kiểm tra độ mạnh.
         """)
     
