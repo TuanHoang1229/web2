@@ -295,7 +295,7 @@ with tabs[1]:
             score = calculate_strength(gen_pwd)
             text, color = strength_text(score)
             st.markdown(f"**Độ mạnh:** <span style='color:{color}'>{text}</span>", unsafe_allow_html=True)
-            st.progress(score * 20)
+            st.progress(min(score * 20, 100))  # Hoặc st.progress(min(score / 8.0, 1.0)) nếu cần tỷ lệ từ 0 đến 1.
             if st.button("💾 Lưu mật khẩu SHA-256"):
                 hashed = hashlib.sha256(gen_pwd.encode()).hexdigest()
                 buffer = io.StringIO()
