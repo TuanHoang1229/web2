@@ -566,7 +566,6 @@ with tabs[6]:
     **Lưu ý:**
     - Hãy chắc chắn rằng bài thực hành của bạn đã được hoàn thiện và kiểm tra kỹ lưỡng trước khi gửi.
     - Nếu bạn có bất kỳ câu hỏi nào hoặc gặp phải vấn đề khi gửi bài, đừng ngần ngại liên hệ với giảng viên hoặc hỗ trợ kỹ thuật.
-    - **Hạn nộp bài**: [Ngày cuối nộp]
     
     **Chúc bạn học tốt và đạt kết quả xuất sắc!**
     """)
