@@ -41,7 +41,7 @@ tabs = st.tabs([
 with tabs[0]:
     st.title("📘 Chào mừng bạn đến với Góc Tự Học Tin học")
     st.markdown("""
-### 💡 Giới thiệu:
+## 💡 Giới thiệu:
 #### Trang web này được xây dựng nhằm hỗ trợ học sinh THPT học tập và thực hành các kỹ năng **Tin học hiện đại** như:
 
 #### - Thiết kế Web cơ bản với HTML/CSS
