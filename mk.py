@@ -205,8 +205,42 @@ with tabs[4]:
 with tabs[5]:
     st.header("🧠 Trắc nghiệm tự luyện")
     question_bank = {
-        "An toàn thông tin": [...],
-        "Thiết kế web cơ bản": [...],
+    "An toàn thông tin": [
+        {
+            "question": "Câu hỏi 1: Bạn nên làm gì khi nhận được email từ người lạ kèm tệp đính kèm?",
+            "options": ["Mở ngay tệp để xem", "Chuyển tiếp", "Không mở và xoá email", "Trả lời email"],
+            "answer": "Không mở và xoá email"
+        },
+        {
+            "question": "Câu hỏi 2: Mật khẩu mạnh nên bao gồm?",
+            "options": ["Tên", "Chữ thường", "Ký tự đặc biệt, số, chữ hoa thường", "Dễ nhớ"],
+            "answer": "Ký tự đặc biệt, số, chữ hoa thường"
+        },
+        {
+            "question": "Câu hỏi 3: Khi truy cập Wi-Fi công cộng, bạn nên?",
+            "options": ["Ngân hàng online", "Không dùng dịch vụ quan trọng", "Gửi mật khẩu", "Cập nhật hệ điều hành"],
+            "answer": "Không dùng dịch vụ quan trọng"
+        }
+    ],
+    "Thiết kế web cơ bản": [
+        {
+            "question": "Câu hỏi 1: Thẻ nào tạo tiêu đề lớn nhất trong HTML?",
+            "options": ["<title>", "<head>", "<h1>", "<header>"],
+            "answer": "<h1>"
+        },
+        {
+            "question": "Câu hỏi 2: CSS thuộc tính nào đổi màu chữ?",
+            "options": ["font-size", "background-color", "color", "text-align"],
+            "answer": "color"
+        },
+        {
+            "question": "Câu hỏi 3: Thẻ nào tạo liên kết web?",
+            "options": ["<img>", "<a>", "<link>", "<div>"],
+            "answer": "<a>"
+        }
+    ]
+}
+
     }
     topic = st.selectbox("Chọn chuyên đề:", list(question_bank.keys()))
     questions = question_bank[topic]
