@@ -241,7 +241,7 @@ with tabs[5]:
     ]
 }
 
-    }
+    
     topic = st.selectbox("Chọn chuyên đề:", list(question_bank.keys()))
     questions = question_bank[topic]
     st.markdown("### 📋 Trả lời câu hỏi:")
