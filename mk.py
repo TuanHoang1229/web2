@@ -19,13 +19,6 @@ st.markdown(f"""
     <hr style="margin-top: 0;">
 """, unsafe_allow_html=True)
 
-st.image(
-    "https://scontent.fhan3-2.fna.fbcdn.net/v/t39.30808-6/304851178_540789087851004_9097165287000760892_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=gHy6kXCaw2AQ7kNvwE-PviU&_nc_oc=Admrg-I1Ihfs1OeVmhVMDCN2WjDhY-G92J9d7FWnfMrm3PH2DaIHFPtWsp3spMJ7lTA&_nc_zt=23&_nc_ht=scontent.fhan3-2.fna&_nc_gid=zUR1Tl_81MyfEa2IiZydTg&oh=00_AfJdAFQuQ6pb2wh4fVJ3RBHgdKJnQDRy9rhd0jvLBUbplQ&oe=6825F9BA",
-    use_container_width=True,
-    caption="📸 Tin Học Online - Hình ảnh minh họa"
-)
-
-
 # --- Tabs ---
 tabs = st.tabs([
     "🏠 Trang chủ",
@@ -36,6 +29,13 @@ tabs = st.tabs([
     "🧠 Trắc nghiệm",
     "💬 Góc chia sẻ",
 ])
+
+st.image(
+    "https://scontent.fhan3-2.fna.fbcdn.net/v/t39.30808-6/304851178_540789087851004_9097165287000760892_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=gHy6kXCaw2AQ7kNvwE-PviU&_nc_oc=Admrg-I1Ihfs1OeVmhVMDCN2WjDhY-G92J9d7FWnfMrm3PH2DaIHFPtWsp3spMJ7lTA&_nc_zt=23&_nc_ht=scontent.fhan3-2.fna&_nc_gid=zUR1Tl_81MyfEa2IiZydTg&oh=00_AfJdAFQuQ6pb2wh4fVJ3RBHgdKJnQDRy9rhd0jvLBUbplQ&oe=6825F9BA",
+    use_container_width=True,
+    caption="📸 Trường THPT Lương Văn Tri"
+)
+
 
 # --- Trang Chủ ---
 with tabs[0]:
@@ -87,6 +87,31 @@ Trang web này được xây dựng nhằm hỗ trợ học sinh THPT học tậ
 > **“Công nghệ sẽ không thay thế giáo viên, nhưng giáo viên biết công nghệ sẽ thay thế người không biết.”**  
 > – **Ray Clifford**
 """)
+
+     # --- Gạch ngang ---
+    st.markdown("<hr style='margin-top: 0;'>", unsafe_allow_html=True)
+
+    # Nội dung "Liên hệ + Góp ý"
+    st.markdown('<div class="box">', unsafe_allow_html=True)
+    
+    # Thông tin liên hệ
+    st.markdown("<h3>Liên hệ</h3>", unsafe_allow_html=True)
+    st.markdown('<div class="contact-item">📍 <strong>Địa chỉ:</strong> Trường THPT Lương Văn Tri</div>', unsafe_allow_html=True)
+    st.markdown('<div class="contact-item">📧 <strong>Email:</strong> ContactLVT@edu.vn</div>', unsafe_allow_html=True)
+    st.markdown('<div class="contact-item">📞 <strong>Số điện thoại:</strong> 0966 813 528</div>', unsafe_allow_html=True)
+    st.markdown('<div class="contact-item">👤 <strong>Người thực hiện:</strong> Hoàng Minh Tuấn</div>', unsafe_allow_html=True)
+    
+    # Góp ý kiến
+    st.markdown("<h3 style='margin-top:40px;'>Góp ý kiến</h3>", unsafe_allow_html=True)
+    feedback = st.text_area("Nhập ý kiến của bạn", height=120, label_visibility="collapsed")
+    
+    if st.button("Gửi"):
+        if feedback.strip():
+            st.success("✅ Cảm ơn bạn đã góp ý!")
+        else:
+            st.warning("⚠️ Vui lòng nhập nội dung góp ý.")
+    
+    st.markdown('</div>', unsafe_allow_html=True)
 
 # --- Thiết kế Web ---
 with tabs[2]:
@@ -230,6 +255,9 @@ with tabs[3]:
 # --- Kho tài liệu ---
 with tabs[4]:
     st.header("📚 Kho tài liệu")
+    st.markdown("""
+    - [Sách lật trang](https://online.fliphtml5.com/irxmh/xiua/)
+    """)
     st.markdown("### Tài liệu PDF:")
     st.download_button("⬇️ Tải PDF bài giảng", "Nội dung giả định", file_name="baigiang.pdf")
 
@@ -307,24 +335,40 @@ with tabs[1]:
     def calculate_strength(password):
         score = 0
         if len(password) >= 8: score += 1
-        if len(password) >= 12: score += 1
+        if len(password) >= 12: score += 2
         if any(c.isdigit() for c in password): score += 1
         if any(c.islower() for c in password): score += 1
         if any(c.isupper() for c in password): score += 1
         if any(c in string.punctuation for c in password): score += 1
         return score
 
-    password = st.text_input("Nhập mật khẩu của bạn để kiểm tra:", type="password")
-    if password:
-        strength = calculate_strength(password)
-        if strength <= 2:
-            st.warning("⚠️ Mật khẩu yếu")
-        elif strength <= 4:
-            st.info("🔐 Mật khẩu trung bình")
-        else:
-            st.success("💪 Mật khẩu mạnh")
+    def strength_text(score):
+        if score <= 2: return "❌ Yếu", "red"
+        elif score <= 4: return "⚠️ Trung bình", "orange"
+        else: return "✅ Mạnh", "green"
 
-    # Tạo mật khẩu ngẫu nhiên
-    if st.button("Tạo mật khẩu ngẫu nhiên"):
-        generated_password = ''.join(random.choices(string.ascii_letters + string.digits + string.punctuation, k=12))
-        st.write(f"🔑 Mật khẩu ngẫu nhiên: {generated_password}")
+    tab1, tab2 = st.tabs(["🔎 Kiểm tra mật khẩu", "⚙️ Tạo mật khẩu mới"])
+    with tab1:
+        pwd = st.text_input("Nhập mật khẩu:", type="password")
+        if pwd:
+            score = calculate_strength(pwd)
+            text, color = strength_text(score)
+            st.markdown(f"**Đánh giá:** <span style='color:{color}'>{text}</span>", unsafe_allow_html=True)
+            st.progress(score * 20)
+    with tab2:
+        length = st.slider("Chọn độ dài mật khẩu", 6, 50, 12)
+        if st.button("🎲 Tạo mật khẩu"):
+            chars = string.ascii_letters + string.digits + string.punctuation
+            gen_pwd = ''.join(random.choice(chars) for _ in range(length))
+            st.text_input("🔑 Mật khẩu đã tạo:", gen_pwd)
+            score = calculate_strength(gen_pwd)
+            text, color = strength_text(score)
+            st.markdown(f"**Độ mạnh:** <span style='color:{color}'>{text}</span>", unsafe_allow_html=True)
+            st.progress(min(score * 20, 100))  # Hoặc st.progress(min(score / 8.0, 1.0)) nếu cần tỷ lệ từ 0 đến 1.
+            if st.button("💾 Lưu mật khẩu SHA-256"):
+                hashed = hashlib.sha256(gen_pwd.encode()).hexdigest()
+                buffer = io.StringIO()
+                buffer.write(hashed + "\n")
+                buffer.seek(0)
+                st.success("Đã lưu mật khẩu dưới dạng SHA-256!")
+                st.download_button("📥 Tải file SHA-256", buffer, file_name="saved_passwords.txt")
