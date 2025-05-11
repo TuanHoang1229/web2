@@ -44,9 +44,10 @@ with tabs[0]:
 ## 💡 Giới thiệu:
 Trang web này được xây dựng nhằm hỗ trợ học sinh THPT học tập và thực hành các kỹ năng **Tin học hiện đại** như:
 
+ - Kiểm tra độ an toàn của mặt khẩu
  - Thiết kế Web cơ bản với HTML/CSS
  - An toàn thông tin
- - Kiểm tra mật khẩu
+ - Tự học và kiểm tra kiến thức đã học
 
 ---
 
