@@ -33,7 +33,6 @@ tabs = st.tabs([
     "🌐 Thiết kế Web cơ bản", 
     "🔐 An toàn thông tin",
     "📂 Kho tài liệu",
-    "🧠 Trắc nghiệm",
     "💬 Góc chia sẻ",
 ])
 
@@ -304,41 +303,8 @@ with tabs[4]:
     st.subheader("📖 Sách lật trang")
     st.markdown("- [Giáo trình Tin học căn bản (FlipBook)](https://online.fliphtml5.com/irxmh/xiua/)")
 
-    # --- Website học lập trình (quốc tế) ---
-    st.subheader("🌐 Website học lập trình")
-    st.markdown("""
-    - [W3Schools](https://www.w3schools.com/) – Học lập trình cơ bản HTML, CSS, JS,...
-    - [GeeksforGeeks](https://www.geeksforgeeks.org/) – Thuật toán, cấu trúc dữ liệu, phỏng vấn.
-    - [FreeCodeCamp](https://www.freecodecamp.org/) – Khóa học miễn phí có chứng chỉ.
-    - [Coursera](https://www.coursera.org/) – Khóa học từ đại học lớn (một số miễn phí).
-    - [Codecademy](https://www.codecademy.com/) – Học lập trình tương tác.
-    """)
-
-    # --- Website tiếng Việt ---
-    st.subheader("🇻🇳 Website tiếng Việt")
-    st.markdown("""
-    - [HowKteam.vn](https://www.howkteam.vn/) – Học C#, Python, Android bằng tiếng Việt.
-    - [Viblo.asia](https://viblo.asia/) – Bài viết kỹ thuật, lập trình, DevOps,...
-    - [Hoclaptrinh.vn](https://hoclaptrinh.vn/) – Khóa học lập trình cơ bản – nâng cao.
-    - [Codelearn.io](https://codelearn.io/) – Học lập trình qua thử thách (game hoá).
-    """)
-
-    # --- Sách & nguồn mở ---
-    st.subheader("📘 Sách lập trình miễn phí")
-    st.markdown("""
-    - [Free Programming Books (GitHub)](https://github.com/EbookFoundation/free-programming-books) – Hàng nghìn sách lập trình miễn phí, có cả tiếng Việt.
-    - [O'Reilly Online Learning](https://www.oreilly.com/) – Thư viện sách lập trình cao cấp (trả phí).
-    """)
-
-    # --- Gợi ý ---
-    st.markdown("---")
-    st.info("💡 Mẹo: Dành 15 phút mỗi ngày học lập trình từ W3Schools hoặc FreeCodeCamp để duy trì thói quen!")
-
-
-# --- Trắc nghiệm tự luyện ---
-with tabs[5]:
+    # --- CH Trắc nghiệm
     st.header("🧠 Trắc nghiệm tự luyện")
-
     question_bank = {
     "An toàn thông tin": [
         {
@@ -346,76 +312,6 @@ with tabs[5]:
             "options": ["Mở ngay tệp để xem", "Chuyển tiếp", "Không mở và xoá email", "Trả lời email"],
             "answer": "Không mở và xoá email"
         },
-        {
-            "question": "Câu hỏi 2: Mật khẩu mạnh nên bao gồm?",
-            "options": ["Tên", "Chữ thường", "Ký tự đặc biệt, số, chữ hoa thường", "Dễ nhớ"],
-            "answer": "Ký tự đặc biệt, số, chữ hoa thường"
-        },
-        {
-            "question": "Câu hỏi 3: Khi truy cập Wi-Fi công cộng, bạn nên?",
-            "options": ["Ngân hàng online", "Không dùng dịch vụ quan trọng", "Gửi mật khẩu", "Cập nhật hệ điều hành"],
-            "answer": "Không dùng dịch vụ quan trọng"
-        },
-        {
-            "question": "Câu hỏi 4: Xác thực hai yếu tố (2FA) giúp?",
-            "options": ["Tăng tốc độ truy cập", "Bảo mật tài khoản", "Giảm dùng dữ liệu", "Tăng dung lượng lưu trữ"],
-            "answer": "Bảo mật tài khoản"
-        },
-        {
-            "question": "Câu hỏi 5: Sau khi dùng máy tính công cộng, bạn nên?",
-            "options": ["Lưu mật khẩu", "Không đăng xuất", "Tắt máy", "Đăng xuất khỏi tài khoản"],
-            "answer": "Đăng xuất khỏi tài khoản"
-        },
-        {
-            "question": "Câu hỏi 6: Tải phần mềm từ nguồn nào là an toàn nhất?",
-            "options": ["Website lạ", "Quảng cáo popup", "Trang chính thức", "Email người lạ gửi"],
-            "answer": "Trang chính thức"
-        },
-        {
-            "question": "Câu hỏi 7: Cách lưu mật khẩu an toàn?",
-            "options": ["Ghi vào giấy", "Lưu trên trình duyệt", "Trình quản lý mật khẩu", "Chia sẻ với bạn"],
-            "answer": "Trình quản lý mật khẩu"
-        },
-        {
-            "question": "Câu hỏi 8: Dùng cùng mật khẩu cho nhiều tài khoản là?",
-            "options": ["An toàn", "Tiện lợi", "Nguy hiểm", "Hiệu quả"],
-            "answer": "Nguy hiểm"
-        },
-        {
-            "question": "Câu hỏi 9: Khi nhận tin nhắn yêu cầu cung cấp OTP, bạn nên?",
-            "options": ["Cung cấp ngay", "Chờ rồi trả lời", "Không phản hồi và báo cáo", "Chuyển tiếp OTP"],
-            "answer": "Không phản hồi và báo cáo"
-        },
-        {
-            "question": "Câu hỏi 10: Đâu là dấu hiệu của một website giả mạo?",
-            "options": ["HTTPS", "Logo chính hãng", "Lỗi chính tả và URL lạ", "Chứng chỉ bảo mật"],
-            "answer": "Lỗi chính tả và URL lạ"
-        },
-        {
-            "question": "Câu hỏi 11: Cookie là gì?",
-            "options": ["Phần mềm gián điệp", "Bánh quy", "Dữ liệu lưu tạm trên trình duyệt", "Virus máy tính"],
-            "answer": "Dữ liệu lưu tạm trên trình duyệt"
-        },
-        {
-            "question": "Câu hỏi 12: Phần mềm diệt virus nên được?",
-            "options": ["Cài đặt và không cập nhật", "Cập nhật thường xuyên", "Cài rồi xóa", "Tắt đi để máy nhanh hơn"],
-            "answer": "Cập nhật thường xuyên"
-        },
-        {
-            "question": "Câu hỏi 13: 'Phishing' là gì?",
-            "options": ["Câu cá", "Tấn công mạng để lừa lấy thông tin", "Dữ liệu sao lưu", "Hình thức cập nhật phần mềm"],
-            "answer": "Tấn công mạng để lừa lấy thông tin"
-        },
-        {
-            "question": "Câu hỏi 14: Nên đặt mật khẩu như thế nào?",
-            "options": ["123456", "Tên bạn", "abcdef", "Chuỗi ngẫu nhiên dài"],
-            "answer": "Chuỗi ngẫu nhiên dài"
-        },
-        {
-            "question": "Câu hỏi 15: Bảo mật thông tin cá nhân là trách nhiệm của?",
-            "options": ["Nhà trường", "Người dùng", "Chính phủ", "Giáo viên"],
-            "answer": "Người dùng"
-        }
     ],
     "Thiết kế web cơ bản": [
         {
@@ -423,85 +319,8 @@ with tabs[5]:
             "options": ["<title>", "<head>", "<h1>", "<header>"],
             "answer": "<h1>"
         },
-        {
-            "question": "Câu hỏi 2: CSS thuộc tính nào đổi màu chữ?",
-            "options": ["font-size", "background-color", "color", "text-align"],
-            "answer": "color"
-        },
-        {
-            "question": "Câu hỏi 3: Thẻ nào dùng để chèn hình ảnh?",
-            "options": ["<img>", "<a>", "<link>", "<pic>"],
-            "answer": "<img>"
-        },
-        {
-            "question": "Câu hỏi 4: Thuộc tính nào căn giữa văn bản trong CSS?",
-            "options": ["align", "center", "text-align", "margin-center"],
-            "answer": "text-align"
-        },
-        {
-            "question": "Câu hỏi 5: HTML viết tắt của gì?",
-            "options": ["HighText Machine Language", "HyperText Markup Language", "Home Tool Markup Language", "Hyperlink Mark Language"],
-            "answer": "HyperText Markup Language"
-        },
-        {
-            "question": "Câu hỏi 6: Thẻ nào dùng để tạo danh sách không thứ tự?",
-            "options": ["<ol>", "<li>", "<ul>", "<dl>"],
-            "answer": "<ul>"
-        },
-        {
-            "question": "Câu hỏi 7: Cặp thẻ HTML nào chứa toàn bộ nội dung hiển thị?",
-            "options": ["<html>", "<head>", "<body>", "<div>"],
-            "answer": "<body>"
-        },
-        {
-            "question": "Câu hỏi 8: CSS dùng để làm gì?",
-            "options": ["Cấu trúc nội dung", "Tạo đường dẫn", "Tạo kiểu hiển thị", "Lưu trữ dữ liệu"],
-            "answer": "Tạo kiểu hiển thị"
-        },
-        {
-            "question": "Câu hỏi 9: Thẻ nào để tạo liên kết đến trang web khác?",
-            "options": ["<a>", "<link>", "<url>", "<href>"],
-            "answer": "<a>"
-        },
-        {
-            "question": "Câu hỏi 10: Để đổi màu nền phần tử HTML, dùng thuộc tính gì?",
-            "options": ["bgcolor", "background-color", "color", "background-image"],
-            "answer": "background-color"
-        },
-        {
-            "question": "Câu hỏi 11: Thẻ nào bắt buộc có trong mọi trang HTML?",
-            "options": ["<html>, <head>, <body>", "<div>, <span>", "<title>, <img>", "<p>, <h1>"],
-            "answer": "<html>, <head>, <body>"
-        },
-        {
-            "question": "Câu hỏi 12: CSS có thể được viết ở đâu?",
-            "options": ["Trong HTML", "Tệp .css", "Nội bộ (style tag)", "Tất cả đúng"],
-            "answer": "Tất cả đúng"
-        },
-        {
-            "question": "Câu hỏi 13: Để tạo đoạn văn bản trong HTML, dùng thẻ nào?",
-            "options": ["<text>", "<p>", "<span>", "<section>"],
-            "answer": "<p>"
-        },
-        {
-            "question": "Câu hỏi 14: Thuộc tính CSS `margin` để làm gì?",
-            "options": ["Tạo đường viền", "Tăng kích cỡ", "Tạo khoảng cách ngoài", "Đặt màu chữ"],
-            "answer": "Tạo khoảng cách ngoài"
-        },
-        {
-            "question": "Câu hỏi 15: Cú pháp đúng để liên kết tệp CSS ngoài?",
-            "options": [
-                "<style src='style.css'>",
-                "<link rel='stylesheet' href='style.css'>",
-                "<css href='style.css'>",
-                "<script src='style.css'>"
-            ],
-            "answer": "<link rel='stylesheet' href='style.css'>"
-        }
     ]
 }
-
-
         # Chọn chuyên đề
     topic = st.selectbox("Chọn chuyên đề:", list(question_bank.keys()))
     questions = question_bank[topic]
@@ -546,7 +365,38 @@ with tabs[5]:
             st.balloons()
 
 
-with tabs[6]:
+    # --- Website học lập trình (quốc tế) ---
+    st.subheader("🌐 Website học lập trình")
+    st.markdown("""
+    - [W3Schools](https://www.w3schools.com/) – Học lập trình cơ bản HTML, CSS, JS,...
+    - [GeeksforGeeks](https://www.geeksforgeeks.org/) – Thuật toán, cấu trúc dữ liệu, phỏng vấn.
+    - [FreeCodeCamp](https://www.freecodecamp.org/) – Khóa học miễn phí có chứng chỉ.
+    - [Coursera](https://www.coursera.org/) – Khóa học từ đại học lớn (một số miễn phí).
+    - [Codecademy](https://www.codecademy.com/) – Học lập trình tương tác.
+    """)
+
+    # --- Website tiếng Việt ---
+    st.subheader("🇻🇳 Website tiếng Việt")
+    st.markdown("""
+    - [HowKteam.vn](https://www.howkteam.vn/) – Học C#, Python, Android bằng tiếng Việt.
+    - [Viblo.asia](https://viblo.asia/) – Bài viết kỹ thuật, lập trình, DevOps,...
+    - [Hoclaptrinh.vn](https://hoclaptrinh.vn/) – Khóa học lập trình cơ bản – nâng cao.
+    - [Codelearn.io](https://codelearn.io/) – Học lập trình qua thử thách (game hoá).
+    """)
+
+    # --- Sách & nguồn mở ---
+    st.subheader("📘 Sách lập trình miễn phí")
+    st.markdown("""
+    - [Free Programming Books (GitHub)](https://github.com/EbookFoundation/free-programming-books) – Hàng nghìn sách lập trình miễn phí, có cả tiếng Việt.
+    - [O'Reilly Online Learning](https://www.oreilly.com/) – Thư viện sách lập trình cao cấp (trả phí).
+    """)
+
+    # --- Gợi ý ---
+    st.markdown("---")
+    st.info("💡 Mẹo: Dành 15 phút mỗi ngày học lập trình từ W3Schools hoặc FreeCodeCamp để duy trì thói quen!")
+
+# --- Góc chia sẻ ---
+with tabs[5]:
     st.header("📬 Góc chia sẻ - Gửi bài thực hành")
     
     st.markdown("""
