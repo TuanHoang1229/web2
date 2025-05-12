@@ -997,11 +997,210 @@ with tabs[4]:
                 }
             ],
             "Chủ đề F": [
-                {
-                    "question": "Lớp 12 - Câu hỏi 1: SQL viết tắt của cụm từ nào?",
-                    "options": ["Structured Question Language", "Strong Query Language", "Structured Query Language", "System Query Level"],
-                    "answer": "Structured Query Language"
+                    {
+                    "question": "Câu 1: HTML là viết tắt của",
+                    "options": [
+                        "Hypertext Markup Language",
+                        "Hyperlink and Text Markup Language",
+                        "Hypertext Multi-language",
+                        "Hypertext Media Language"
+                    ],
+                    "answer": "Hypertext Markup Language"
                 },
+                {
+                    "question": "Câu 2: Ngôn ngữ đánh dấu siêu văn bản (HTML) được sử dụng chủ yếu để làm gì?",
+                    "options": [
+                        "Tạo bảng tính",
+                        "Tạo trang web",
+                        "Lập trình ứng dụng",
+                        "Xử lý dữ liệu"
+                    ],
+                    "answer": "Tạo trang web"
+                },
+                {
+                    "question": "Câu 3: Trong HTML, dấu “/” trong thẻ có ý nghĩa gì?",
+                    "options": [
+                        "Đánh dấu phần tử bị lỗi",
+                        "Kết thúc thẻ",
+                        "Bắt đầu thẻ",
+                        "Chỉ thị kiểu chữ"
+                    ],
+                    "answer": "Kết thúc thẻ"
+                },
+                {
+                    "question": "Câu 4: Tên thẻ HTML có phân biệt chữ hoa và chữ thường không?",
+                    "options": [
+                        "Có phân biệt",
+                        "Không phân biệt",
+                        "Chỉ phân biệt trong các trình duyệt khác nhau",
+                        "Phân biệt trong các phiên bản khác nhau"
+                    ],
+                    "answer": "Không phân biệt"
+                },
+                {
+                    "question": "Câu 5: Phần nào của tài liệu HTML chứa nội dung sẽ hiển thị trên màn hình của trình duyệt web?",
+                    "options": [
+                        "Phần đầu",
+                        "Phần chân",
+                        "Phần thân",
+                        "Phần meta"
+                    ],
+                    "answer": "Phần thân"
+                },
+                {
+                    "question": "Câu 6: Dòng đầu tiên của văn bản HTML thường là gì?",
+                    "options": [
+                        "Tiêu đề của trang web",
+                        "Doctype",
+                        "Nội dung của trang web",
+                        "Siêu dữ liệu"
+                    ],
+                    "answer": "Doctype"
+                },
+                {
+                    "question": "Câu 7: Khi soạn thảo văn bản HTML trong Sublime Text, bạn nên lưu tệp với định dạng nào?",
+                    "options": [
+                        ".txt",
+                        ".html",
+                        ".docx",
+                        ".xml"
+                    ],
+                    "answer": ".html"
+                },
+                {
+                    "question": "Câu 8: Phần tử nào được sử dụng để xác định phần đầu của một tài liệu HTML?",
+                    "options": [
+                        "<body>",
+                        "<footer>",
+                        "<head>",
+                        "<header>"
+                    ],
+                    "answer": "<head>"
+                },
+                {
+                    "question": "Câu 9: Thẻ nào trong phần đầu của tài liệu HTML dùng để khai báo tiêu đề của trang web?",
+                    "options": [
+                        "<title>",
+                        "<header>",
+                        "<footer>",
+                        "<meta>"
+                    ],
+                    "answer": "<title>"
+                },
+                {
+                    "question": "Câu 10: Để xem kết quả của tệp HTML, bạn cần làm gì sau khi lưu tệp?",
+                    "options": [
+                        "Mở tệp bằng trình soạn thảo văn bản",
+                        "Gửi tệp qua email",
+                        "Chạy tệp trên máy chủ",
+                        "Mở tệp bằng trình duyệt web"
+                    ],
+                    "answer": "Mở tệp bằng trình duyệt web"
+                },
+                {
+                    "question": "Câu 11: Số phát biểu đúng là?\n"
+                                "a) Thẻ HTML thường không có thẻ kết thúc.\n"
+                                "b) Tên thẻ HTML không phân biệt chữ hoa và chữ thường.\n"
+                                "c) Phần đầu của một tệp HTML được xác định bởi thẻ <head> và </head>.\n"
+                                "d) Thẻ <body> chứa nội dung chính hiển thị trên màn hình của trình duyệt.",
+                    "options": [
+                        "1",
+                        "2",
+                        "3",
+                        "4"
+                    ],
+                    "answer": "3"
+                },
+                {
+                    "question": "Câu 12: HTML hỗ trợ bao nhiêu cấp tiêu đề mục từ lớn đến nhỏ?",
+                    "options": [
+                        "3",
+                        "4",
+                        "5",
+                        "6"
+                    ],
+                    "answer": "6"
+                },
+                {
+                    "question": "Câu 13: Phần tử <a> trong HTML được sử dụng để làm gì?",
+                    "options": [
+                        "Tạo các đoạn văn bản",
+                        "Tạo các tiêu đề",
+                        "Tạo các siêu liên kết",
+                        "Tạo các bảng"
+                    ],
+                    "answer": "Tạo các siêu liên kết"
+                },
+                {
+                    "question": "Câu 14: Phần tử nào trong HTML được sử dụng để in đậm văn bản?",
+                    "options": [
+                        "<strong>",
+                        "<em>",
+                        "<mark>",
+                        "<b>"
+                    ],
+                    "answer": "<strong>"
+                },
+                {
+                    "question": "Câu 15: Thẻ nào dùng để chèn hình ảnh vào trang web?",
+                    "options": [
+                        "<img>",
+                        "<picture>",
+                        "<photo>",
+                        "<image>"
+                    ],
+                    "answer": "<img>"
+                },
+                {
+                    "question": "Câu 16: Thẻ nào được sử dụng để tạo các đoạn văn bản trên trang web trong HTML?",
+                    "options": [
+                        "<h1>",
+                        "<a>",
+                        "<p>",
+                        "<div>"
+                    ],
+                    "answer": "<p>"
+                },
+                {
+                    "question": "Câu 17: Thẻ nào trong HTML được sử dụng để định nghĩa tiêu đề cho một bảng?",
+                    "options": [
+                        "<thead>",
+                        "<title>",
+                        "<header>",
+                        "<footer>"
+                    ],
+                    "answer": "<thead>"
+                },
+                {
+                    "question": "Câu 18: Thẻ nào được dùng để tạo tiêu đề cấp 1 trong HTML?",
+                    "options": [
+                        "<header>",
+                        "<h1>",
+                        "<title>",
+                        "<head>"
+                    ],
+                    "answer": "<h1>"
+                },
+                {
+                    "question": "Câu 19: Để tạo một đoạn văn bản mới trong HTML, ta sử dụng thẻ",
+                    "options": [
+                        "<p>",
+                        "<div>",
+                        "<span>",
+                        "<br>"
+                    ],
+                    "answer": "<p>"
+                },
+                {
+                    "question": "Câu 20: Cú pháp <strong> Nội dung </strong> sử dụng để",
+                    "options": [
+                        "Tô màu đỏ nội dung",
+                        "In nghiêng nội dung",
+                        "Tô màu vàng nội dung",
+                        "In đậm nội dung"
+                    ],
+                    "answer": "In đậm nội dung"
+                }
             ]
         }
     }
