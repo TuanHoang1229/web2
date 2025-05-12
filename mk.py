@@ -569,107 +569,107 @@ with tabs[4]:
         },
         "11": {
             "Chủ đề C": [
+                            {
+                    'question': 'Câu 1: Lưu trữ trực tuyến là gì?',
+                    'options': ['A. Lưu trữ dữ liệu trên một thiết bị lưu trữ ngoại vi', 'B. Lưu trữ dữ liệu trên đám mây', 'C. Lưu trữ dữ liệu trên ổ đĩa cứng', 'D. Lưu trữ dữ liệu trên USB'],
+                    'answer': 'B. Lưu trữ dữ liệu trên đám mây'
+                },
                 {
-                'question': 'Câu 1: Lưu trữ trực tuyến là gì?',
-                'options': ['A. Lưu trữ dữ liệu trên một thiết bị lưu trữ ngoại vi', 'B. Lưu trữ dữ liệu trên đám mây', 'C. Lưu trữ dữ liệu trên ổ đĩa cứng', 'D. Lưu trữ dữ liệu trên USB'],
-                'answer': 'B'
-            },
-            {
-                'question': 'Câu 2: Dịch vụ lưu trữ trực tuyến nào được sử dụng phổ biến nhất?',
-                'options': ['A. Google Drive', 'B. Dropbox', 'C. OneDrive', 'D. iCloud'],
-                'answer': 'A'
-            },
-            {
-                'question': 'Câu 3: Google Drive là gì?',
-                'options': ['A. Dịch vụ lưu trữ trực tuyến của Google', 'B. Trình duyệt web của Google', 'C. Ứng dụng chỉnh sửa văn bản của Google', 'D. Công cụ tìm kiếm của Google'],
-                'answer': 'A'
-            },
-            {
-                'question': 'Câu 4: Google Drive cung cấp bao nhiêu dung lượng lưu trữ miễn phí cho người dùng?',
-                'options': ['A. 5 GB', 'B. 10 GB', 'C. 15 GB', 'D. 20 GB'],
-                'answer': 'C'
-            },
-            {
-                'question': 'Câu 5: Lưu trữ trực tuyến có nhược điểm gì?',
-                'options': ['A. Tốc độ truy cập chậm hơn so với lưu trữ ngoại vi', 'B. Dữ liệu dễ bị mất hoặc bị xâm nhập', 'C. Giá cả đắt đỏ', 'D. Không thể lưu trữ tệp có kích thước lớn.'],
-                'answer': 'B'
-            },
-            {
-                'question': 'Câu 6: Tính năng chia sẻ tệp là gì?',
-                'options': ['A. Cho phép người dùng lưu trữ tệp trên đám mây', 'B. Cho phép người dùng gửi tệp đến người khác để xem hoặc chỉnh sửa', 'C. Cho phép người dùng tải xuống tệp từ đám mây', 'D. Cho phép người dùng tạo bản sao lưu tệp trong trường hợp tệp gốc bị mất.'],
-                'answer': 'B'
-            },
-            {
-                'question': 'Câu 7: Tính năng đồng bộ hóa dữ liệu là gì?',
-                'options': ['A. Cho phép người dùng tải xuống tất cả các tệp từ đám mây', 'B. Cho phép người dùng lưu trữ dữ liệu trên nhiều thiết bị và đồng bộ hóa dữ liệu giữa chúng', 'C. Cho phép người dùng chia sẻ dữ liệu với người khác', 'D. Cho phép người dùng tạo bản sao lưu dữ liệu trên đám mây.'],
-                'answer': 'B'
-            },
-            {
-                'question': 'Câu 8: Lưu trữ trực tuyến? Chọn đáp án SAI',
-                'options': ['A. Lưu trữ tài liệu cá nhân', 'B. Lưu trữ dữ liệu doanh nghiệp', 'C. Lưu trữ tệp tin đa phương tiện như video và âm thanh', 'D. Không giới hạn dung lượng lưu trữ.'],
-                'answer': 'D'
-            },
-            {
-                'question': 'Câu 9: Tính năng nào trên Google Drive cho phép người dùng tạo bản sao lưu tệp tự động?',
-                'options': ['A. Chế độ lịch', 'B. Chế độ xem trình diễn', 'C. Chế độ tìm kiếm', 'D. Chế độ chia sẻ.'],
-                'answer': 'A'
-            },
-            {
-                'question': 'Câu 10: Khi sử dụng dịch vụ Google Drive. Phát biểu nào sai khi nói về thao tác bên dưới?',
-                'options': ['A. Gõ địa chỉ hộp thư của người muốn chia sẻ vào ô hiển thị chữ “Thêm người và nhóm”', 'B. Địa chỉ thư toantinvanquan@gmail.com là địa chỉ hộp thư người chia sẻ.', 'C. Người được chia sẻ có quyền chỉnh sửa tài liệu.', 'D. Người được chia sẻ có quyền xem tài liệu.'],
-                'answer': 'B'
-            },
-            {
-                'question': 'Câu 11: Loại lưu trữ nào đảm bảo rằng dữ liệu được đồng bộ hóa trên nhiều thiết bị và có thể chia sẻ bởi nhiều người dùng ở các vị trí địa lý khác nhau?',
-                'options': ['A. Lưu trữ vật lí', 'B. Lưu trữ trong bộ nhớ', 'C. Lưu trữ trực tuyến', 'D. Lưu trữ đám mây'],
-                'answer': 'C'
-            },
-            {
-                'question': 'Câu 12: Lợi ích chính của lưu trữ trực tuyến là gì?',
-                'options': ['A. Tốc độ truyền dữ liệu cao', 'B. Chi phí thấp', 'C. Độ bền vật lí', 'D. Tiện lợi và chia sẻ dữ liệu'],
-                'answer': 'D'
-            },
-            {
-                'question': 'Câu 13: Công ty nào cung cấp dịch vụ lưu trữ đám mây Google Drive phổ biến?',
-                'options': ['A. Microsoft', 'B. Google', 'C. Apple', 'D. Amazon'],
-                'answer': 'B'
-            },
-            {
-                'question': 'Câu 14: Dịch vụ lưu trữ trực tuyến nào rất phổ biến tại Việt Nam?',
-                'options': ['A. Google Drive', 'B. OneDrive', 'C. Fshare', 'D. Dropbox'],
-                'answer': 'C'
-            },
-            {
-                'question': 'Câu 15: Phương pháp lưu trữ nào liên quan đến việc lưu trữ dữ liệu trên các máy chủ từ xa có thể truy cập qua Internet?',
-                'options': ['A. Lưu trữ đám mây', 'B. Lưu trữ trong bộ nhớ', 'C. Lưu trữ ngoại tuyến', 'D. Lưu trữ trên băng'],
-                'answer': 'A'
-            },
-            {
-                'question': 'Câu 16: Vấn đề chính khi lưu trữ dữ liệu trực tuyến là gì?',
-                'options': ['A. Đồng bộ hóa dữ liệu', 'B. Độ bền vật lí', 'C. Bảo mật dữ liệu', 'D. Tốc độ truyền dữ liệu'],
-                'answer': 'C'
-            },
-            {
-                'question': 'Câu 17: Dịch vụ lưu trữ trực tuyến nào liên quan đến tên miền "www.onedrive.live.com"?',
-                'options': ['A. Google Drive', 'B. OneDrive', 'C. Dropbox', 'D. iCloud'],
-                'answer': 'B'
-            },
-            {
-                'question': 'Câu 18: Thiết bị lưu trữ nào được đặc trưng bởi bộ nhớ không bay hơi và độ bền cao?',
-                'options': ['A. HDD', 'B. SSD', 'C. Ổ đĩa USB flash', 'D. Đĩa quang'],
-                'answer': 'B'
-            },
-            {
-                'question': 'Câu 19: Thuật ngữ nào ám chỉ việc sao lưu dữ liệu đã lưu trữ trực tuyến?',
-                'options': ['A. Đồng bộ hóa dữ liệu', 'B. Nén dữ liệu', 'C. Mã hóa dữ liệu', 'D. Sao lưu dữ liệu'],
-                'answer': 'D'
-            },
-            {
-                'question': 'Câu 20: Công ty nào cung cấp dịch vụ lưu trữ đám mây được biết đến là iCloud?',
-                'options': ['A. Microsoft', 'B. Google', 'C. Apple', 'D. Dropbox'],
-                'answer': 'C'
-            }
-        ],
+                    'question': 'Câu 2: Dịch vụ lưu trữ trực tuyến nào được sử dụng phổ biến nhất?',
+                    'options': ['A. Google Drive', 'B. Dropbox', 'C. OneDrive', 'D. iCloud'],
+                    'answer': 'A. Google Drive'
+                },
+                {
+                    'question': 'Câu 3: Google Drive là gì?',
+                    'options': ['A. Dịch vụ lưu trữ trực tuyến của Google', 'B. Trình duyệt web của Google', 'C. Ứng dụng chỉnh sửa văn bản của Google', 'D. Công cụ tìm kiếm của Google'],
+                    'answer': 'A. Dịch vụ lưu trữ trực tuyến của Google'
+                },
+                {
+                    'question': 'Câu 4: Google Drive cung cấp bao nhiêu dung lượng lưu trữ miễn phí cho người dùng?',
+                    'options': ['A. 5 GB', 'B. 10 GB', 'C. 15 GB', 'D. 20 GB'],
+                    'answer': 'C. 15 GB'
+                },
+                {
+                    'question': 'Câu 5: Lưu trữ trực tuyến có nhược điểm gì?',
+                    'options': ['A. Tốc độ truy cập chậm hơn so với lưu trữ ngoại vi', 'B. Dữ liệu dễ bị mất hoặc bị xâm nhập', 'C. Giá cả đắt đỏ', 'D. Không thể lưu trữ tệp có kích thước lớn.'],
+                    'answer': 'B. Dữ liệu dễ bị mất hoặc bị xâm nhập'
+                },
+                {
+                    'question': 'Câu 6: Tính năng chia sẻ tệp là gì?',
+                    'options': ['A. Cho phép người dùng lưu trữ tệp trên đám mây', 'B. Cho phép người dùng gửi tệp đến người khác để xem hoặc chỉnh sửa', 'C. Cho phép người dùng tải xuống tệp từ đám mây', 'D. Cho phép người dùng tạo bản sao lưu tệp trong trường hợp tệp gốc bị mất.'],
+                    'answer': 'B. Cho phép người dùng gửi tệp đến người khác để xem hoặc chỉnh sửa'
+                },
+                {
+                    'question': 'Câu 7: Tính năng đồng bộ hóa dữ liệu là gì?',
+                    'options': ['A. Cho phép người dùng tải xuống tất cả các tệp từ đám mây', 'B. Cho phép người dùng lưu trữ dữ liệu trên nhiều thiết bị và đồng bộ hóa dữ liệu giữa chúng', 'C. Cho phép người dùng chia sẻ dữ liệu với người khác', 'D. Cho phép người dùng tạo bản sao lưu dữ liệu trên đám mây.'],
+                    'answer': 'B. Cho phép người dùng lưu trữ dữ liệu trên nhiều thiết bị và đồng bộ hóa dữ liệu giữa chúng'
+                },
+                {
+                    'question': 'Câu 8: Lưu trữ trực tuyến? Chọn đáp án SAI',
+                    'options': ['A. Lưu trữ tài liệu cá nhân', 'B. Lưu trữ dữ liệu doanh nghiệp', 'C. Lưu trữ tệp tin đa phương tiện như video và âm thanh', 'D. Không giới hạn dung lượng lưu trữ.'],
+                    'answer': 'D. Không giới hạn dung lượng lưu trữ.'
+                },
+                {
+                    'question': 'Câu 9: Tính năng nào trên Google Drive cho phép người dùng tạo bản sao lưu tệp tự động?',
+                    'options': ['A. Chế độ lịch', 'B. Chế độ xem trình diễn', 'C. Chế độ tìm kiếm', 'D. Chế độ chia sẻ.'],
+                    'answer': 'A. Chế độ lịch'
+                },
+                {
+                    'question': 'Câu 10: Khi sử dụng dịch vụ Google Drive. Phát biểu nào sai khi nói về thao tác bên dưới?',
+                    'options': ['A. Gõ địa chỉ hộp thư của người muốn chia sẻ vào ô hiển thị chữ “Thêm người và nhóm”', 'B. Địa chỉ thư toantinvanquan@gmail.com là địa chỉ hộp thư người chia sẻ.', 'C. Người được chia sẻ có quyền chỉnh sửa tài liệu.', 'D. Người được chia sẻ có quyền xem tài liệu.'],
+                    'answer': 'B. Địa chỉ thư toantinvanquan@gmail.com là địa chỉ hộp thư người chia sẻ.'
+                },
+                {
+                    'question': 'Câu 11: Loại lưu trữ nào đảm bảo rằng dữ liệu được đồng bộ hóa trên nhiều thiết bị và có thể chia sẻ bởi nhiều người dùng ở các vị trí địa lý khác nhau?',
+                    'options': ['A. Lưu trữ vật lí', 'B. Lưu trữ trong bộ nhớ', 'C. Lưu trữ trực tuyến', 'D. Lưu trữ đám mây'],
+                    'answer': 'C. Lưu trữ trực tuyến'
+                },
+                {
+                    'question': 'Câu 12: Lợi ích chính của lưu trữ trực tuyến là gì?',
+                    'options': ['A. Tốc độ truyền dữ liệu cao', 'B. Chi phí thấp', 'C. Độ bền vật lí', 'D. Tiện lợi và chia sẻ dữ liệu'],
+                    'answer': 'D. Tiện lợi và chia sẻ dữ liệu'
+                },
+                {
+                    'question': 'Câu 13: Công ty nào cung cấp dịch vụ lưu trữ đám mây Google Drive phổ biến?',
+                    'options': ['A. Microsoft', 'B. Google', 'C. Apple', 'D. Amazon'],
+                    'answer': 'B. Google'
+                },
+                {
+                    'question': 'Câu 14: Dịch vụ lưu trữ trực tuyến nào rất phổ biến tại Việt Nam?',
+                    'options': ['A. Google Drive', 'B. OneDrive', 'C. Fshare', 'D. Dropbox'],
+                    'answer': 'C. Fshare'
+                },
+                {
+                    'question': 'Câu 15: Phương pháp lưu trữ nào liên quan đến việc lưu trữ dữ liệu trên các máy chủ từ xa có thể truy cập qua Internet?',
+                    'options': ['A. Lưu trữ đám mây', 'B. Lưu trữ trong bộ nhớ', 'C. Lưu trữ ngoại tuyến', 'D. Lưu trữ trên băng'],
+                    'answer': 'A. Lưu trữ đám mây'
+                },
+                {
+                    'question': 'Câu 16: Vấn đề chính khi lưu trữ dữ liệu trực tuyến là gì?',
+                    'options': ['A. Đồng bộ hóa dữ liệu', 'B. Độ bền vật lí', 'C. Bảo mật dữ liệu', 'D. Tốc độ truyền dữ liệu'],
+                    'answer': 'C. Bảo mật dữ liệu'
+                },
+                {
+                    'question': 'Câu 17: Dịch vụ lưu trữ trực tuyến nào liên quan đến tên miền "www.onedrive.live.com"?',
+                    'options': ['A. Google Drive', 'B. OneDrive', 'C. Dropbox', 'D. iCloud'],
+                    'answer': 'B. OneDrive'
+                },
+                {
+                    'question': 'Câu 18: Thiết bị lưu trữ nào được đặc trưng bởi bộ nhớ không bay hơi và độ bền cao?',
+                    'options': ['A. HDD', 'B. SSD', 'C. Ổ đĩa USB flash', 'D. Đĩa quang'],
+                    'answer': 'B. SSD'
+                },
+                {
+                    'question': 'Câu 19: Thuật ngữ nào ám chỉ việc sao lưu dữ liệu đã lưu trữ trực tuyến?',
+                    'options': ['A. Đồng bộ hóa dữ liệu', 'B. Nén dữ liệu', 'C. Mã hóa dữ liệu', 'D. Sao lưu dữ liệu'],
+                    'answer': 'D. Sao lưu dữ liệu'
+                },
+                {
+                    'question': 'Câu 20: Công ty nào cung cấp dịch vụ lưu trữ đám mây được biết đến là iCloud?',
+                    'options': ['A. Microsoft', 'B. Google', 'C. Apple', 'D. Dropbox'],
+                    'answer': 'C. Apple'
+                }
+            ],
             "Chủ đề D": [
                     {
                     'question': 'Câu 1: Đâu không phải là những thủ đoạn lừa đảo trên mạng?',
