@@ -78,8 +78,7 @@ Trang web này được xây dựng nhằm hỗ trợ học sinh THPT học tậ
 - [🔑 Kiểm tra mặt khẩu]
 - [🔧 Thiết kế Web cơ bản]
 - [🔐 An toàn thông tin]
-- [📁 Kho tài liệu thực hành]
-- [🧠 Trắc nghiệm tự luyện]
+- [📁 Kho tài liệu và trắc nghiệm tự luyện]
 - [💬 Góc chia sẻ và nộp bài]
 
 ---
