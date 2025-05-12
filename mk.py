@@ -127,15 +127,17 @@ with tabs[2]:
     """)
 
     st.markdown("""
-    <div style='margin-top: 20px; font-size: 15px;'>
-        <p><strong>📘 Cách viết web bằng HTML và CSS đơn giản, chi tiết</strong></p>
-        <p>Nếu bạn mới học lập trình web thì hãy bắt đầu với <strong>HTML</strong> và <strong>CSS</strong>. Đây là hai ngôn ngữ cơ bản và quan trọng trong xây dựng web.</p>
-        <p>Việc viết code web bằng HTML và CSS không khó, tuy nhiên nó đòi hỏi bạn cần có các kiến thức nhất định về lập trình, cụ thể:</p>
-        <ul>
-            <li>HTML giúp bạn xác định nội dung trên trang như tiêu đề, đoạn văn, hình ảnh, liên kết,...</li>
-            <li>CSS giúp bạn làm đẹp trang web: thay đổi màu sắc, căn lề, điều chỉnh khoảng cách và thiết kế bố cục hợp lý.</li>
-        </ul>
-        <p>💡 <em>Lời khuyên:</em> Hãy luyện tập thường xuyên bằng cách tạo những trang web nhỏ như hồ sơ cá nhân, trang giới thiệu sản phẩm,... để làm quen với HTML & CSS.</p>
+    <div style='margin-top: 20px;'>
+        <h3 style='margin-bottom: 10px;'>📘 Cách viết web bằng HTML và CSS đơn giản, chi tiết</h3>
+        <div style='font-size: 16px; line-height: 1.6;'>
+            <p>Nếu bạn mới học lập trình web thì hãy bắt đầu với <strong>HTML</strong> và <strong>CSS</strong>. Đây là hai ngôn ngữ cơ bản và quan trọng trong xây dựng web.</p>
+            <p>Việc viết code web bằng HTML và CSS không khó, tuy nhiên nó đòi hỏi bạn cần có các kiến thức nhất định về lập trình, cụ thể:</p>
+            <ul>
+                <li>HTML giúp bạn xác định nội dung trên trang như tiêu đề, đoạn văn, hình ảnh, liên kết,...</li>
+                <li>CSS giúp bạn làm đẹp trang web: thay đổi màu sắc, căn lề, điều chỉnh khoảng cách và thiết kế bố cục hợp lý.</li>
+            </ul>
+            <p>💡 <em>Lời khuyên:</em> Hãy luyện tập thường xuyên bằng cách tạo những trang web nhỏ như hồ sơ cá nhân, trang giới thiệu sản phẩm,... để làm quen với HTML & CSS.</p>
+        </div>
     </div>
     """, unsafe_allow_html=True)
 
