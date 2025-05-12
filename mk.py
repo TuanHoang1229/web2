@@ -671,11 +671,156 @@ with tabs[4]:
             }
         ],
             "Chủ đề D": [
-                {
-                    "question": "Lớp 11 - Câu hỏi 1: CSS dùng để làm gì?",
-                    "options": ["Tạo cấu trúc trang", "Tạo tương tác", "Định dạng giao diện", "Lưu trữ dữ liệu"],
-                    "answer": "Định dạng giao diện"
+                    {
+                    'question': 'Câu 1: Đâu không phải là những thủ đoạn lừa đảo trên mạng?',
+                    'options': [
+                        'A. Lừa đảo trúng thưởng, tặng quà để lấy tiền phí vận chuyển',
+                        'B. Lừa đảo chiếm tiền đặt cọc hoặc bán hàng giả',
+                        'C. Lừa đảo để lấy cắp thông tin cá nhân',
+                        'D. Khai báo thông tin cá nhân khi đăng ký dịch vụ công trực tuyến'
+                    ],
+                    'answer': 'D. Khai báo thông tin cá nhân khi đăng ký dịch vụ công trực tuyến'
                 },
+                {
+                    'question': 'Câu 2: Đâu không phải là dấu hiệu lừa đảo để lấy cắp thông tin cá nhân bằng trang web?',
+                    'options': [
+                        'A. Trang web có lỗi chính tả, lỗi hành văn thì đó có thể là lừa đảo',
+                        'B. Tên miền gồm vài phần cách nhau dấu chấm',
+                        'C. Những cách viết sai chính tả trong tên miền để đánh lừa người đọc như thay chữ “o” bằng số 0; thay chữ “m” bằng “r” và “n”',
+                        'D. Trỏ chuột vào liên kết thấy địa chỉ đích hiện ra khớp với địa chỉ hiển thị'
+                    ],
+                    'answer': 'D. Trỏ chuột vào liên kết thấy địa chỉ đích hiện ra khớp với địa chỉ hiển thị'
+                },
+                {
+                    'question': 'Câu 3: Đâu là nguyên tắc để hạn chế thiệt hại?',
+                    'options': [
+                        'A. Không mở bất kì liên kết hoặc tệp đính kèm nào mà hãy kiểm tra địa chỉ đích thực sự để phát hiện liên kết lừa đảo.',
+                        'B. Trỏ chuột vào một liên kết nhưng không nháy chuột, ta sẽ nhìn thấy địa chỉ địch thực sự mà liên kết sẽ mở ra.',
+                        'C. Nếu tài khoản bị ảnh hưởng có liên quan đến nhà trường hay một cơ quan, tổ chức, cần thông báo ngay cho người có trách nhiệm',
+                        'D. Gọi điện thoại trực tiếp, truy cập địa chỉ trang web in trên các tài liệu chính thức'
+                    ],
+                    'answer': 'A. Không mở bất kì liên kết hoặc tệp đính kèm nào mà hãy kiểm tra địa chỉ đích thực sự để phát hiện liên kết lừa đảo.'
+                },
+                {
+                    'question': 'Câu 4: Điều nào cho chúng ta dễ dàng nhận biết nhất là đang bị lừa đảo?',
+                    'options': [
+                        'A. Nhắn tin hỏi thăm sức khỏe',
+                        'B. Người thân gọi điện hỏi thăm sức khỏe',
+                        'C. Gửi Email đi phỏng vấn công việc',
+                        'D. Tin nhắn lạ hỏi vay tiền, vay thẻ nạp điện thoại'
+                    ],
+                    'answer': 'D. Tin nhắn lạ hỏi vay tiền, vay thẻ nạp điện thoại'
+                },
+                {
+                    'question': 'Câu 5: Trong tin học, Phishing là gì?',
+                    'options': [
+                        'A. Lừa đảo để lấy cắp thông tin cá nhân bằng các trang web giả',
+                        'B. Lừa đảo nhận được quà tặng từ dịch vụ chuyển phát',
+                        'C. Lừa đảo chiếm tiền đặt cọc',
+                        'D. Lừa đảo để lấy phí vận chuyển'
+                    ],
+                    'answer': 'A. Lừa đảo để lấy cắp thông tin cá nhân bằng các trang web giả'
+                },
+                {
+                    'question': 'Câu 6: Không tìm cách đọc mail, tin nhắn của người khác thuộc nguyên tắc ứng xử nào?',
+                    'options': [
+                        'A. Không lợi dụng vị thế của mình để làm việc xấu',
+                        'B. Tôn trọng quyền riêng tư của người khác',
+                        'C. Tôn trọng văn hóa nhóm',
+                        'D. Đặt mình vào vị trí của người khác'
+                    ],
+                    'answer': 'B. Tôn trọng quyền riêng tư của người khác'
+                },
+                {
+                    'question': 'Câu 7: Việc tạo lập một tài khoản giả mạo trên mạng xã hội nhằm lừa đảo, gây tổn hại đến người khác có thể bị xử lý như thế nào?',
+                    'options': [
+                        'A. Bị phạt tiền hoặc bị truy cứu trách nhiệm hình sự tùy theo mức độ nghiêm trọng',
+                        'B. Không bị xử lý vì đó là tự do cá nhân',
+                        'C. Chỉ bị nhắc nhở từ nhà cung cấp dịch vụ',
+                        'D. Tài khoản bị khóa tạm thời mà không có hình phạt nào khác'
+                    ],
+                    'answer': 'A. Bị phạt tiền hoặc bị truy cứu trách nhiệm hình sự tùy theo mức độ nghiêm trọng'
+                },
+                {
+                    'question': 'Câu 8: Trong môi trường số, việc chia sẻ quá nhiều thông tin cá nhân có thể dẫn đến hậu quả gì?',
+                    'options': [
+                        'A. Giúp bạn bè hiểu rõ hơn về bạn',
+                        'B. Gây nguy cơ mất cắp thông tin, lừa đảo và xâm phạm quyền riêng tư',
+                        'C. Tăng khả năng tìm kiếm việc làm',
+                        'D. Giúp nâng cao uy tín cá nhân'
+                    ],
+                    'answer': 'B. Gây nguy cơ mất cắp thông tin, lừa đảo và xâm phạm quyền riêng tư'
+                },
+                {
+                    'question': 'Câu 9: Tại sao chúng ta cần tôn trọng quyền riêng tư của người khác trên mạng xã hội?',
+                    'options': [
+                        'A. Vì luật pháp yêu cầu như vậy',
+                        'B. Vì tôn trọng quyền riêng tư là một phần của đạo đức và văn hóa ứng xử trên mạng',
+                        'C. Vì nó giúp tăng số lượng người theo dõi',
+                        'D. Vì người khác có thể trả thù nếu quyền riêng tư bị xâm phạm'
+                    ],
+                    'answer': 'B. Vì tôn trọng quyền riêng tư là một phần của đạo đức và văn hóa ứng xử trên mạng'
+                },
+                {
+                    'question': 'Câu 10: Quan điểm nào sau đây là đúng về sử dụng mạng xã hội?',
+                    'options': [
+                        'A. Mạng xã hội là thế giới ảo, nên luật pháp trên mạng cũng chỉ là ảo',
+                        'B. Sử dụng mạng xã hội để buôn bán thì thích bán gì thì bán, không cần giấy phép kinh doanh',
+                        'C. Không có điều lệ nào quy định phải sử dụng ngôn từ hợp đạo đức. Ngươi chửi mắng mình thì mình cũng chửi mắng lại',
+                        'D. Thế giới ảo nhưng cuộc sống thực, nên nó sẽ ảnh hưởng đến đời sống thực'
+                    ],
+                    'answer': 'D. Thế giới ảo nhưng cuộc sống thực, nên nó sẽ ảnh hưởng đến đời sống thực'
+                },
+                {
+                    'question': 'Câu 11: Theo quy định của pháp luật Việt Nam, hành vi đăng tải thông tin sai sự thật lên mạng xã hội có thể bị xử phạt như thế nào?',
+                    'options': [
+                        'A. Bị cảnh cáo',
+                        'B. Bị xử phạt hành chính hoặc truy cứu trách nhiệm hình sự',
+                        'C. Bị khóa tài khoản mạng xã hội',
+                        'D. Không có hình thức xử phạt nào'
+                    ],
+                    'answer': 'B. Bị xử phạt hành chính hoặc truy cứu trách nhiệm hình sự'
+                },
+                {
+                    'question': 'Câu 12: Trong trường hợp bạn nhận được email từ một nguồn không rõ yêu cầu cung cấp thông tin cá nhân, bạn nên làm gì?',
+                    'options': [
+                        'A. Cung cấp ngay thông tin để nhận được phần thưởng',
+                        'B. Kiểm tra tính xác thực của email và không cung cấp thông tin nếu không chắc chắn',
+                        'C. Bỏ qua và tiếp tục sử dụng mạng bình thường',
+                        'D. Chia sẻ email đó với bạn bè để cùng nhận thưởng'
+                    ],
+                    'answer': 'B. Kiểm tra tính xác thực của email và không cung cấp thông tin nếu không chắc chắn'
+                },
+                {
+                    'question': 'Câu 13: Khi đã bị lừa đảo tiền bạc và hăm dọa tinh thần trên không gian mạng, bạn My đã đăng tải lên facebook cá nhân về điều đó, tuy nhiên văn hóa mạng rất tồi tệ đã chỉ trích và nói “đấy là điều bạn đáng phải nhận, dốt thì phải tự chịu,….” Hãy cho bạn My một phương án tốt nhất?',
+                    'options': [
+                        'A. Lên facebook để trả lời các bình luận, và đòi lại công bằng cho bản thân',
+                        'B. Nói với người thân và nên dừng sử dụng mạng xã hội facebook một thời gian. Nên có khoảng thời gian hồi phục tinh thần. Trình báo cho cơ quan chức năng về độ nghiệm trọng của sự việc',
+                        'C. Tiếp tục đăng bài, chửi rủa và sử dụng vũ lực để đòi lại công bằng',
+                        'D. Ngày nào cũng đăng bài công kích lại những chỉ trích đó'
+                    ],
+                    'answer': 'B. Nói với người thân và nên dừng sử dụng mạng xã hội facebook một thời gian. Nên có khoảng thời gian hồi phục tinh thần. Trình báo cho cơ quan chức năng về độ nghiệm trọng của sự việc'
+                },
+                {
+                    'question': 'Câu 14: Nếu nhận một tin nhắn lạ hỏi vay tiền thì ta nên làm gì?',
+                    'options': [
+                        'A. Gọi điện lại ngay và kiểm tra thông tin của người hỏi',
+                        'B. Chuyển tiền luôn cho người ta',
+                        'C. Kệ người ta',
+                        'D. Chia sẻ thông tin đó cho nhiều người biết'
+                    ],
+                    'answer': 'A. Gọi điện lại ngay và kiểm tra thông tin của người hỏi'
+                },
+                {
+                    'question': 'Câu 15: Bạn Lan đang sử dụng internet để lướt web thì thấy mọt tin nhắn từ bạn thân mình là bạn B gửi đến “Cậu cho mình vay 1 triệu mình đưa mẹ đi khám”. Nếu là Lan bạn sẽ làm gì ngay lúc này?',
+                    'options': [
+                        'A. Gọi điện cho B và kiểm tra lại thông tin, đúng thì cho vay',
+                        'B. Chuyển tiền ngay cho B để còn kịp thời đưa mẹ B đi viện',
+                        'C. Không quan tâm, vì không muốn dây dưa tiền bạc',
+                        'D. Đi hỏi người khác cho B vay chứ mình không cho vay'
+                    ],
+                    'answer': 'A. Gọi điện cho B và kiểm tra lại thông tin, đúng thì cho vay'
+                }
             ]
         },
         "12": {
