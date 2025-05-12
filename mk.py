@@ -34,6 +34,8 @@ tabs = st.tabs([
     "🔐 An toàn thông tin",
     "📂 Kho tài liệu",
     "💬 Góc chia sẻ",
+    "🔓 Đăng nhập",
+    "📝 Đăng ký"
 ])
 
 # --- Trang Chủ ---
@@ -1427,3 +1429,43 @@ with tabs[1]:
             </ol>
         </div>
         """, unsafe_allow_html=True)
+
+
+# 🔓 Đăng nhập (tab 6)
+with tabs[6]:
+    st.markdown("## 🔓 Đăng nhập")
+
+    username = st.text_input("Username", key="login_user")
+    password = st.text_input("Mật khẩu", type="password", key="login_pass")
+
+    if st.button("ĐĂNG NHẬP", type="primary", use_container_width=True):
+        if not username or not password:
+            st.warning("Vui lòng nhập username và mật khẩu.")
+        else:
+            st.success(f"Xin chào, {username}!")
+
+    st.markdown("Chưa có tài khoản? [Đăng ký.](#)")
+
+#--- Đăng Ký --- 
+with tabs[7]:  # Đăng ký
+    st.markdown("## 📝 Đăng ký tài khoản")
+
+    st.markdown("### Hoặc")
+    full_name = st.text_input("Họ và tên")
+    username = st.text_input("Username")
+    password = st.text_input("Mật khẩu", type="password")
+    email = st.text_input("Email")
+
+    captcha = st.checkbox("Tôi không phải là người máy")
+    agree = st.checkbox("Tôi đồng ý với thỏa thuận sử dụng của Tin Học Online")
+
+    if st.button("ĐĂNG KÝ", type="primary", use_container_width=True):
+        if not (full_name and username and password and email):
+            st.warning("Vui lòng điền đầy đủ thông tin.")
+        elif not captcha or not agree:
+            st.warning("Bạn cần xác nhận CAPTCHA và đồng ý điều khoản.")
+        else:
+            st.success("✅ Đăng ký thành công!")
+    
+    st.markdown("Bạn đã có tài khoản? [Đăng nhập.](#)")
+
