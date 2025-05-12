@@ -303,8 +303,11 @@ with tabs[4]:
     st.subheader("📖 Sách lật trang")
     st.markdown("- [Giáo trình Tin học căn bản (FlipBook)](https://online.fliphtml5.com/irxmh/xiua/)")
 
+
+
+
+    # --- CH trắc nghiệm
     st.subheader("🧠 Trắc nghiệm tự luyện")
-    
     # Ngân hàng câu hỏi theo lớp và chủ đề
     question_bank = {
         "10": {
@@ -338,56 +341,74 @@ with tabs[4]:
                     "answer": "Định dạng giao diện"
                 },
             ]
+        },
+        "12": {
+            "Chủ đề E": [
+                {
+                    "question": "Lớp 12 - Câu hỏi 1: Đạo hàm của hàm số y = x^2 là gì?",
+                    "options": ["x", "2x", "x^2", "2"],
+                    "answer": "2x"
+                },
+            ],
+            "Chủ đề F": [
+                {
+                    "question": "Lớp 12 - Câu hỏi 1: SQL viết tắt của cụm từ nào?",
+                    "options": ["Structured Question Language", "Strong Query Language", "Structured Query Language", "System Query Level"],
+                    "answer": "Structured Query Language"
+                },
+            ]
         }
     }
-
+    
     # Bước 1: Chọn lớp
-    selected_class = st.selectbox("📚 Chọn lớp:", ["10", "11"])
+    selected_class = st.selectbox("📚 Chọn lớp:", ["-- Chọn lớp --", "10", "11", "12"])
     
-    # Bước 2: Chọn chủ đề dựa theo lớp đã chọn
-    topics = list(question_bank[selected_class].keys())
-    selected_topic = st.selectbox("📂 Chọn chủ đề:", topics)
+    # Bước 2: Chọn chủ đề (chỉ khi lớp hợp lệ)
+    if selected_class in question_bank:
+        topics = list(question_bank[selected_class].keys())
+        selected_topic = st.selectbox("📂 Chọn chủ đề:", ["-- Chọn chủ đề --"] + topics)
     
-    # Nếu cả lớp và chủ đề đều đã chọn, hiển thị câu hỏi
-    if selected_class and selected_topic:
-        questions = question_bank[selected_class][selected_topic]
-        st.markdown("### 📋 Trả lời câu hỏi:")
-        
-        # Danh sách chứa câu trả lời của người dùng
-        user_answers = []
+        # Bước 3: Chỉ hiển thị câu hỏi khi chủ đề đã chọn hợp lệ
+        if selected_topic in question_bank[selected_class]:
+            questions = question_bank[selected_class][selected_topic]
+            st.markdown("### 📋 Trả lời câu hỏi:")
+            
+            # Danh sách chứa câu trả lời của người dùng
+            user_answers = []
     
-        # Hiển thị câu hỏi và các lựa chọn
-        for i, q in enumerate(questions):
-            ans = st.radio(q["question"], q["options"], key=f"{selected_class}_{selected_topic}_{i}")
-            user_answers.append(ans)
-    
-        # Khi nhấn nút "Nộp bài"
-        if st.button("📤 Nộp bài"):
-            score = 0
-            st.markdown("## 🎯 Kết quả:")
-    
-            # Kiểm tra từng câu trả lời
+            # Hiển thị câu hỏi và các lựa chọn
             for i, q in enumerate(questions):
-                user_answer = user_answers[i]
-                correct_answer = q["answer"]
-                is_correct = user_answer == correct_answer
+                ans = st.radio(q["question"], q["options"], key=f"{selected_class}_{selected_topic}_{i}")
+                user_answers.append(ans)
     
-                # Thông báo kết quả từng câu
-                if is_correct:
-                    score += 1
-                    st.markdown(f"✅ **Câu {i+1}: Đúng**")
-                else:
-                    st.markdown(f"❌ **Câu {i+1}: Sai**")
-                    st.markdown(f"- Bạn chọn: `{user_answer}`")
-                    st.markdown(f"- Đáp án đúng: `{correct_answer}`")
-                st.markdown("---")
+            # Khi nhấn nút "Nộp bài"
+            if st.button("📤 Nộp bài"):
+                score = 0
+                st.markdown("## 🎯 Kết quả:")
     
-            # Hiển thị điểm và kết quả
-            st.success(f"🎉 Bạn được {score}/{len(questions)} điểm.")
+                # Kiểm tra từng câu trả lời
+                for i, q in enumerate(questions):
+                    user_answer = user_answers[i]
+                    correct_answer = q["answer"]
+                    is_correct = user_answer == correct_answer
     
-            # Nếu đúng hết, hiển thị bóng bay
-            if score == len(questions):
-                st.balloons()
+                    if is_correct:
+                        score += 1
+                        st.markdown(f"✅ **Câu {i+1}: Đúng**")
+                    else:
+                        st.markdown(f"❌ **Câu {i+1}: Sai**")
+                        st.markdown(f"- Bạn chọn: `{user_answer}`")
+                        st.markdown(f"- Đáp án đúng: `{correct_answer}`")
+                    st.markdown("---")
+    
+                # Hiển thị điểm
+                st.success(f"🎉 Bạn được {score}/{len(questions)} điểm.")
+    
+                # Nếu đúng hết, hiển thị bóng bay
+                if score == len(questions):
+                    st.balloons()
+    
+
 
     # --- Website học lập trình (quốc tế) ---
     st.subheader("🌐 Website học lập trình")
