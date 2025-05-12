@@ -465,11 +465,106 @@ with tabs[4]:
             }
         ],
             "Chủ đề B": [
-                {
-                    "question": "Lớp 10 - Câu hỏi 1: HTML là viết tắt của?",
-                    "options": ["Hyper Text Markup Language", "High Text Machine Language", "Home Tool Markup Language", "Hyperlinks and Text Markup Language"],
-                    "answer": "Hyper Text Markup Language"
+                    {
+                    "question": "Câu 1: Để tránh phần mềm độc hại chúng ta cần làm gì?",
+                    "options": ["Sử dụng phần mềm diệt virus.", "Mở mail có tệp lạ.", "Sử dụng phần mềm không rõ nguồn gốc.", "Tránh sử dụng USB khi chưa kiểm tra thiết bị đó."],
+                    "answer": "Sử dụng phần mềm diệt virus."
                 },
+                {
+                    "question": "Câu 2: Hạn chế của mạng Internet?",
+                    "options": ["Cập nhật tin tức và xu hướng nhanh nhất; kết nối với nhiều người.", "Học hỏi được nhiều kỹ năng bổ ích.", "Tìm hiểu về các chủ đề mới; các trò chơi rèn luyện IQ.", "Dễ dàng tiếp cận với những thông tin nguy hiểm, hình ảnh bạo lực."],
+                    "answer": "Dễ dàng tiếp cận với những thông tin nguy hiểm, hình ảnh bạo lực."
+                },
+                {
+                    "question": "Câu 3: Thuật ngữ E-Payment dùng để chỉ lĩnh vực nào?",
+                    "options": ["Thương mại điện tử.", "Ngân hàng điện tử.", "Thanh toán điện tử.", "Thông tin số."],
+                    "answer": "Thanh toán điện tử."
+                },
+                {
+                    "question": "Câu 4: Thuật ngữ E-Commerce dùng để chỉ lĩnh vực nào?",
+                    "options": ["Thương mại điện tử.", "Ngân hàng điện tử.", "Thanh toán điện tử.", "Thông tin số."],
+                    "answer": "Thương mại điện tử."
+                },
+                {
+                    "question": "Câu 5: Thuật ngữ E-Government để chỉ dịch vụ nào?",
+                    "options": ["Học liệu mở.", "Chính phủ điện tử.", "Ngân hàng điện tử.", "Y tế số."],
+                    "answer": "Chính phủ điện tử."
+                },
+                {
+                    "question": "Câu 6: Việt Nam bắt đầu cung cấp dịch vụ Internet cho người dân vào năm nào?",
+                    "options": ["1996", "1997", "1998", "1999"],
+                    "answer": "1997"
+                },
+                {
+                    "question": "Câu 7: Tên tiếng Anh của điện toán đám mây là gì?",
+                    "options": ["Gmail.", "Zoom Cloud Meeting.", "Cloud Computing.", "Google Meet."],
+                    "answer": "Cloud Computing."
+                },
+                {
+                    "question": "Câu 8: Mạng LAN là viết tắt của cụm từ nào?",
+                    "options": ["Local Arian Network", "Lomal Area Network", "Local Area", "Local Area Network"],
+                    "answer": "Local Area Network"
+                },
+                {
+                    "question": "Câu 9: Hành vi nào có thể làm cho máy tính bị nhiễm các phần mềm độc hại?",
+                    "options": ["Truy cập các nguồn học liệu mở", "Truy cập các trang mua sắm lớn", "Truy cập vào đường link lạ", "Truy cập trang nghe nhạc trực tuyến"],
+                    "answer": "Truy cập vào đường link lạ"
+                },
+                {
+                    "question": "Câu 10: Đâu không phải là dịch vụ lưu trữ qua điện toán đám mây?",
+                    "options": ["Dropbox.", "Google Drive.", "iCoud.", "Paint."],
+                    "answer": "Paint."
+                },
+                {
+                    "question": "Câu 11: Đâu là từ viết tắt của Internet vạn vật?",
+                    "options": ["ICT.", "CS.", "IoT.", "OST."],
+                    "answer": "IoT."
+                },
+                {
+                    "question": "Câu 12: Chọn đáp án sai khi nói về tác động tích cực của mạng Internet?",
+                    "options": ["Học tập trực tuyến hiệu quả.", "Mua sắm trực tuyến dễ dàng.", "Lười suy nghĩ.", "Trò chuyện trực tuyến thuận lợi."],
+                    "answer": "Lười suy nghĩ."
+                },
+                {
+                    "question": "Câu 13: Mô tả nào sau đây sai khi nói về Internet?",
+                    "options": ["Là một mạng máy tính.", "Có phạm vi bao phủ khắp thế giới.", "Hàng tỉ người truy cập và sử dụng.", "Là tài sản và hoạt động dưới sự quản lí của một công ty tin học lớn nhất thế giới."],
+                    "answer": "Là tài sản và hoạt động dưới sự quản lí của một công ty tin học lớn nhất thế giới."
+                },
+                {
+                    "question": "Câu 14: Khi sử dụng máy tính có kết nối mạng, bạn không sử dụng ứng dụng nặng mà máy tính vẫn chạy rất chậm so với bình thường. Dấu hiệu đó báo hiệu điều gì?",
+                    "options": ["Máy tính có thể đã bị nhiễm virus.", "Máy tính có thể đã hỏng ổ đĩa cứng.", "Máy tính có thể đã bị hỏng loa.", "Máy tính không có kết nối Internet."],
+                    "answer": "Máy tính có thể đã bị nhiễm virus."
+                },
+                {
+                    "question": "Câu 15: Những tờ tiền giấy có thể bị bẩn, bị rách hoặc bị làm giả. Ứng dụng nào sau đây của Internet giúp khắc phục những hạn chế đó?",
+                    "options": ["E – Learning", "E – Government", "Mạng xã hội", "E – Payment"],
+                    "answer": "E – Payment"
+                },
+                {
+                    "question": "Câu 16: Gia đình bạn An cần tìm hiểu và làm thủ tục đóng thuế trước bạ về đất đai, nhưng do dịch Covid-19 nên phải hạn chế đi lại. Trong trường hợp này, ứng dụng nào sau đây của mạng máy tính hữu ích?",
+                    "options": ["E-Learning.", "E-Government.", "E-Payment.", "E-Commerce."],
+                    "answer": "E-Government."
+                },
+                {
+                    "question": "Câu 17: Đâu là ưu điểm của việc liên lạc qua Email?",
+                    "options": ["Chi phí cao hơn.", "Bức thư không bao giờ bị thất lạc hay bị kẻ gian đọc trộm.", "Có thể gửi cả âm thanh, hình ảnh, video.", "Ít thuận tiện hơn cho người sử dụng."],
+                    "answer": "Có thể gửi cả âm thanh, hình ảnh, video."
+                },
+                {
+                    "question": "Câu 18: Hành vi nào có thể làm cho máy tính bị nhiễm các phần mềm độc hại?",
+                    "options": ["Truy cập các nguồn học liệu mở.", "Truy cập các trang mua sắm lớn.", "Truy cập vào đường link lạ.", "Truy cập trang nghe nhạc trực tuyến."],
+                    "answer": "Truy cập vào đường link lạ."
+                },
+                {
+                    "question": "Câu 19: Trường hợp nào không thích hợp để sử dụng mạng LAN?",
+                    "options": ["Tòa nhà.", "Cơ quan.", "Nhà riêng.", "Quận/huyện."],
+                    "answer": "Quận/huyện."
+                },
+                {
+                    "question": "Câu 20: Phát biểu đúng về điện toán đám mây?",
+                    "options": ["Nó sẽ luôn rẻ hơn và an toàn hơn so với máy tính cục bộ.", "Bạn có thể truy cập dữ liệu của mình từ bất kỳ máy tính nào trên thế giới, miễn là bạn có kết nối Internet.", "Chỉ có một vài công ty nhỏ đang đầu tư vào công nghệ, làm cho nó trở thành một công việc mạo hiểm.", "Bạn có thể truy cập dữ liệu của mình từ bất kỳ máy tính nào trên thế giới."],
+                    "answer": "Bạn có thể truy cập dữ liệu của mình từ bất kỳ máy tính nào trên thế giới, miễn là bạn có kết nối Internet."
+                }
             ]
         },
         "11": {
