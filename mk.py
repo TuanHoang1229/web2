@@ -327,8 +327,11 @@ with tabs[4]:
 
     # --- Sách lật trang ---
     st.subheader("📖 Sách lật trang")
-    st.markdown("- [Giáo trình Tin học căn bản (FlipBook)](https://online.fliphtml5.com/irxmh/xiua/)")
-
+    st.markdown("""
+    - [Tin Học 10](https://online.fliphtml5.com/irxmh/xdee/)
+    - [Tin Học 11](#)
+    - [Tin Học 12](#)
+    """)
 
 
 
