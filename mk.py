@@ -303,67 +303,91 @@ with tabs[4]:
     st.subheader("📖 Sách lật trang")
     st.markdown("- [Giáo trình Tin học căn bản (FlipBook)](https://online.fliphtml5.com/irxmh/xiua/)")
 
-    # --- CH Trắc nghiệm
-    st.header("🧠 Trắc nghiệm tự luyện")
+    st.subheader("🧠 Trắc nghiệm tự luyện")
+    
+    # Ngân hàng câu hỏi theo lớp và chủ đề
     question_bank = {
-    "An toàn thông tin": [
-        {
-            "question": "Câu hỏi 1: Bạn nên làm gì khi nhận được email từ người lạ kèm tệp đính kèm?",
-            "options": ["Mở ngay tệp để xem", "Chuyển tiếp", "Không mở và xoá email", "Trả lời email"],
-            "answer": "Không mở và xoá email"
+        "10": {
+            "Chủ đề A": [
+                {
+                    "question": "Lớp 10 - Câu hỏi 1: Số nguyên tố nhỏ nhất là?",
+                    "options": ["0", "1", "2", "3"],
+                    "answer": "2"
+                },
+            ],
+            "Chủ đề B": [
+                {
+                    "question": "Lớp 10 - Câu hỏi 1: HTML là viết tắt của?",
+                    "options": ["Hyper Text Markup Language", "High Text Machine Language", "Home Tool Markup Language", "Hyperlinks and Text Markup Language"],
+                    "answer": "Hyper Text Markup Language"
+                },
+            ]
         },
-    ],
-    "Thiết kế web cơ bản": [
-        {
-            "question": "Câu hỏi 1: Thẻ nào tạo tiêu đề lớn nhất trong HTML?",
-            "options": ["<title>", "<head>", "<h1>", "<header>"],
-            "answer": "<h1>"
-        },
-    ]
-}
-        # Chọn chuyên đề
-    topic = st.selectbox("Chọn chuyên đề:", list(question_bank.keys()))
-    questions = question_bank[topic]
-    
-    st.markdown("### 📋 Trả lời câu hỏi:")
-    
-    # Danh sách chứa câu trả lời của người dùng
-    user_answers = []
-    
-    # Hiển thị câu hỏi và các lựa chọn
-    for i, q in enumerate(questions):
-        ans = st.radio(q["question"], q["options"], key=f"{topic}_{i}")
-        user_answers.append(ans)
-    
-    # Khi nhấn nút "Nộp bài"
-    if st.button("📤 Nộp bài"):
-        score = 0
-        st.markdown("## 🎯 Kết quả:")
-    
-        # Kiểm tra từng câu trả lời
-        for i, q in enumerate(questions):
-            user_answer = user_answers[i]
-            correct_answer = q["answer"]
-            is_correct = user_answer == correct_answer
-    
-            # Thông báo kết quả từng câu
-            if is_correct:
-                score += 1
-                st.markdown(f"✅ **Câu {i+1}: Đúng**")
-            else:
-                st.markdown(f"❌ **Câu {i+1}: Sai**")
-                st.markdown(f"- Bạn chọn: `{user_answer}`")
-                st.markdown(f"- Đáp án đúng: `{correct_answer}`")
-    
-            st.markdown("---")
-    
-        # Hiển thị điểm và kết quả
-        st.success(f"🎉 Bạn được {score}/{len(questions)} điểm.")
-        
-        # Nếu đúng hết, hiển thị bóng bay
-        if score == len(questions):
-            st.balloons()
+        "11": {
+            "Chủ đề C": [
+                {
+                    "question": "Lớp 11 - Câu hỏi 1: Tập hợp các số thực được ký hiệu là gì?",
+                    "options": ["N", "Z", "Q", "R"],
+                    "answer": "R"
+                },
+            ],
+            "Chủ đề D": [
+                {
+                    "question": "Lớp 11 - Câu hỏi 1: CSS dùng để làm gì?",
+                    "options": ["Tạo cấu trúc trang", "Tạo tương tác", "Định dạng giao diện", "Lưu trữ dữ liệu"],
+                    "answer": "Định dạng giao diện"
+                },
+            ]
+        }
+    }
 
+    # Bước 1: Chọn lớp
+    selected_class = st.selectbox("📚 Chọn lớp:", ["10", "11"])
+    
+    # Bước 2: Chọn chủ đề dựa theo lớp đã chọn
+    topics = list(question_bank[selected_class].keys())
+    selected_topic = st.selectbox("📂 Chọn chủ đề:", topics)
+    
+    # Nếu cả lớp và chủ đề đều đã chọn, hiển thị câu hỏi
+    if selected_class and selected_topic:
+        questions = question_bank[selected_class][selected_topic]
+        st.markdown("### 📋 Trả lời câu hỏi:")
+        
+        # Danh sách chứa câu trả lời của người dùng
+        user_answers = []
+    
+        # Hiển thị câu hỏi và các lựa chọn
+        for i, q in enumerate(questions):
+            ans = st.radio(q["question"], q["options"], key=f"{selected_class}_{selected_topic}_{i}")
+            user_answers.append(ans)
+    
+        # Khi nhấn nút "Nộp bài"
+        if st.button("📤 Nộp bài"):
+            score = 0
+            st.markdown("## 🎯 Kết quả:")
+    
+            # Kiểm tra từng câu trả lời
+            for i, q in enumerate(questions):
+                user_answer = user_answers[i]
+                correct_answer = q["answer"]
+                is_correct = user_answer == correct_answer
+    
+                # Thông báo kết quả từng câu
+                if is_correct:
+                    score += 1
+                    st.markdown(f"✅ **Câu {i+1}: Đúng**")
+                else:
+                    st.markdown(f"❌ **Câu {i+1}: Sai**")
+                    st.markdown(f"- Bạn chọn: `{user_answer}`")
+                    st.markdown(f"- Đáp án đúng: `{correct_answer}`")
+                st.markdown("---")
+    
+            # Hiển thị điểm và kết quả
+            st.success(f"🎉 Bạn được {score}/{len(questions)} điểm.")
+    
+            # Nếu đúng hết, hiển thị bóng bay
+            if score == len(questions):
+                st.balloons()
 
     # --- Website học lập trình (quốc tế) ---
     st.subheader("🌐 Website học lập trình")
