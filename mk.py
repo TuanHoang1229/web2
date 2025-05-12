@@ -22,9 +22,10 @@ st.markdown(f"""
 
 st.image(
     "https://scontent.fhan3-2.fna.fbcdn.net/v/t39.30808-6/304851178_540789087851004_9097165287000760892_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=gHy6kXCaw2AQ7kNvwE-PviU&_nc_oc=Admrg-I1Ihfs1OeVmhVMDCN2WjDhY-G92J9d7FWnfMrm3PH2DaIHFPtWsp3spMJ7lTA&_nc_zt=23&_nc_ht=scontent.fhan3-2.fna&_nc_gid=zUR1Tl_81MyfEa2IiZydTg&oh=00_AfJdAFQuQ6pb2wh4fVJ3RBHgdKJnQDRy9rhd0jvLBUbplQ&oe=6825F9BA",
-    use_container_width=True,
+    width=300,
     caption="📸 Trường THPT Lương Văn Tri"
 )
+
 
 # --- Tabs ---
 tabs = st.tabs([
@@ -1450,7 +1451,6 @@ with tabs[6]:
 with tabs[7]:  # Đăng ký
     st.markdown("## 📝 Đăng ký tài khoản")
 
-    st.markdown("### Hoặc")
     full_name = st.text_input("Họ và tên")
     username = st.text_input("Username")
     password = st.text_input("Mật khẩu", type="password")
