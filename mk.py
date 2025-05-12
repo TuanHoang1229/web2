@@ -70,7 +70,9 @@ Trang web này được xây dựng nhằm hỗ trợ học sinh THPT học tậ
 3. **Làm trắc nghiệm ôn tập**
 4. **Chia sẻ bài thực hành của bạn**
 5. **Luyện kỹ các năng an toàn**
-6. **Tăng cường mặt khẩu của bạn**\n**Lưu ý:** Bạn có thể chia sẻ các ý kiến cá nhân trong form nhaa!
+6. **Tăng cường mật khẩu của bạn**
+
+   **Lưu ý:** Bạn có thể chia sẻ các ý kiến cá nhân trong form nhaa!
 
 ---
 
