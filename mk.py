@@ -313,11 +313,157 @@ with tabs[4]:
         "10": {
             "Chủ đề A": [
                 {
-                    "question": "Lớp 10 - Câu hỏi 1: Số nguyên tố nhỏ nhất là?",
-                    "options": ["0", "1", "2", "3"],
-                    "answer": "2"
-                },
-            ],
+                "question": "Câu 1: Thông tin là gì?",
+                "options": ["Các văn bản và số liệu", 
+                            "Hiểu biết của con người về một thực thể, sự vật, khái niệm, hiện tượng nào đó.", 
+                            "Văn bản, Hình ảnh, âm thanh", 
+                            "Hình ảnh, âm thanh"],
+                "answer": "Hiểu biết của con người về một thực thể, sự vật, khái niệm, hiện tượng nào đó."
+            },
+            {
+                "question": "Câu 2: Phát biểu nào sau đây là đúng?",
+                "options": ["Dữ liệu chỉ có ở trong máy tính", 
+                            "Dữ liệu là những giá trị số do con người nghĩ ra.",
+                            "Dữ liệu được thể hiện dưới dạng con số, văn bản, hình ảnh, âm thanh.",
+                            "Dữ liệu chỉ có thể được hiểu bởi những người có trình độ cao"],
+                "answer": "Dữ liệu được thể hiện dưới dạng con số, văn bản, hình ảnh, âm thanh."
+            },
+            {
+                "question": "Câu 3: Phát biểu nào sau đây là sai khi nói về quan hệ giữa thông tin và dữ liệu?",
+                "options": ["Dữ liệu là thông tin đã được đưa vào máy tính", 
+                            "Thông tin là ý nghĩa của dữ liệu",
+                            "Thông tin và dữ liệu có tính độc lập tương đối",
+                            "Thông tin không có tính toàn vẹn"],
+                "answer": "Thông tin không có tính toàn vẹn"
+            },
+            {
+                "question": "Câu 4: Thông tin nào không phải là thông tin cần xử lí để xếp loại các tổ cuối tuần?",
+                "options": ["Số lượng bạn ăn bán trú", 
+                            "Số các bạn bị ghi tên vì đi muộn",
+                            "Số bạn không mặc áo đồng phục",
+                            "Số bạn bị cô giáo nhắc nhở"],
+                "answer": "Số lượng bạn ăn bán trú"
+            },
+            {
+                "question": "Câu 5: Thông tin có thể được biểu diễn thành các dạng nào sau đây:",
+                "options": ["Văn bản, hình ảnh", 
+                            "Văn bản, hình ảnh và âm thanh", 
+                            "Dãy bit", 
+                            "Âm thanh, hình ảnh"],
+                "answer": "Văn bản, hình ảnh và âm thanh"
+            },
+            {
+                "question": "Câu 6: Đặc thù của ngành tin học là gì?",
+                "options": ["Quá trình nghiên cứu và xử lí thông tin.", 
+                            "Quá trình nghiên cứu và triển khai các ứng dụng không tách rời việc phát triển và sử dụng máy tính điện tử.",
+                            "Quá trình nghiên cứu và xử lí thông tin một cách tự động.",
+                            "Quá trình nghiên cứu và ứng dụng các công cụ tính toán."],
+                "answer": "Quá trình nghiên cứu và xử lí thông tin một cách tự động."
+            },
+            {
+                "question": "Câu 7: Mắt thường không thể tiếp nhận những thông tin nào dưới đây?",
+                "options": ["Rác bẩn vứt ngoài hành lang lớp học", 
+                            "Những con vi trùng gây bệnh lị lẫn trong thức ăn bị ôi thiu",
+                            "Đàn kiến đang “tấn công” lọ đường quên đậy nắp",
+                            "Bạn Phương quên không đeo khăn quàng đỏ"],
+                "answer": "Những con vi trùng gây bệnh lị lẫn trong thức ăn bị ôi thiu"
+            },
+            {
+                "question": "Câu 8: Tin học là?",
+                "options": ["Ngành khoa học về xử lý thông tin tự động dựa trên máy tính điện tử", 
+                            "Áp dụng máy tính trong các hoạt động xử lý thông tin", 
+                            "Máy tính và các công việc liên quan đến máy tính điện tử", 
+                            "Lập chương trình cho máy tính"],
+                "answer": "Ngành khoa học về xử lý thông tin tự động dựa trên máy tính điện tử"
+            },
+            {
+                "question": "Câu 9: Tin học là một ngành khoa học vì đó là ngành:",
+                "options": ["Nghiên cứu máy tính điện tử", 
+                            "Sử dụng máy tính điện tử",
+                            "Được sinh ra trong nền văn minh thông tin",
+                            "Có nội dung, mục tiêu, phương pháp nghiên cứu riêng"],
+                "answer": "Có nội dung, mục tiêu, phương pháp nghiên cứu riêng"
+            },
+            {
+                "question": "Câu 10: Cho tình huống: Em đang ngồi trong lớp chờ giờ học bắt đầu, em thấy thầy giáo bước vào lớp. Thông tin em nhận được là gì?",
+                "options": ["Thầy giáo bước vào lớp", 
+                            "Đứng dậy chào thầy giáo",
+                            "Em đang ngồi trong lớp", 
+                            "Giờ học bắt đầu"],
+                "answer": "Thầy giáo bước vào lớp"
+            },
+            {
+                "question": "Câu 11: Khẳng định nào sau đây là sai khi nói về máy tính?",
+                "options": ["Máy tính có tốc độ xử lí nhanh",
+                            "Máy tính có khả năng lưu trữ lượng thông tin lớn",
+                            "Máy tính ngày càng nhỏ gọn",
+                            "Máy tính không thể kết nối được với nhau"],
+                "answer": "Máy tính không thể kết nối được với nhau"
+            },
+            {
+                "question": "Câu 12: Đâu không phải là ưu việt của máy tính điện tử?",
+                "options": ["Máy tính có thể làm việc 24/7", 
+                            "Máy tính có thể lưu trữ một lượng lớn thông tin",
+                            "Các máy tính liên kết tạo khả năng xử lý thông tin tốt",
+                            "Đôi khi máy tính có thể cho kết quả không chính xác"],
+                "answer": "Đôi khi máy tính có thể cho kết quả không chính xác"
+            },
+            {
+                "question": "Câu 13: Trong tin học, Flops có nghĩa là gì?",
+                "options": ["Tốc độ tính toán trong 1 giây", 
+                            "Tốc độ tính toán trong 1 phút",
+                            "Tốc độ tính toán trong 1 giờ", 
+                            "Tốc độ tính toán trong một thời gian ngắn"],
+                "answer": "Tốc độ tính toán trong 1 giây"
+            },
+            {
+                "question": "Câu 14: Mạng Xã hội Facebook ra đời vào năm nào?",
+                "options": ["2001", "2002", "2003", "2004"],
+                "answer": "2004"
+            },
+            {
+                "question": "Câu 15: Đặc trưng của cuộc cách mạng công nghiệp lần thứ 4 là gì?",
+                "options": ["Động cơ hơi nước", 
+                            "Điện và động cơ điện", 
+                            "Máy tính và thiết bị điện tử", 
+                            "Trí tuệ nhân tạo và công nghệ robot"],
+                "answer": "Trí tuệ nhân tạo và công nghệ robot"
+            },
+            {
+                "question": "Câu 16: Máy tính trở thành công cụ lao động không thể thiếu vì?",
+                "options": ["Cho ta khả năng lưu trữ và xử lý thông tin", 
+                            "Giải tất cả các bài toán khó", 
+                            "Soạn thảo văn bản và truy cập Internet", 
+                            "Tính toán cực nhanh và chính xác"],
+                "answer": "Cho ta khả năng lưu trữ và xử lý thông tin"
+            },
+            {
+                "question": "Câu 17: Đơn vị nào sau đây là đơn vị lưu trữ dữ liệu trong máy tính?",
+                "options": ["KB", "Kg", "MG", "Gi"],
+                "answer": "KB"
+            },
+            {
+                "question": "Câu 18: Khẳng định sai về thành tựu của ngành tin học là?",
+                "options": ["Trí tuệ nhân tạo tạo ra Robot", 
+                            "Internet làm thay đổi xã hội", 
+                            "Ra lệnh bằng lời nói", 
+                            "Ngôn ngữ lập trình mới xuất hiện 2 năm gần đây"],
+                "answer": "Ngôn ngữ lập trình mới xuất hiện 2 năm gần đây"
+            },
+            {
+                "question": "Câu 19: Nền văn minh thông tin gắn liền với loại công cụ nào?",
+                "options": ["Động cơ hơi nước", "Máy điện thoại", "Máy tính điện tử", "Máy phát điện"],
+                "answer": "Máy tính điện tử"
+            },
+            {
+                "question": "Câu 20: Ngành tin học gắn liền với…… và ……máy tính điện tử",
+                "options": ["Sự phát triển, sử dụng", 
+                            "Sử dụng, tiêu thụ", 
+                            "Sự phát triển, tiêu thụ", 
+                            "Tiêu thụ, sự phát triển"],
+                "answer": "Sự phát triển, sử dụng"
+            }
+        ],
             "Chủ đề B": [
                 {
                     "question": "Lớp 10 - Câu hỏi 1: HTML là viết tắt của?",
