@@ -189,14 +189,33 @@ with tabs[2]:
 
     # Thử thách thực hành
     st.markdown("""
-    ### Thử thách:
-    Tạo một trang web có:
-    - Một tiêu đề lớn
-    - Một đoạn văn mô tả
-    - Một hình ảnh từ Internet
-    - Một liên kết đến Google
+    ### Thử thách thực hành
+
+    Hãy luyện tập viết HTML bằng cách thực hiện các yêu cầu sau:
+
+    #### Cơ bản:
+    - Tạo một tiêu đề lớn
+    - Viết một đoạn văn mô tả
+    - Hiển thị một hình ảnh từ Internet
+    - Chèn một liên kết đến Google
 
     **Gợi ý:** Dùng các thẻ `<h1>`, `<p>`, `<img>`, `<a>`
+
+    ---
+
+    #### Nâng cao:
+    1. Tạo danh sách các sở thích của bạn bằng thẻ `<ul>` hoặc `<ol>`.
+    2. Tạo bảng thông tin cá nhân (Họ tên, Tuổi, Lớp) bằng thẻ `<table>`.
+    3. Thêm một nút bấm đơn giản bằng thẻ `<button>`.
+    4. Nhúng một video YouTube yêu thích bằng thẻ `<iframe>`.
+    5. Sử dụng thẻ `<div>` để tạo một khối nội dung có viền và nền màu nhẹ.
+
+    ---
+
+    **Thử thách phụ:**  
+    Hãy sáng tạo một trang giới thiệu bản thân bằng tất cả những gì bạn đã học!
+
+    > **Ghi nhớ:** Hãy lưu lại mã HTML của bạn và gửi qua form ở góc chia sẻ để nhận góp ý và đánh giá!
     """)
 
     # Học thêm
@@ -1325,7 +1344,7 @@ with tabs[5]:
     **Chào bạn!** Đây là nơi bạn có thể gửi các bài thực hành, đề tài hoặc sản phẩm bạn đã hoàn thành trong quá trình học.
     
     Bằng cách gửi bài qua Google Forms, bạn sẽ nhận được:
-    - **Phản hồi từ giảng viên** giúp cải thiện kỹ năng.
+    - **Phản hồi từ giáo viên** giúp cải thiện kỹ năng.
     - **Cơ hội nhận xét và đánh giá** từ cộng đồng.
     - **Cải thiện kỹ năng thực hành** qua các bài tập thực tế.
     
