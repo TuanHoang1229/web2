@@ -126,6 +126,19 @@ with tabs[2]:
     - Một số thuộc tính CSS thường gặp: `color`, `font-size`, `margin`, `padding`, `background-color`
     """)
 
+    st.markdown("""
+    <div style='margin-top: 20px; font-size: 15px;'>
+        <p><strong>📘 Cách viết web bằng HTML và CSS đơn giản, chi tiết</strong></p>
+        <p>Nếu bạn mới học lập trình web thì hãy bắt đầu với <strong>HTML</strong> và <strong>CSS</strong>. Đây là hai ngôn ngữ cơ bản và quan trọng trong xây dựng web.</p>
+        <p>Việc viết code web bằng HTML và CSS không khó, tuy nhiên nó đòi hỏi bạn cần có các kiến thức nhất định về lập trình, cụ thể:</p>
+        <ul>
+            <li>HTML giúp bạn xác định nội dung trên trang như tiêu đề, đoạn văn, hình ảnh, liên kết,...</li>
+            <li>CSS giúp bạn làm đẹp trang web: thay đổi màu sắc, căn lề, điều chỉnh khoảng cách và thiết kế bố cục hợp lý.</li>
+        </ul>
+        <p>💡 <em>Lời khuyên:</em> Hãy luyện tập thường xuyên bằng cách tạo những trang web nhỏ như hồ sơ cá nhân, trang giới thiệu sản phẩm,... để làm quen với HTML & CSS.</p>
+    </div>
+    """, unsafe_allow_html=True)
+
     # Ví dụ minh hoạ
     st.markdown("### Ví dụ đơn giản với HTML + CSS:")
     st.code("""
@@ -164,7 +177,7 @@ with tabs[2]:
 
     # Thử thách thực hành
     st.markdown("""
-    ### 🧪 Thử thách:
+    ### Thử thách:
     Tạo một trang web có:
     - Một tiêu đề lớn
     - Một đoạn văn mô tả
@@ -176,9 +189,13 @@ with tabs[2]:
 
     # Học thêm
     st.markdown("""
-    ### 📘 Tài liệu thêm:
+    ### 📘 Tài liệu Tham Khảo:
     - [🎥 Video hướng dẫn HTML cơ bản](https://www.youtube.com/watch?v=Ke90Tje7VS0)
     - [🌐 Tài liệu CSS tại W3Schools](https://www.w3schools.com/css/)
+    
+    - **Một số trang web hỗ trợ lập trình cho người mới:**
+    - [ Web hỗ trợ lập trình cơ bản](https://gitiho.com/blog/cach-lap-trinh-web-html-va-css.html#tim_hieu_ve_html_va_css)
+    - [ Web hỗ trợ thiết kế giao diện](https://www.mypage.vn/thiet-ke-giao-dien-web-bang-html.html)
     """)
 
     # Mini quiz
