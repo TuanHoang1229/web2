@@ -825,11 +825,176 @@ with tabs[4]:
         },
         "12": {
             "Chủ đề E": [
-                {
-                    "question": "Lớp 12 - Câu hỏi 1: Đạo hàm của hàm số y = x^2 là gì?",
-                    "options": ["x", "2x", "x^2", "2"],
-                    "answer": "2x"
+                        {
+                    "question": "Câu hỏi 1: Phát biểu nào sau đây đúng?",
+                    "options": [
+                        "Website có thể được tạo ra bởi lập trình viên hoặc người không có kĩ năng lập trình.",
+                        "Website chỉ có thể được tạo ra bởi lập trình viên.",
+                        "Website không thể được tạo ra bởi người am hiểu về lập trình.",
+                        "Người dùng không thể chỉnh sửa website."
+                    ],
+                    "answer": "Website có thể được tạo ra bởi lập trình viên hoặc người không có kĩ năng lập trình."
                 },
+                {
+                    "question": "Câu hỏi 2: Dựa trên môi trường hoạt động, có thể phân chia các phần mềm tạo website thành mấy loại?",
+                    "options": ["2", "1", "4", "3"],
+                    "answer": "2"
+                },
+                {
+                    "question": "Câu hỏi 3: Phần mềm tạo website được chia thành 2 loại là",
+                    "options": [
+                        "phần mềm tạo website ngoại tuyến và phần mềm tạo website có sẵn.",
+                        "phần mềm tạo website trực tuyến và phần mềm tạo website thụ động.",
+                        "phần mềm tạo website trực tuyến và phần mềm tạo website ngoại tuyến.",
+                        "phần mềm tạo website thụ động và phần mềm tạo website chủ động."
+                    ],
+                    "answer": "phần mềm tạo website trực tuyến và phần mềm tạo website ngoại tuyến."
+                },
+                {
+                    "question": "Câu hỏi 4: Thế nào là phần mềm tạo website ngoại tuyến?",
+                    "options": [
+                        "Là phần mềm cài đặt sẵn trên máy tính và cần sử dụng môi trường mạng.",
+                        "Là phần mềm không được cài đặt sẵn trên máy tính và không cần sử dụng môi trường mạng.",
+                        "Là phần mềm cài đặt sẵn trên máy tính và không cần sử dụng môi trường mạng.",
+                        "Là phần mềm được sử dụng trực tiếp trên môi trường mạng."
+                    ],
+                    "answer": "Là phần mềm cài đặt sẵn trên máy tính và không cần sử dụng môi trường mạng."
+                },
+                {
+                    "question": "Câu hỏi 5: Thế nào là phần mềm tạo website trực tuyến?",
+                    "options": [
+                        "Là phần mềm cài đặt sẵn trên máy tính và cần sử dụng môi trường mạng.",
+                        "Là phần mềm không được cài đặt sẵn trên máy tính và không cần sử dụng môi trường mạng.",
+                        "Là phần mềm cài đặt sẵn trên máy tính và không cần sử dụng môi trường mạng.",
+                        "Là phần mềm được sử dụng trực tiếp trên môi trường mạng mà không yêu cầu cài đặt trên máy tính."
+                    ],
+                    "answer": "Là phần mềm được sử dụng trực tiếp trên môi trường mạng mà không yêu cầu cài đặt trên máy tính."
+                },
+                {
+                    "question": "Câu hỏi 6: Đâu không phải là tính năng của phần mềm tạo website trực tuyến?",
+                    "options": [
+                        "Cài đặt phần mềm trên máy tính.",
+                        "Chèn các biểu mẫu.",
+                        "Cung cấp mẫu trang web.",
+                        "Tạo các trang web với nội dung văn bản."
+                    ],
+                    "answer": "Cài đặt phần mềm trên máy tính."
+                },
+                {
+                    "question": "Câu hỏi 7: Chức năng nào sau đây không được cung cấp bởi phần mềm tạo website cơ bản?",
+                    "options": [
+                        "Chèn hình ảnh và video.",
+                        "Tạo trò chơi trực tuyến.",
+                        "Xuất bản website.",
+                        "Chèn liên kết."
+                    ],
+                    "answer": "Tạo trò chơi trực tuyến."
+                },
+                {
+                    "question": "Câu hỏi 8: Mobirise thuộc phân loại phần mềm nào?",
+                    "options": [
+                        "Là phần mềm ngoại tuyến có phí.",
+                        "Là phần mềm ngoại tuyến miễn phí.",
+                        "Là phần mềm trực tuyến miễn phí.",
+                        "Là phần mềm trực tuyến có phí."
+                    ],
+                    "answer": "Là phần mềm ngoại tuyến miễn phí."
+                },
+                {
+                    "question": "Câu hỏi 9: Phần mềm Mobirise có thể hoạt động trên hệ điều hành nào?",
+                    "options": ["Windows", "Android", "iOS", "Chrome OS"],
+                    "answer": "Windows"
+                },
+                {
+                    "question": "Câu hỏi 10: Phần mềm Mobirise cung cấp nhiều mẫu trang web với ____.",
+                    "options": [
+                        "kiểu bố cục và chủ đề đa dạng.",
+                        "chức năng lập lịch.",
+                        "chức năng tạo trò chơi.",
+                        "khả năng phân tích dữ liệu."
+                    ],
+                    "answer": "kiểu bố cục và chủ đề đa dạng."
+                },
+                {
+                    "question": "Câu hỏi 11: Màn hình làm việc của phần mềm Mobirise gồm bao nhiêu thành phần chính?",
+                    "options": ["1", "2", "3", "4"],
+                    "answer": "3"
+                },
+                {
+                    "question": "Câu hỏi 12: Phát biểu nào sau đây là đúng?",
+                    "options": [
+                        "Các phần mềm tạo website chỉ có thể hoạt động ngoại tuyến.",
+                        "Có thể đăng nhập sử dụng phần mềm Mobirise qua tài khoản Google, Facebook hoặc email.",
+                        "Phần mềm Mobirise chỉ cho phép tại trang web từ các mẫu trang web theo chủ đề được cung cấp sẵn.",
+                        "Sử dụng phần mềm Mobirise tạo trang web bằng cách viết mã lệnh."
+                    ],
+                    "answer": "Có thể đăng nhập sử dụng phần mềm Mobirise qua tài khoản Google, Facebook hoặc email."
+                },
+                {
+                    "question": "Câu hỏi 13: Các trang web có phần mở rộng là gì?",
+                    "options": [".html", ".tml", ".tlm", "tmh"],
+                    "answer": ".html"
+                },
+                {
+                    "question": "Câu hỏi 14: Về cơ bản, mỗi website gồm bao nhiêu trang web chính?",
+                    "options": ["1", "2", "3", "4"],
+                    "answer": "3"
+                },
+                {
+                    "question": "Câu hỏi 15: Trang nào trong website thường chứa các mục nội dung nổi bật nhất?",
+                    "options": [
+                        "Trang chủ.",
+                        "Trang chuyên mục.",
+                        "Trang chi tiết.",
+                        "Trang liên hệ."
+                    ],
+                    "answer": "Trang chủ."
+                },
+                {
+                    "question": "Câu hỏi 16: Trang web nào có chức năng hiển thị thông tin cụ thể về các mục nội dung của website?",
+                    "options": [
+                        "Trang chủ.",
+                        "Trang chuyên mục.",
+                        "Trang chi tiết.",
+                        "Trang giới thiệu."
+                    ],
+                    "answer": "Trang chi tiết."
+                },
+                {
+                    "question": "Câu hỏi 17: Mỗi trang web thường có bao nhiêu thành phần cơ bản?",
+                    "options": ["1", "4", "2", "3"],
+                    "answer": "3"
+                },
+                {
+                    "question": "Câu hỏi 18: Trang chuyên mục có ý nghĩa gì?",
+                    "options": [
+                        "Giúp website có tính chuyên nghiệp hơn.",
+                        "Giúp người xem giới hạn phạm vi tìm kiếm thông tin thuộc chủ đề mình quan tâm trong website.",
+                        "Giúp tạo ra các trang web nhỏ.",
+                        "Giúp phân loại người dùng."
+                    ],
+                    "answer": "Giúp người xem giới hạn phạm vi tìm kiếm thông tin thuộc chủ đề mình quan tâm trong website."
+                },
+                {
+                    "question": "Câu hỏi 19: Thành phần nào của trang web giúp người dùng dễ dàng di chuyển giữa các trang?",
+                    "options": [
+                        "Phần đầu trang.",
+                        "Phần nội dung.",
+                        "Thanh điều hướng.",
+                        "Phần chân trang."
+                    ],
+                    "answer": "Thanh điều hướng."
+                },
+                {
+                    "question": "Câu hỏi 20: Phần nào của trang web thường chứa các liên kết nhanh và thông tin bản quyền?",
+                    "options": [
+                        "Phần đầu trang.",
+                        "Thanh điều hướng.",
+                        "Phần nội dung.",
+                        "Phần chân trang."
+                    ],
+                    "answer": "Phần chân trang."
+                }
             ],
             "Chủ đề F": [
                 {
