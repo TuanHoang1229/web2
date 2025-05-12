@@ -5,7 +5,7 @@ import hashlib
 from PIL import Image
 
 # --- Cấu hình trang ---
-st.set_page_config(page_title="Tin Học Online", layout="wide")
+st.set_page_config(page_title="Tin Học LVT", layout="wide")
 
 # --- Logo & Tiêu đề ---
 logo_url = "https://raw.githubusercontent.com/TuanHoang1229/web2/refs/heads/main/IMG_2935.JPG"
@@ -13,7 +13,7 @@ st.markdown(f"""
     <div style="display: flex; align-items: center; justify-content: space-between; padding: 10px 0;">
         <div style="display: flex; align-items: center;">
             <img src="{logo_url}" alt="Logo" width="60" style="margin-right: 10px;">
-            <h2 style="margin: 0; color: #40E0D0;">Tin Học Online</h2>
+            <h2 style="margin: 0; color: #40E0D0;">Tin Học LVT</h2>
         </div>
     </div>
     <hr style="margin-top: 0;">
@@ -100,6 +100,18 @@ Trang web này được xây dựng nhằm hỗ trợ học sinh THPT học tậ
 
     # Nội dung "Liên hệ + Góp ý"
     st.markdown('<div class="box">', unsafe_allow_html=True)
+
+    # Góp ý kiến
+    st.markdown("<h3 style='margin-top:40px;'>Góp ý kiến</h3>", unsafe_allow_html=True)
+    feedback = st.text_area("Nhập ý kiến của bạn", height=120, label_visibility="collapsed")
+
+    if st.button("Gửi"):
+        if feedback.strip():
+            st.success("✅ Cảm ơn bạn đã góp ý!")
+        else:
+            st.warning("⚠️ Vui lòng nhập nội dung góp ý.")
+    
+    st.markdown('</div>', unsafe_allow_html=True)
     
     # Thông tin liên hệ
     st.markdown("<h3>Liên hệ</h3>", unsafe_allow_html=True)
@@ -108,17 +120,6 @@ Trang web này được xây dựng nhằm hỗ trợ học sinh THPT học tậ
     st.markdown('<div class="contact-item">📞 <strong>Số điện thoại:</strong> 0966 813 528</div>', unsafe_allow_html=True)
     st.markdown('<div class="contact-item">👤 <strong>Người thực hiện:</strong> Hoàng Minh Tuấn</div>', unsafe_allow_html=True)
     
-    # Góp ý kiến
-    st.markdown("<h3 style='margin-top:40px;'>Góp ý kiến</h3>", unsafe_allow_html=True)
-    feedback = st.text_area("Nhập ý kiến của bạn", height=120, label_visibility="collapsed")
-    
-    if st.button("Gửi"):
-        if feedback.strip():
-            st.success("✅ Cảm ơn bạn đã góp ý!")
-        else:
-            st.warning("⚠️ Vui lòng nhập nội dung góp ý.")
-    
-    st.markdown('</div>', unsafe_allow_html=True)
 
 # --- Thiết kế Web ---
 with tabs[2]:
