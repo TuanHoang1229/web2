@@ -1340,11 +1340,13 @@ with tabs[1]:
         st.markdown("### 🔍 Kiểm tra độ mạnh mật khẩu:")
         st.markdown("""
         Mật khẩu mạnh là mật khẩu có độ dài tối thiểu 8 ký tự, bao gồm chữ hoa, chữ thường, số và ký tự đặc biệt.
-        
-                                     Vậy mật khẩu của bạn đã đủ mạnh chưa?
-                                     
-                           Nhập mật khẩu của bạn vào ô bên dưới để kiểm tra độ mạnh.
         """)
+        st.markdown("""
+        <div style='text-align: center; font-size:16px;'>
+            <p><strong>Vậy mật khẩu của bạn đã đủ mạnh chưa?</strong></p>
+            <p>Nhập mật khẩu của bạn vào ô bên dưới để kiểm tra độ mạnh.</p>
+        </div>
+    """, unsafe_allow_html=True)
     
         pwd = st.text_input("Nhập mật khẩu:", type="password")
         if pwd:
@@ -1352,7 +1354,17 @@ with tabs[1]:
             text, color = strength_text(score)
             st.markdown(f"**Đánh giá:** <span style='color:{color}'>{text}</span>", unsafe_allow_html=True)
             st.progress(score * 20)  # Hiển thị tiến trình mạnh yếu
-    
+        
+        st.markdown("""
+    <div style='margin-top: 10px; font-size: 15px;'>
+        <p><strong>🔐 Mật khẩu bị đánh cắp là nguy cơ to lớn nhất</strong></p>
+        <p>80% các vụ rò rỉ dữ liệu xảy ra do mật khẩu bị tấn công, và những sự cố này đã gây ra thất thoát hàng triệu đô la cho nhiều công ty. Theo IBM, trung bình một vụ rò rỉ dữ liệu gây thiệt hại lên đến <strong>3.86 triệu đô la</strong> trong năm 2020.</p>
+        <p>Đối với cá nhân, mật khẩu bị lộ có thể khiến người dùng trở thành nạn nhân của các vụ lừa đảo, đánh cắp danh tính, v.v.</p>
+        <p><strong>Tại sao cần kiểm tra độ mạnh mật khẩu?</strong></p>
+        <p>Để lộ thông tin đăng nhập là nguyên nhân thường thấy trong các vụ đánh cắp danh tính và rò rỉ dữ liệu. Trong bối cảnh các vụ tấn công mạng ngày càng gia tăng, bạn cần phải nâng cấp bảo mật cho mật khẩu của mình bằng cách kiểm tra độ mạnh mật khẩu.</p>
+    </div>
+    """, unsafe_allow_html=True)
+        
     # Tab tạo mật khẩu
     with tab2:
         st.markdown("### 🔑 Tạo mật khẩu mạnh:")
@@ -1384,3 +1396,15 @@ with tabs[1]:
                 buffer.seek(0)
                 st.success("Đã lưu mật khẩu dưới dạng SHA-256!")
                 st.download_button("📥 Tải file SHA-256", buffer, file_name="saved_passwords.txt")
+        
+        st.markdown("""
+        <div style='margin-top: 30px; font-size: 15px;'>
+            <p><strong>💡 Mẹo tạo mật khẩu mạnh để giữ an toàn cho tài khoản:</strong></p>
+            <ol>
+                <li><strong>Không sử dụng tên tuổi, ngày tháng năm sinh trong mật khẩu:</strong> Những thông tin này dễ bị đoán trúng. Hãy dùng cụm từ cá nhân khó đoán như câu trong bài hát yêu thích hoặc tên thú cưng.</li>
+                <li><strong>Không sử dụng các cụm từ phổ thông dễ đoán:</strong> Tránh các mật khẩu như "123456", "password", "iloveyou",...</li>
+                <li><strong>Mật khẩu bao gồm chữ cái in thường, in hoa, số, ký tự đặc biệt:</strong> Ví dụ: <code>P@ssw0rd!2024</code></li>
+                <li><strong>Mật khẩu có độ dài tối thiểu 12 ký tự:</strong> Độ dài càng lớn, mật khẩu càng khó bị phá.</li>
+            </ol>
+        </div>
+        """, unsafe_allow_html=True)
