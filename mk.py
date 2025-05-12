@@ -8,7 +8,7 @@ from PIL import Image
 st.set_page_config(page_title="Tin Học LVT", layout="wide")
 
 # --- Logo & Tiêu đề ---
-logo_url = "https://raw.githubusercontent.com/TuanHoang1229/web2/refs/heads/main/IMG_2935.JPG"
+logo_url = "https://raw.githubusercontent.com/TuanHoang1229/web2/refs/heads/main/IMG_2984.png"
 st.markdown(f"""
     <div style="display: flex; align-items: center; justify-content: space-between; padding: 10px 0;">
         <div style="display: flex; align-items: center;">
