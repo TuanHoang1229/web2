@@ -1506,7 +1506,7 @@ with tabs[7]:  # Đăng ký
     email = st.text_input("Email")
 
     captcha = st.checkbox("Tôi không phải là người máy")
-    agree = st.checkbox("Tôi đồng ý với thỏa thuận sử dụng của Tin Học Online")
+    agree = st.checkbox("Tôi đồng ý với thỏa thuận sử dụng của Tin Học LVT")
 
     if st.button("ĐĂNG KÝ", type="primary", use_container_width=True):
         if not (full_name and username and password and email):
