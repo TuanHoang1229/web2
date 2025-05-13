@@ -1461,7 +1461,7 @@ with tabs[1]:
     
         if "gen_pwd" in st.session_state:
             gen_pwd = st.session_state["gen_pwd"]
-            st.text_area("🔑 Mật khẩu đã tạo:", gen_pwd, height=40)  # Dùng text_area để dễ sao chép
+            st.text_area("🔑 Mật khẩu đã tạo:", gen_pwd)
             score = calculate_strength(gen_pwd)
             text, color = strength_text(score)
             st.markdown(f"**Độ mạnh:** <span style='color:{color}'>{text}</span>", unsafe_allow_html=True)
