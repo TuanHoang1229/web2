@@ -234,7 +234,7 @@ with tabs[2]:
 
     ### 🐍 Cài đặt Python và Giới thiệu Streamlit
 
-    - [⬇️ Tải Python tại python.org](https://www.python.org/downloads/)
+    - [📥 Tải Python tại python.org](https://www.python.org/downloads/)
     - [📘 Giới thiệu và tài liệu Streamlit](https://docs.streamlit.io/)
     - [🚀 Hướng dẫn cài đặt và chạy Streamlit](https://docs.streamlit.io/streamlit-tutorial/installation)
 
