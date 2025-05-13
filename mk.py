@@ -352,7 +352,7 @@ with tabs[4]:
     st.subheader("📖 Sách lật trang")
     st.markdown("""
     - [Tin Học 10](https://online.fliphtml5.com/irxmh/xdee/)
-    - [Tin Học 11](#)
+    - [Tin Học 11](https://online.fliphtml5.com/arbaq/fdvz/)
     - [Tin Học 12](#)
     """)
 
