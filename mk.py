@@ -1377,7 +1377,7 @@ with tabs[5]:
     st.markdown("""
     **Lưu ý:**
     - Hãy chắc chắn rằng bài thực hành của bạn đã được hoàn thiện và kiểm tra kỹ lưỡng trước khi gửi.
-    - Nếu bạn có bất kỳ câu hỏi nào hoặc gặp phải vấn đề khi gửi bài, đừng ngần ngại liên hệ với giảng viên hoặc hỗ trợ kỹ thuật.
+    - Nếu bạn có bất kỳ câu hỏi nào hoặc gặp phải vấn đề khi gửi bài, đừng ngần ngại liên hệ với hỗ trợ kỹ thuật.
     
     **Chúc bạn học tốt và đạt kết quả xuất sắc!**
     """)
