@@ -1333,6 +1333,13 @@ with tabs[4]:
     - [O'Reilly Online Learning](https://www.oreilly.com/) – Thư viện sách lập trình cao cấp (trả phí).
     """)
 
+    st.subheader("🖥️ Một số trang web tự học")
+    st.markdown("""
+    - [Học Mãi](https://hocmai.vn/)
+    - [Học 10](https://www.hoc10.vn/)
+    - [Học 24h](https://hoc24.vn/)
+    """)
+
     # --- Gợi ý ---
     st.markdown("---")
     st.info("💡 Mẹo: Dành 15 phút mỗi ngày học lập trình từ W3Schools hoặc FreeCodeCamp để duy trì thói quen!")
