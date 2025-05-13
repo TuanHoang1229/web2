@@ -87,13 +87,13 @@ Trang web này được xây dựng nhằm hỗ trợ học sinh THPT học tậ
 
 ###  Hướng dẫn:
 - Chọn các chuyên mục ở đầu trang.
-- Mỗi mục có video, tài liệu và bài tập kèm theo.
+- Mỗi mục có hướng dẫn thực hiện, tài liệu và bài tập kèm theo.
 - Đừng quên làm trắc nghiệm để kiểm tra kiến thức nhé!
 
 ---
 
-> **“Công nghệ sẽ không thay thế giáo viên, nhưng giáo viên biết công nghệ sẽ thay thế người không biết.”**  
-> – **Ray Clifford**
+> **“Công nghệ là công cụ. Trong việc tạo động lực và giảng dạy, giáo viên vẫn là yếu tố quan trọng nhất.”**  
+> – **Bill Gates**
 """)
 
      # --- Gạch ngang ---
