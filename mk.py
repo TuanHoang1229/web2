@@ -103,7 +103,7 @@ Trang web này được xây dựng nhằm hỗ trợ học sinh THPT học tậ
     st.markdown('<div class="box">', unsafe_allow_html=True)
 
     # Góp ý kiến
-    st.markdown("<h3 style='margin-top:40px;'>Góp ý kiến</h3>", unsafe_allow_html=True)
+    st.markdown("<h3 style='margin-top:40px;'>Góp ý</h3>", unsafe_allow_html=True)
     feedback = st.text_area("Nhập ý kiến của bạn", height=120, label_visibility="collapsed")
 
     if st.button("Gửi"):
