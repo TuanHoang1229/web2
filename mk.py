@@ -1446,37 +1446,37 @@ with tabs[1]:
         
     # --- Tab 2: Tạo mật khẩu ---
     with tab2:
-    st.header("🔑 Tạo mật khẩu mạnh:")
-    st.markdown("""
-    Sử dụng công cụ này để tạo mật khẩu ngẫu nhiên. Mật khẩu mạnh kết hợp chữ hoa, thường, số và ký tự đặc biệt.
-    """)
-
-    length = st.slider("Chọn độ dài mật khẩu", 6, 50, 12)
-
-    if st.button("🎲 Tạo mật khẩu"):
-        chars = string.ascii_letters + string.digits + string.punctuation
-        gen_pwd = ''.join(random.choice(chars) for _ in range(length))
-        st.session_state["gen_pwd"] = gen_pwd
-        st.success("✅ Đã tạo mật khẩu!")
-
-    if "gen_pwd" in st.session_state:
-        gen_pwd = st.session_state["gen_pwd"]
-        st.text_area("🔑 Mật khẩu đã tạo:", gen_pwd, height=40)  # Dùng text_area để dễ sao chép
-        score = calculate_strength(gen_pwd)
-        text, color = strength_text(score)
-        st.markdown(f"**Độ mạnh:** <span style='color:{color}'>{text}</span>", unsafe_allow_html=True)
-        st.progress(min(score * 20, 100))
-
-        # Lưu mật khẩu gốc
-        st.markdown("Bạn có thể lưu mật khẩu đã tạo dưới dạng văn bản:")
-        
-        if st.button("💾 Lưu mật khẩu"):
-            # Chuyển StringIO thành định dạng nhị phân
-            buffer = io.BytesIO()
-            buffer.write(gen_pwd.encode())  # Chuyển mật khẩu thành bytes
-            buffer.seek(0)  # Đặt lại con trỏ để có thể đọc từ đầu
-            st.success("Mật khẩu gốc đã được lưu!")
-            st.download_button("📥 Tải file mật khẩu", buffer, file_name="saved_password.txt", mime="text/plain")
+        st.header("🔑 Tạo mật khẩu mạnh:")
+        st.markdown("""
+        Sử dụng công cụ này để tạo mật khẩu ngẫu nhiên. Mật khẩu mạnh kết hợp chữ hoa, thường, số và ký tự đặc biệt.
+        """)
+    
+        length = st.slider("Chọn độ dài mật khẩu", 6, 50, 12)
+    
+        if st.button("🎲 Tạo mật khẩu"):
+            chars = string.ascii_letters + string.digits + string.punctuation
+            gen_pwd = ''.join(random.choice(chars) for _ in range(length))
+            st.session_state["gen_pwd"] = gen_pwd
+            st.success("✅ Đã tạo mật khẩu!")
+    
+        if "gen_pwd" in st.session_state:
+            gen_pwd = st.session_state["gen_pwd"]
+            st.text_area("🔑 Mật khẩu đã tạo:", gen_pwd, height=40)  # Dùng text_area để dễ sao chép
+            score = calculate_strength(gen_pwd)
+            text, color = strength_text(score)
+            st.markdown(f"**Độ mạnh:** <span style='color:{color}'>{text}</span>", unsafe_allow_html=True)
+            st.progress(min(score * 20, 100))
+    
+            # Lưu mật khẩu gốc
+            st.markdown("Bạn có thể lưu mật khẩu đã tạo dưới dạng văn bản:")
+            
+            if st.button("💾 Lưu mật khẩu"):
+                # Chuyển StringIO thành định dạng nhị phân
+                buffer = io.BytesIO()
+                buffer.write(gen_pwd.encode())  # Chuyển mật khẩu thành bytes
+                buffer.seek(0)  # Đặt lại con trỏ để có thể đọc từ đầu
+                st.success("Mật khẩu gốc đã được lưu!")
+                st.download_button("📥 Tải file mật khẩu", buffer, file_name="saved_password.txt", mime="text/plain")
             
         st.markdown("""
             <div style='margin-top: 30px; font-size: 15px;'>
