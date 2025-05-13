@@ -362,10 +362,17 @@ with tabs[4]:
 
     # --- Sách lật trang ---
     st.subheader("📖 Sách lật trang")
+
     st.markdown("""
-    - [Tin Học 10](https://online.fliphtml5.com/irxmh/xdee/)
-    - [Tin Học 11](https://online.fliphtml5.com/arbaq/fdvz/)
-    - [Tin Học 12](#)
+    Sách lật trang là dạng tài liệu điện tử mô phỏng trải nghiệm lật trang như sách giấy, giúp bạn dễ dàng xem trực tuyến trên mọi thiết bị mà không cần tải về.
+    
+    Mời bạn tham khảo các sách lật trang môn Tin học dành cho học sinh THPT lớp 10, 11 và 12 dưới đây:
+    
+    - [📘 Tin Học 10](https://online.fliphtml5.com/irxmh/xdee/)
+    - [📗 Tin Học 11](https://online.fliphtml5.com/arbaq/fdvz/)
+    - [📙 Tin Học 12](https://online.fliphtml5.com/arbaq/gelv/)
+    
+    > 💡 **Mẹo:** Bạn có thể phóng to, tìm kiếm từ khóa, và xem toàn màn hình để học dễ dàng hơn!
     """)
 
 
