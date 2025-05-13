@@ -1433,7 +1433,8 @@ with tabs[1]:
                 score = calculate_strength(pwd)
                 text, color = strength_text(score)
                 st.markdown(f"**Đánh giá:** <span style='color:{color}'>{text}</span>", unsafe_allow_html=True)
-                st.progress(score * 20)  # Hiển thị tiến trình mạnh yếu
+                progress_value = min(score * 20, 100)
+                st.progress(progress_value)
             else:
                 st.warning("Vui lòng nhập mật khẩu để kiểm tra.")  # Nếu mật khẩu không được nhập
                 
