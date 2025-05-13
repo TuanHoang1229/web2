@@ -1446,7 +1446,7 @@ with tabs[1]:
         
     # --- Tab 2: Tạo mật khẩu ---
     with tab2:
-        st.markdown("### 🔑 Tạo mật khẩu mạnh:")
+        st.header("🔑 Tạo mật khẩu mạnh:")
         st.markdown("""
         Sử dụng công cụ này để tạo mật khẩu ngẫu nhiên. Mật khẩu mạnh kết hợp chữ hoa, thường, số và ký tự đặc biệt.
         """)
@@ -1461,7 +1461,7 @@ with tabs[1]:
     
         if "gen_pwd" in st.session_state:
             gen_pwd = st.session_state["gen_pwd"]
-            st.text_input("🔑 Mật khẩu đã tạo:", gen_pwd)
+            st.text_area("🔑 Mật khẩu đã tạo:", gen_pwd, height=150)  # Dùng text_area để dễ sao chép
             score = calculate_strength(gen_pwd)
             text, color = strength_text(score)
             st.markdown(f"**Độ mạnh:** <span style='color:{color}'>{text}</span>", unsafe_allow_html=True)
@@ -1470,12 +1470,12 @@ with tabs[1]:
             # Lưu mật khẩu gốc
             st.markdown("Bạn có thể lưu mật khẩu đã tạo dưới dạng văn bản:")
             
-            if st.button("💾 Lưu mật khẩu "):
+            if st.button("💾 Lưu mật khẩu"):
                 buffer = io.StringIO()
                 buffer.write(gen_pwd + "\n")
                 buffer.seek(0)
                 st.success("Mật khẩu gốc đã được lưu!")
-                st.download_button("📥 Tải file mật khẩu ", buffer, file_name="saved_password.txt")
+                st.download_button("📥 Tải file mật khẩu", buffer, file_name="saved_password.txt")
 
         st.markdown("""
             <div style='margin-top: 30px; font-size: 15px;'>
