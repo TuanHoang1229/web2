@@ -2,6 +2,7 @@ import streamlit as st
 import random
 import string
 import hashlib
+import io
 from PIL import Image
 
 # --- Cấu hình trang ---
@@ -1443,49 +1444,52 @@ with tabs[1]:
     </div>
     """, unsafe_allow_html=True)
         
-    # Tab tạo mật khẩu
+    # --- Tab 2: Tạo mật khẩu ---
     with tab2:
         st.markdown("### 🔑 Tạo mật khẩu mạnh:")
         st.markdown("""
-        Bạn có thể sử dụng công cụ này để tạo mật khẩu ngẫu nhiên với độ dài tùy chỉnh. 
-        Một mật khẩu mạnh là một mật khẩu dài, kết hợp chữ hoa, chữ thường, số và ký tự đặc biệt.
+        Sử dụng công cụ này để tạo mật khẩu ngẫu nhiên. Mật khẩu mạnh kết hợp chữ hoa, thường, số và ký tự đặc biệt.
         """)
     
         length = st.slider("Chọn độ dài mật khẩu", 6, 50, 12)
+    
         if st.button("🎲 Tạo mật khẩu"):
             chars = string.ascii_letters + string.digits + string.punctuation
             gen_pwd = ''.join(random.choice(chars) for _ in range(length))
+            st.session_state["gen_pwd"] = gen_pwd
+            st.success("✅ Đã tạo mật khẩu!")
+    
+        if "gen_pwd" in st.session_state:
+            gen_pwd = st.session_state["gen_pwd"]
             st.text_input("🔑 Mật khẩu đã tạo:", gen_pwd)
             score = calculate_strength(gen_pwd)
             text, color = strength_text(score)
             st.markdown(f"**Độ mạnh:** <span style='color:{color}'>{text}</span>", unsafe_allow_html=True)
-            st.progress(min(score * 20, 100))  # Tỷ lệ tiến trình từ 0 đến 100
+            st.progress(score * 20)
     
-            # Lưu mật khẩu đã tạo dưới dạng SHA-256
             st.markdown("""
-            Bạn có thể lưu mật khẩu đã tạo dưới dạng SHA-256 để đảm bảo an toàn. 
-            SHA-256 là thuật toán mã hóa mật khẩu giúp bảo vệ thông tin của bạn.
+            Bạn có thể lưu mật khẩu đã tạo dưới dạng SHA-256 để đảm bảo an toàn.
             """)
-            
+    
             if st.button("💾 Lưu mật khẩu SHA-256"):
                 hashed = hashlib.sha256(gen_pwd.encode()).hexdigest()
-                buffer = io.StringIO()
-                buffer.write(hashed + "\n")
+                buffer = io.BytesIO()
+                buffer.write((hashed + "\n").encode())
                 buffer.seek(0)
-                st.success("Đã lưu mật khẩu dưới dạng SHA-256!")
-                st.download_button("📥 Tải file SHA-256", buffer, file_name="saved_passwords.txt")
-        
+                st.success("✅ Mật khẩu đã mã hóa!")
+                st.download_button("📥 Tải file SHA-256", buffer, file_name="saved_passwords.txt", mime="text/plain")
+
         st.markdown("""
-        <div style='margin-top: 30px; font-size: 15px;'>
-            <p><strong>💡 Mẹo tạo mật khẩu mạnh để giữ an toàn cho tài khoản:</strong></p>
-            <ol>
-                <li><strong>Không sử dụng tên tuổi, ngày tháng năm sinh trong mật khẩu:</strong> Những thông tin này dễ bị đoán trúng. Hãy dùng cụm từ cá nhân khó đoán như câu trong bài hát yêu thích hoặc tên thú cưng.</li>
-                <li><strong>Không sử dụng các cụm từ phổ thông dễ đoán:</strong> Tránh các mật khẩu như "123456", "password", "iloveyou",...</li>
-                <li><strong>Mật khẩu bao gồm chữ cái in thường, in hoa, số, ký tự đặc biệt:</strong> Ví dụ: <code>P@ssw0rd!2024</code></li>
-                <li><strong>Mật khẩu có độ dài tối thiểu 12 ký tự:</strong> Độ dài càng lớn, mật khẩu càng khó bị phá.</li>
-            </ol>
-        </div>
-        """, unsafe_allow_html=True)
+            <div style='margin-top: 30px; font-size: 15px;'>
+                <p><strong>💡 Mẹo tạo mật khẩu mạnh để giữ an toàn cho tài khoản:</strong></p>
+                <ol>
+                    <li><strong>Không sử dụng tên tuổi, ngày tháng năm sinh trong mật khẩu:</strong> Những thông tin này dễ bị đoán trúng. Hãy dùng cụm từ cá nhân khó đoán như câu trong bài hát yêu thích hoặc tên thú cưng.</li>
+                    <li><strong>Không sử dụng các cụm từ phổ thông dễ đoán:</strong> Tránh các mật khẩu như "123456", "password", "iloveyou",...</li>
+                    <li><strong>Mật khẩu bao gồm chữ cái in thường, in hoa, số, ký tự đặc biệt:</strong> Ví dụ: <code>P@ssw0rd!2024</code></li>
+                    <li><strong>Mật khẩu có độ dài tối thiểu 12 ký tự:</strong> Độ dài càng lớn, mật khẩu càng khó bị phá.</li>
+                </ol>
+            </div>
+            """, unsafe_allow_html=True)
 
 
 # 🔓 Đăng nhập (tab 6)
