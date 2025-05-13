@@ -230,8 +230,6 @@ with tabs[2]:
     - [ Web hỗ trợ thiết kế giao diện](https://www.mypage.vn/thiet-ke-giao-dien-web-bang-html.html)
     """)
 
-    ---
-
     ### 🐍 Cài đặt Python và Giới thiệu Streamlit
 
     - [ Tải Python tại python.org](https://www.python.org/downloads/)
