@@ -1428,12 +1428,15 @@ with tabs[1]:
     """, unsafe_allow_html=True)
     
         pwd = st.text_input("Nhập mật khẩu:", type="password")
-        if pwd:
-            score = calculate_strength(pwd)
-            text, color = strength_text(score)
-            st.markdown(f"**Đánh giá:** <span style='color:{color}'>{text}</span>", unsafe_allow_html=True)
-            st.progress(score * 20)  # Hiển thị tiến trình mạnh yếu
-        
+        if st.button("Kiểm Tra"):
+            if pwd:
+                score = calculate_strength(pwd)
+                text, color = strength_text(score)
+                st.markdown(f"**Đánh giá:** <span style='color:{color}'>{text}</span>", unsafe_allow_html=True)
+                st.progress(score * 20)  # Hiển thị tiến trình mạnh yếu
+            else:
+                st.warning("Vui lòng nhập mật khẩu để kiểm tra.")  # Nếu mật khẩu không được nhập
+                
         st.markdown("""
     <div style='margin-top: 10px; font-size: 15px;'>
         <p><strong>🔐 Mật khẩu bị đánh cắp là nguy cơ to lớn nhất</strong></p>
