@@ -230,6 +230,18 @@ with tabs[2]:
     - [ Web hỗ trợ thiết kế giao diện](https://www.mypage.vn/thiet-ke-giao-dien-web-bang-html.html)
     """)
 
+    ---
+
+    ### 🐍 Cài đặt Python và Giới thiệu Streamlit
+
+    - [⬇️ Tải Python tại python.org](https://www.python.org/downloads/)
+    - [📘 Giới thiệu và tài liệu Streamlit](https://docs.streamlit.io/)
+    - [🚀 Hướng dẫn cài đặt và chạy Streamlit](https://docs.streamlit.io/streamlit-tutorial/installation)
+
+    > **Gợi ý:** Sau khi cài đặt Python, bạn có thể dùng lệnh sau trong terminal để cài Streamlit:
+    ```bash
+    pip install streamlit
+
     # Mini quiz
     st.markdown("### 🧠 Trắc nghiệm nhanh:")
 
