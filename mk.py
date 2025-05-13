@@ -117,7 +117,7 @@ Trang web này được xây dựng nhằm hỗ trợ học sinh THPT học tậ
     # Thông tin liên hệ có biểu tượng Zalo & Facebook
     st.markdown("<h3>Liên hệ</h3>", unsafe_allow_html=True)
     st.markdown('<div class="contact-item">📍 <strong>Địa chỉ:</strong> Trường THPT Lương Văn Tri</div>', unsafe_allow_html=True)
-    st.markdown('<div class="contact-item">📧 <strong>Email:</strong> ContactLVT@edu.vn</div>', unsafe_allow_html=True)
+    st.markdown('<div class="contact-item">📧 <strong>Email:</strong> tilsvngame@gmail.com</div>', unsafe_allow_html=True)
     st.markdown('<div class="contact-item">📞 <strong>Số điện thoại:</strong> 0966 813 528</div>', unsafe_allow_html=True)
     st.markdown('<div class="contact-item">👤 <strong>Người thực hiện:</strong> Hoàng Minh Tuấn</div>', unsafe_allow_html=True)
     st.markdown('<div class="contact-item"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" width="18" style="margin-right:5px;"> <strong>Zalo:</strong> <a href="https://zalo.me/0966813528" target="_blank">0966 813 528</a></div>', unsafe_allow_html=True)
