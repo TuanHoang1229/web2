@@ -1465,7 +1465,7 @@ with tabs[1]:
             score = calculate_strength(gen_pwd)
             text, color = strength_text(score)
             st.markdown(f"**Độ mạnh:** <span style='color:{color}'>{text}</span>", unsafe_allow_html=True)
-            st.progress(score * 20)
+            st.progress(min(score * 20, 100))
     
             st.markdown("""
             Bạn có thể lưu mật khẩu đã tạo dưới dạng SHA-256 để đảm bảo an toàn.
