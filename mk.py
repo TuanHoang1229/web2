@@ -1372,7 +1372,7 @@ with tabs[5]:
     """)
 
     st.markdown("### 📝 Biểu mẫu gửi bài thực hành:")
-    st.markdown("[📎 Gửi bài qua Google Forms](https://forms.gle/...)")
+    st.markdown("[📎 Gửi bài qua Google Forms](https://forms.gle/dwQnECTG76BQAUXE6)")
 
     st.markdown("""
     **Lưu ý:**
