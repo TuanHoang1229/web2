@@ -1467,17 +1467,15 @@ with tabs[1]:
             st.markdown(f"**Độ mạnh:** <span style='color:{color}'>{text}</span>", unsafe_allow_html=True)
             st.progress(min(score * 20, 100))
     
-            st.markdown("""
-            Bạn có thể lưu mật khẩu đã tạo dưới dạng SHA-256 để đảm bảo an toàn.
-            """)
-    
-            if st.button("💾 Lưu mật khẩu SHA-256"):
-                hashed = hashlib.sha256(gen_pwd.encode()).hexdigest()
-                buffer = io.BytesIO()
-                buffer.write((hashed + "\n").encode())
+            # Lưu mật khẩu gốc
+            st.markdown("Bạn có thể lưu mật khẩu đã tạo dưới dạng văn bản:")
+            
+            if st.button("💾 Lưu mật khẩu "):
+                buffer = io.StringIO()
+                buffer.write(gen_pwd + "\n")
                 buffer.seek(0)
-                st.success("✅ Mật khẩu đã mã hóa!")
-                st.download_button("📥 Tải file SHA-256", buffer, file_name="saved_passwords.txt", mime="text/plain")
+                st.success("Mật khẩu gốc đã được lưu!")
+                st.download_button("📥 Tải file mật khẩu ", buffer, file_name="saved_password.txt")
 
         st.markdown("""
             <div style='margin-top: 30px; font-size: 15px;'>
