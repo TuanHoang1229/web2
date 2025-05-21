@@ -30,8 +30,15 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-
-
+st.markdown("""
+    <style>
+        /* Tăng kích thước chữ của tiêu đề tab */
+        button[data-baseweb="tab"] > div[data-testid="stMarkdownContainer"] > p {
+            font-size: 20px;
+        }
+    </style>
+    """, unsafe_allow_html=True)
+    
 # --- Tabs ---
 tabs = st.tabs([
     "🏠 Trang chủ",
@@ -48,54 +55,66 @@ tabs = st.tabs([
 with tabs[0]:
     st.title("📘 Chào mừng bạn đến với Góc Tự Học Tin học")
     st.markdown("""
-## 💡 Giới thiệu:
-Trang web này được xây dựng nhằm hỗ trợ học sinh THPT học tập và thực hành các kỹ năng **Tin học hiện đại** như:
+<div style='font-family: "Segoe UI", sans-serif; font-size: 20px;'>
 
- - Kiểm tra độ an toàn của mặt khẩu
- - Thiết kế Web cơ bản với HTML/CSS
- - An toàn thông tin
- - Tự học và kiểm tra kiến thức đã học
+<h2>💡 Giới thiệu:</h2>
+<p>Trang web này được xây dựng nhằm hỗ trợ học sinh THPT học tập và thực hành các kỹ năng <strong>Tin học hiện đại</strong> như:</p>
+<ul>
+<li>Kiểm tra độ an toàn của mật khẩu</li>
+<li>Thiết kế Web cơ bản với HTML/CSS</li>
+<li>An toàn thông tin</li>
+<li>Tự học và kiểm tra kiến thức đã học</li>
+</ul>
 
----
+<hr>
 
-### 🎯 Mục tiêu:
-- Học qua thực hành
-- Nâng cao tư duy logic và kỹ năng sử dụng máy tính
-- Tự tin ứng dụng công nghệ trong học tập và đời sống
+<h3>🎯 Mục tiêu:</h3>
+<ul>
+<li>Học qua thực hành</li>
+<li>Nâng cao tư duy logic và kỹ năng sử dụng máy tính</li>
+<li>Tự tin ứng dụng công nghệ trong học tập và đời sống</li>
+</ul>
 
----
+<hr>
 
-### 🗺️ Gợi ý phương pháp học tập:
-1. **Bắt đầu với lý thuyết cơ bản**
-2. **Xem video và làm bài tập**
-3. **Làm trắc nghiệm ôn tập**
-4. **Chia sẻ bài thực hành của bạn**
-5. **Luyện kỹ các năng an toàn**
-6. **Tăng cường mật khẩu của bạn**
+<h3>🗺️ Gợi ý phương pháp học tập:</h3>
+<ol>
+<li><strong>Bắt đầu với lý thuyết cơ bản</strong></li>
+<li><strong>Xem video và làm bài tập</strong></li>
+<li><strong>Làm trắc nghiệm ôn tập</strong></li>
+<li><strong>Chia sẻ bài thực hành của bạn</strong></li>
+<li><strong>Luyện kỹ các năng an toàn</strong></li>
+<li><strong>Tăng cường mật khẩu của bạn</strong></li>
+</ol>
+<p><strong>Lưu ý:</strong> Bạn có thể chia sẻ các ý kiến cá nhân trong form nhé!</p>
 
-   **Lưu ý:** Bạn có thể chia sẻ các ý kiến cá nhân trong form nhaa!
+<hr>
 
----
+<h3>🚀 Các chuyên mục nổi bật:</h3>
+<ul>
+<li>🔑 Kiểm tra mật khẩu</li>
+<li>🔧 Thiết kế Web cơ bản</li>
+<li>🔐 An toàn thông tin</li>
+<li>📁 Kho tài liệu và trắc nghiệm tự luyện</li>
+<li>💬 Góc chia sẻ và nộp bài</li>
+</ul>
 
-### 🚀 Các chuyên mục nổi bật:
-- [🔑 Kiểm tra mặt khẩu]
-- [🔧 Thiết kế Web cơ bản]
-- [🔐 An toàn thông tin]
-- [📁 Kho tài liệu và trắc nghiệm tự luyện]
-- [💬 Góc chia sẻ và nộp bài]
+<hr>
 
----
+<h3>Hướng dẫn:</h3>
+<ul>
+<li>Chọn các chuyên mục ở đầu trang.</li>
+<li>Mỗi mục có hướng dẫn thực hiện, tài liệu và bài tập kèm theo.</li>
+<li>Đừng quên làm trắc nghiệm để kiểm tra kiến thức nhé!</li>
+</ul>
 
-###  Hướng dẫn:
-- Chọn các chuyên mục ở đầu trang.
-- Mỗi mục có hướng dẫn thực hiện, tài liệu và bài tập kèm theo.
-- Đừng quên làm trắc nghiệm để kiểm tra kiến thức nhé!
+<blockquote>
+<p><strong>“Công nghệ là công cụ. Trong việc tạo động lực và giảng dạy, giáo viên vẫn là yếu tố quan trọng nhất.”</strong><br>
+– <strong>Bill Gates</strong></p>
+</blockquote>
 
----
-
-> **“Công nghệ là công cụ. Trong việc tạo động lực và giảng dạy, giáo viên vẫn là yếu tố quan trọng nhất.”**  
-> – **Bill Gates**
-""")
+</div>
+""", unsafe_allow_html=True)
 
      # --- Gạch ngang ---
     st.markdown("<hr style='margin-top: 0;'>", unsafe_allow_html=True)
@@ -131,17 +150,23 @@ with tabs[2]:
 
     # Giới thiệu kiến thức
     st.markdown("""
-    ### Giới thiệu nhanh:
-    - **HTML**: Dùng để xây dựng cấu trúc trang web.
-    - **CSS**: Dùng để tạo kiểu dáng (màu sắc, font chữ, bố cục).
-    - Một số thẻ HTML cơ bản: `<h1>`, `<p>`, `<a>`, `<img>`, `<div>`
-    - Một số thuộc tính CSS thường gặp: `color`, `font-size`, `margin`, `padding`, `background-color`
-    """)
+<div style='font-family: "Segoe UI", sans-serif; font-size: 20px;'>
+
+<h3>Giới thiệu nhanh:</h3>
+<ul>
+  <li><strong>HTML</strong>: Dùng để xây dựng cấu trúc trang web.</li>
+  <li><strong>CSS</strong>: Dùng để tạo kiểu dáng (màu sắc, font chữ, bố cục).</li>
+  <li>Một số thẻ HTML cơ bản: <code>&lt;h1&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;div&gt;</code></li>
+  <li>Một số thuộc tính CSS thường gặp: <code>color</code>, <code>font-size</code>, <code>margin</code>, <code>padding</code>, <code>background-color</code></li>
+</ul>
+
+</div>
+""", unsafe_allow_html=True)
 
     st.markdown("""
     <div style='margin-top: 20px;'>
         <h3 style='margin-bottom: 10px;'>📘 Cách viết web bằng HTML và CSS đơn giản, chi tiết</h3>
-        <div style='font-size: 16px; line-height: 1.6;'>
+        <div style='font-size: 20px; line-height: 1.6;'>
             <p>Nếu bạn mới học lập trình web thì hãy bắt đầu với <strong>HTML</strong> và <strong>CSS</strong>. Đây là hai ngôn ngữ cơ bản và quan trọng trong xây dựng web.</p>
             <p>Việc viết code web bằng HTML và CSS không khó, tuy nhiên nó đòi hỏi bạn cần có các kiến thức nhất định về lập trình, cụ thể:</p>
             <ul>
@@ -191,71 +216,106 @@ with tabs[2]:
 
     # Thử thách thực hành
     st.markdown("""
-    ### Thử thách thực hành
-
-    Hãy luyện tập viết HTML bằng cách thực hiện các yêu cầu sau:
-
-    #### Cơ bản:
-    - Tạo một tiêu đề lớn
-    - Viết một đoạn văn mô tả
-    - Hiển thị một hình ảnh từ Internet
-    - Chèn một liên kết đến Google
-
-    **Gợi ý:** Dùng các thẻ `<h1>`, `<p>`, `<img>`, `<a>`
-
-    ---
-
-    #### Nâng cao:
-    1. Tạo danh sách các sở thích của bạn bằng thẻ `<ul>` hoặc `<ol>`.
-    2. Tạo bảng thông tin cá nhân (Họ tên, Tuổi, Lớp) bằng thẻ `<table>`.
-    3. Thêm một nút bấm đơn giản bằng thẻ `<button>`.
-    4. Nhúng một video YouTube yêu thích bằng thẻ `<iframe>`.
-    5. Sử dụng thẻ `<div>` để tạo một khối nội dung có viền và nền màu nhẹ.
-
-    ---
-
-    **Thử thách phụ:**  
-    Hãy sáng tạo một trang giới thiệu bản thân bằng tất cả những gì bạn đã học!
-
-    > **Ghi nhớ:** Hãy lưu lại mã HTML của bạn và gửi qua form ở góc chia sẻ để nhận góp ý và đánh giá!
-    """)
+    <div style='font-family: "Segoe UI", sans-serif; font-size: 20px;'>
+    
+    <h3>Thử thách thực hành</h3>
+    
+    <p>Hãy luyện tập viết HTML bằng cách thực hiện các yêu cầu sau:</p>
+    
+    <h4>Cơ bản:</h4>
+    <ul>
+      <li>Tạo một tiêu đề lớn</li>
+      <li>Viết một đoạn văn mô tả</li>
+      <li>Hiển thị một hình ảnh từ Internet</li>
+      <li>Chèn một liên kết đến Google</li>
+    </ul>
+    
+    <p><strong>Gợi ý:</strong> Dùng các thẻ <code>&lt;h1&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;a&gt;</code></p>
+    
+    <hr>
+    
+    <h4>Nâng cao:</h4>
+    <ol>
+      <li>Tạo danh sách các sở thích của bạn bằng thẻ <code>&lt;ul&gt;</code> hoặc <code>&lt;ol&gt;</code>.</li>
+      <li>Tạo bảng thông tin cá nhân (Họ tên, Tuổi, Lớp) bằng thẻ <code>&lt;table&gt;</code>.</li>
+      <li>Thêm một nút bấm đơn giản bằng thẻ <code>&lt;button&gt;</code>.</li>
+      <li>Nhúng một video YouTube yêu thích bằng thẻ <code>&lt;iframe&gt;</code>.</li>
+      <li>Sử dụng thẻ <code>&lt;div&gt;</code> để tạo một khối nội dung có viền và nền màu nhẹ.</li>
+    </ol>
+    
+    <hr>
+    
+    <p><strong>Thử thách phụ:</strong><br>
+    Hãy sáng tạo một trang giới thiệu bản thân bằng tất cả những gì bạn đã học!</p>
+    
+    <blockquote>
+    <p><strong>Ghi nhớ:</strong> Hãy lưu lại mã HTML của bạn và gửi qua form ở góc chia sẻ để nhận góp ý và đánh giá!</p>
+    </blockquote>
+    
+    </div>
+    """, unsafe_allow_html=True)
 
     # Học thêm
     st.markdown("""
-    ### 📘 Tài liệu Tham Khảo:
-    - [🎥 Video hướng dẫn HTML cơ bản](https://www.youtube.com/watch?v=Ke90Tje7VS0)
-    - [🌐 Tài liệu CSS tại W3Schools](https://www.w3schools.com/css/)
+    <div style='font-family: "Segoe UI", sans-serif; font-size: 20px;'>
     
-    - **Một số trang web hỗ trợ lập trình cho người mới:**
-    - [ Web hỗ trợ lập trình cơ bản](https://gitiho.com/blog/cach-lap-trinh-web-html-va-css.html#tim_hieu_ve_html_va_css)
-    - [ Web hỗ trợ thiết kế giao diện](https://www.mypage.vn/thiet-ke-giao-dien-web-bang-html.html)
-
-    ---
+    <h3>📘 Tài liệu Tham Khảo:</h3>
+    <ul>
+      <li>🎥 <a href="https://www.youtube.com/watch?v=Ke90Tje7VS0" target="_blank">Video hướng dẫn HTML cơ bản</a></li>
+      <li>🌐 <a href="https://www.w3schools.com/css/" target="_blank">Tài liệu CSS tại W3Schools</a></li>
+    </ul>
     
-    ### 🐍 Cài đặt Python và Giới thiệu Streamlit
+    <p><strong>Một số trang web hỗ trợ lập trình cho người mới:</strong></p>
+    <ul>
+      <li><a href="https://gitiho.com/blog/cach-lap-trinh-web-html-va-css.html#tim_hieu_ve_html_va_css" target="_blank">Web hỗ trợ lập trình cơ bản</a></li>
+      <li><a href="https://www.mypage.vn/thiet-ke-giao-dien-web-bang-html.html" target="_blank">Web hỗ trợ thiết kế giao diện</a></li>
+    </ul>
     
-    - [⬇️ Tải Python tại python.org](https://www.python.org/downloads/)
-    - [📘 Giới thiệu và tài liệu Streamlit](https://docs.streamlit.io/)
-    - [🚀 Hướng dẫn cài đặt và chạy Streamlit](https://docs.streamlit.io/streamlit-tutorial/installation)
-
-    > **Gợi ý:** Sau khi cài đặt Python, bạn có thể dùng lệnh sau trong terminal để cài Streamlit:
-    ```bash
-    pip install streamlit
-    """)
+    <hr>
+    
+    <h3>🐍 Cài đặt Python và Giới thiệu Streamlit</h3>
+    <ul>
+      <li>⬇️ <a href="https://www.python.org/downloads/" target="_blank">Tải Python tại python.org</a></li>
+      <li>📘 <a href="https://docs.streamlit.io/" target="_blank">Giới thiệu và tài liệu Streamlit</a></li>
+      <li>🚀 <a href="https://docs.streamlit.io/streamlit-tutorial/installation" target="_blank">Hướng dẫn cài đặt và chạy Streamlit</a></li>
+    </ul>
+    
+    <blockquote>
+    <p><strong>Gợi ý:</strong> Sau khi cài đặt Python, bạn có thể dùng lệnh sau trong terminal để cài Streamlit:</p>
+    <pre><code>pip install streamlit</code></pre>
+    </blockquote>
+    
+    </div>
+    """, unsafe_allow_html=True)
 
     # Mini quiz
     st.markdown("### 🧠 Trắc nghiệm nhanh:")
 
-    q1 = st.radio("1. Thẻ nào dùng để tạo tiêu đề lớn nhất?", ["<p>", "<h1>", "<title>", "<div>"], key="web_q1")
-    q2 = st.radio("2. Thuộc tính nào để đổi màu chữ trong CSS?", ["font-size", "color", "background-color", "margin"], key="web_q2")
-    q3 = st.radio("3. Thẻ nào dùng để chèn hình ảnh vào trang web?", ["<a>", "<img>", "<picture>", "<div>"], key="web_q3")
-    q4 = st.radio("4. Trong CSS, thuộc tính `padding` dùng để làm gì?", ["Tạo khoảng cách bên trong phần tử", "Đổi màu nền", "Tạo đường viền", "Tăng cỡ chữ"], key="web_q4")
-    q5 = st.radio("5. Đoạn mã nào tạo liên kết đến Google?", [
+    st.markdown("""
+    <style>
+        /* Tăng cỡ chữ cho label của radio buttons */
+        .stRadio > div div {
+            font-size: 18px;
+        }
+    </style>
+""", unsafe_allow_html=True)
+
+    st.markdown("<div style='font-size:19px; font-weight:600;'>1. Thẻ nào dùng để tạo tiêu đề lớn nhất?</div>", unsafe_allow_html=True)
+    q1 = st.radio("", ["<p>", "<h1>", "<title>", "<div>"], key="web_q1")
+    st.markdown("<div style='font-size:19px; font-weight:600;'>2. Thuộc tính nào để đổi màu chữ trong CSS?</div>", unsafe_allow_html=True)
+    q2 = st.radio("", ["font-size", "color", "background-color", "margin"], key="web_q2")
+    st.markdown("<div style='font-size:19px; font-weight:600;'>3. Thẻ nào dùng để chèn hình ảnh vào trang web?</div>", unsafe_allow_html=True)
+    q3 = st.radio("", ["<a>", "<img>", "<picture>", "<div>"], key="web_q3")
+    st.markdown("<div style='font-size:19px; font-weight:600;'>4. Trong CSS, thuộc tính <code>padding</code> dùng để làm gì?</div>", unsafe_allow_html=True)
+    q4 = st.radio("", ["Tạo khoảng cách bên trong phần tử", "Đổi màu nền", "Tạo đường viền", "Tăng cỡ chữ"], key="web_q4")
+    st.markdown("<div style='font-size:19px; font-weight:600;'>5. Đoạn mã nào tạo liên kết đến Google?</div>", unsafe_allow_html=True)
+    q5 = st.radio("", [
         "<link href='google.com'>Google</link>", 
         "<a>Google</a>", 
         "<a href='https://google.com'>Google</a>", 
         "<p href='google.com'>Google</p>"
-    ], key="web_q5")
+        ], key="web_q5")
+
 
     if st.button("✅ Nộp câu trả lời", key="submit_web_quiz"):
         score = 0
@@ -280,60 +340,126 @@ with tabs[3]:
 
     # Kiến thức cơ bản
     st.markdown("""
-    ### Kiến thức cơ bản:
-    - **Mật khẩu mạnh** nên có chữ hoa, chữ thường, số và ký tự đặc biệt.
-    - **Không chia sẻ mật khẩu** qua email hay tin nhắn.
-    - **Không nhấn vào liên kết lạ** trong email từ người lạ.
-    - **Cập nhật phần mềm thường xuyên** để tránh lỗ hổng bảo mật.
-    """)
+    <div style='font-family: "Segoe UI", sans-serif; font-size: 20px;'>
+    
+    <h3>🛡️ Kiến thức cơ bản:</h3>
+    <ul>
+      <li><strong>Mật khẩu mạnh</strong> nên có chữ hoa, chữ thường, số và ký tự đặc biệt.</li>
+      <li><strong>Không chia sẻ mật khẩu</strong> qua email hay tin nhắn.</li>
+      <li><strong>Không nhấn vào liên kết lạ</strong> trong email từ người lạ.</li>
+      <li><strong>Cập nhật phần mềm thường xuyên</strong> để tránh lỗ hổng bảo mật.</li>
+    </ul>
+    
+    <hr>
+    
+    <h3>📧 Tình huống:</h3>
+    <p>Bạn nhận được email từ một địa chỉ lạ với tiêu đề <strong>"Bạn đã trúng thưởng!"</strong> và tệp đính kèm là file <code>.exe</code>.<br>
+    <strong>Bạn nên làm gì?</strong></p>
+    <ul>
+      <li>❌ Không mở tệp đính kèm</li>
+      <li>🔍 Kiểm tra địa chỉ người gửi</li>
+      <li>📢 Báo cáo cho giáo viên hoặc quản trị mạng</li>
+    </ul>
+    
+    <hr>
+    
+    <h3>💡 Mẹo an toàn khi dùng Internet:</h3>
+    <ul style="line-height: 1.8;">
+      <li>🔑 <strong>1. Sử dụng trình quản lý mật khẩu để an toàn trên internet</strong><br>
+          Trình quản lý mật khẩu như Google Password Manager giúp tạo, lưu và điền mật khẩu an toàn, tránh việc phải ghi nhớ từng mật khẩu riêng lẻ.
+      </li>
+    
+      <li>🛠️ <strong>2. Cài đặt hệ điều hành và bản cập nhật mới nhất</strong><br>
+          Cập nhật thường xuyên giúp vá lỗ hổng bảo mật, bảo vệ thiết bị khỏi các mối đe dọa an ninh mạng mới.
+      </li>
+    
+      <li>🕵️ <strong>3. Kiểm tra bảo mật định kỳ</strong><br>
+          Dùng công cụ như Google Safe Browsing để phát hiện trang web hoặc tệp độc hại trước khi truy cập hay tải xuống.
+      </li>
+    
+      <li>🧿 <strong>4. Bảo mật tài khoản bằng khóa passkey</strong><br>
+          Passkey xác thực người dùng bằng sinh trắc học hoặc thiết bị bảo mật, giúp tăng cường bảo vệ tài khoản cá nhân.
+      </li>
+    
+      <li>⚙️ <strong>5. Xem lại cài đặt dữ liệu</strong><br>
+          Kiểm tra và giới hạn quyền truy cập dữ liệu của các ứng dụng và dịch vụ để bảo vệ thông tin cá nhân.
+      </li>
+    
+      <li>🚫 <strong>6. Cẩn thận với các email và tin nhắn lừa đảo</strong><br>
+          Không mở liên kết lạ hoặc cung cấp thông tin cá nhân khi nhận email hay tin nhắn đáng ngờ.
+      </li>
+    
+      <li>🙈 <strong>7. Tránh chia sẻ thông tin cá nhân nhạy cảm trên mạng xã hội</strong><br>
+          Không đăng tải địa chỉ, số điện thoại, thông tin tài chính hoặc những dữ liệu dễ bị lợi dụng.
+      </li>
+    
+      <li>📶 <strong>8. Sử dụng kết nối Wi-Fi an toàn</strong><br>
+          Tránh dùng Wi-Fi công cộng cho các giao dịch quan trọng, và nên dùng VPN để mã hóa dữ liệu nếu cần.
+      </li>
+    </ul>
 
-    # Tình huống thực tế
-    st.markdown("""
-    ### Tình huống:
-    Bạn nhận được email từ một địa chỉ lạ với tiêu đề "Bạn đã trúng thưởng!" và tệp đính kèm là file .exe.  
-    **Bạn nên làm gì?**
-    - Không mở tệp đính kèm  
-    - Kiểm tra địa chỉ người gửi  
-    - Báo cáo cho giáo viên hoặc quản trị mạng
-    """)
 
-    # Danh sách mẹo
-    st.markdown("""
-    ### Mẹo an toàn khi dùng Internet:
-    - Sử dụng xác thực 2 yếu tố (2FA)
-    - Không dùng chung một mật khẩu cho nhiều tài khoản
-    - Không dùng Wi-Fi công cộng cho việc quan trọng
-    - Đăng xuất sau khi dùng xong máy tính công cộng
-    """)
-
-    # Học thêm
-    st.markdown("""
-    ### Một số cách để phòng tránh:
-    - [Video: Làm sao để an toàn trên mạng?](https://www.youtube.com/watch?v=1I4FZ6Nkm4A)
-    - [Cẩm nang an toàn thông tin của VNPT](https://attt.vnpt.vn)
-    """)
-
+    <hr>
+    
+    <h3>📚 Một số cách để phòng tránh:</h3>
+    <ul>
+      <li>🎥 <a href="https://www.youtube.com/watch?v=1I4FZ6Nkm4A" target="_blank">Video: Làm sao để an toàn trên mạng?</a></li>
+      <li>📘 <a href="https://attt.vnpt.vn" target="_blank">Cẩm nang an toàn thông tin của VNPT</a></li>
+    </ul>
+    
+    </div>
+    """, unsafe_allow_html=True)
+    
     # Trắc nghiệm nhỏ
     st.markdown("### 🧠 Trắc nghiệm nhanh:")
 
-    q1 = st.radio("1. Mật khẩu an toàn nên chứa?", [
-        "Ngày sinh", "Chỉ chữ thường", "Ký tự đặc biệt, số, chữ hoa thường", "Tên người thân"
+    st.markdown("""
+        <style>
+            /* Tăng cỡ chữ cho label của radio buttons */
+            .stRadio > div div {
+                font-size: 18px;
+            }
+        </style>
+    """, unsafe_allow_html=True)
+    
+    st.markdown("<div style='font-size:20px; font-weight:600;'>1. Mật khẩu an toàn nên chứa?</div>", unsafe_allow_html=True)
+    q1 = st.radio("", [
+        "Ngày sinh", 
+        "Chỉ chữ thường", 
+        "Ký tự đặc biệt, số, chữ hoa thường", 
+        "Tên người thân"
     ], key="sec_q1")
-
-    q2 = st.radio("2. Khi nhận được email lạ có tệp đính kèm, bạn nên?", [
-        "Mở ngay để xem nội dung", "Xóa email và không mở tệp", "Chuyển tiếp cho bạn bè", "Trả lời email"
+    
+    st.markdown("<div style='font-size:20px; font-weight:600;'>2. Khi nhận được email lạ có tệp đính kèm, bạn nên?</div>", unsafe_allow_html=True)
+    q2 = st.radio("", [
+        "Mở ngay để xem nội dung", 
+        "Xóa email và không mở tệp", 
+        "Chuyển tiếp cho bạn bè", 
+        "Trả lời email"
     ], key="sec_q2")
-
-    q3 = st.radio("3. Cách bảo vệ tài khoản hiệu quả nhất là?", [
-        "Đặt mật khẩu dễ nhớ", "Dùng mật khẩu giống nhau cho mọi tài khoản", "Bật xác thực 2 yếu tố (2FA)", "Không đặt mật khẩu"
+    
+    st.markdown("<div style='font-size:20px; font-weight:600;'>3. Cách bảo vệ tài khoản hiệu quả nhất là?</div>", unsafe_allow_html=True)
+    q3 = st.radio("", [
+        "Đặt mật khẩu dễ nhớ", 
+        "Dùng mật khẩu giống nhau cho mọi tài khoản", 
+        "Bật xác thực 2 yếu tố (2FA)", 
+        "Không đặt mật khẩu"
     ], key="sec_q3")
-
-    q4 = st.radio("4. Khi dùng Wi-Fi công cộng, bạn nên?", [
-        "Mua hàng online và nhập thẻ ngân hàng", "Kiểm tra email cá nhân", "Tránh truy cập tài khoản quan trọng", "Tải phần mềm lạ"
+    
+    st.markdown("<div style='font-size:20px; font-weight:600;'>4. Khi dùng Wi-Fi công cộng, bạn nên?</div>", unsafe_allow_html=True)
+    q4 = st.radio("", [
+        "Mua hàng online và nhập thẻ ngân hàng", 
+        "Kiểm tra email cá nhân", 
+        "Tránh truy cập tài khoản quan trọng", 
+        "Tải phần mềm lạ"
     ], key="sec_q4")
-
-    q5 = st.radio("5. Đâu là ví dụ về phần mềm độc hại?", [
-        "Microsoft Word", "Trình duyệt Chrome", "Phần mềm virus giả mạo", "Zoom"
+    
+    st.markdown("<div style='font-size:20px; font-weight:600;'>5. Đâu là ví dụ về phần mềm độc hại?</div>", unsafe_allow_html=True)
+    q5 = st.radio("", [
+        "Microsoft Word", 
+        "Trình duyệt Chrome", 
+        "Phần mềm virus giả mạo", 
+        "Zoom"
     ], key="sec_q5")
 
     # Nút nộp bài và chấm điểm
@@ -365,16 +491,24 @@ with tabs[4]:
     st.subheader("📖 Sách lật trang")
 
     st.markdown("""
-    Sách lật trang là dạng tài liệu điện tử mô phỏng trải nghiệm lật trang như sách giấy, giúp bạn dễ dàng xem trực tuyến trên mọi thiết bị mà không cần tải về.
+    <div style='font-family: "Segoe UI", sans-serif; font-size: 20px;'>
     
-    Mời bạn tham khảo các sách lật trang môn Tin học dành cho học sinh THPT lớp 10, 11 và 12 dưới đây:
+    <p>Sách lật trang là dạng tài liệu điện tử mô phỏng trải nghiệm <strong>lật trang như sách giấy</strong>, giúp bạn dễ dàng xem trực tuyến trên mọi thiết bị mà không cần tải về.</p>
     
-    - [📘 Tin Học 10](https://online.fliphtml5.com/irxmh/xdee/)
-    - [📗 Tin Học 11](https://online.fliphtml5.com/arbaq/fdvz/)
-    - [📙 Tin Học 12](https://online.fliphtml5.com/arbaq/gelv/)
+    <p>Mời bạn tham khảo các sách lật trang môn <strong>Tin học dành cho học sinh THPT lớp 10, 11 và 12</strong> dưới đây:</p>
     
-    > 💡 **Mẹo:** Bạn có thể phóng to, tìm kiếm từ khóa, và xem toàn màn hình để học dễ dàng hơn!
-    """)
+    <ul>
+      <li>📘 <a href="https://online.fliphtml5.com/irxmh/xdee/" target="_blank">Tin Học 10</a></li>
+      <li>📗 <a href="https://online.fliphtml5.com/arbaq/fdvz/" target="_blank">Tin Học 11</a></li>
+      <li>📙 <a href="https://online.fliphtml5.com/arbaq/gelv/" target="_blank">Tin Học 12</a></li>
+    </ul>
+    
+    <blockquote>
+      💡 <strong>Mẹo:</strong> Bạn có thể <em>phóng to</em>, <em>tìm kiếm từ khóa</em>, và <em>xem toàn màn hình</em> để học dễ dàng hơn!
+    </blockquote>
+    
+    </div>
+    """, unsafe_allow_html=True)
 
 
 
@@ -466,7 +600,7 @@ with tabs[4]:
             },
             {
                 "question": "Câu 11: Khẳng định nào sau đây là sai khi nói về máy tính?",
-                "options": ["Máy tính có tốc độ xử lí nhanh",
+                "options": ["Máy tính có tốc độ xử lí nhanh",
                             "Máy tính có khả năng lưu trữ lượng thông tin lớn",
                             "Máy tính ngày càng nhỏ gọn",
                             "Máy tính không thể kết nối được với nhau"],
@@ -1327,68 +1461,91 @@ with tabs[4]:
     
 
 
-    # --- Website học lập trình (quốc tế) ---
-    st.subheader("🌐 Website học lập trình")
     st.markdown("""
-    - [W3Schools](https://www.w3schools.com/) – Học lập trình cơ bản HTML, CSS, JS,...
-    - [GeeksforGeeks](https://www.geeksforgeeks.org/) – Thuật toán, cấu trúc dữ liệu, phỏng vấn.
-    - [FreeCodeCamp](https://www.freecodecamp.org/) – Khóa học miễn phí có chứng chỉ.
-    - [Coursera](https://www.coursera.org/) – Khóa học từ đại học lớn (một số miễn phí).
-    - [Codecademy](https://www.codecademy.com/) – Học lập trình tương tác.
-    """)
+    <div style='font-family: "Segoe UI", sans-serif; font-size: 20px;'>
+    
+    <h3>🌐 Website học lập trình (quốc tế)</h3>
+    <ul>
+      <li><a href="https://www.w3schools.com/" target="_blank">W3Schools</a> – Học lập trình cơ bản HTML, CSS, JS,...</li>
+      <li><a href="https://www.geeksforgeeks.org/" target="_blank">GeeksforGeeks</a> – Thuật toán, cấu trúc dữ liệu, phỏng vấn.</li>
+      <li><a href="https://www.freecodecamp.org/" target="_blank">FreeCodeCamp</a> – Khóa học miễn phí có chứng chỉ.</li>
+      <li><a href="https://www.coursera.org/" target="_blank">Coursera</a> – Khóa học từ đại học lớn (một số miễn phí).</li>
+      <li><a href="https://www.codecademy.com/" target="_blank">Codecademy</a> – Học lập trình tương tác.</li>
+    </ul>
+    
+    <h3>🇻🇳 Website tiếng Việt</h3>
+    <ul>
+      <li><a href="https://www.howkteam.vn/" target="_blank">HowKteam.vn</a> – Học C#, Python, Android bằng tiếng Việt.</li>
+      <li><a href="https://viblo.asia/" target="_blank">Viblo.asia</a> – Bài viết kỹ thuật, lập trình, DevOps,...</li>
+      <li><a href="https://hoclaptrinh.vn/" target="_blank">Hoclaptrinh.vn</a> – Khóa học lập trình cơ bản – nâng cao.</li>
+      <li><a href="https://codelearn.io/" target="_blank">Codelearn.io</a> – Học lập trình qua thử thách (game hoá).</li>
+    </ul>
+    
+    <h3>📘 Sách lập trình miễn phí</h3>
+    <ul>
+      <li><a href="https://github.com/EbookFoundation/free-programming-books" target="_blank">Free Programming Books (GitHub)</a> – Hàng nghìn sách lập trình miễn phí, có cả tiếng Việt.</li>
+      <li><a href="https://www.oreilly.com/" target="_blank">O'Reilly Online Learning</a> – Thư viện sách lập trình cao cấp (trả phí).</li>
+    </ul>
 
-    # --- Website tiếng Việt ---
-    st.subheader("🇻🇳 Website tiếng Việt")
-    st.markdown("""
-    - [HowKteam.vn](https://www.howkteam.vn/) – Học C#, Python, Android bằng tiếng Việt.
-    - [Viblo.asia](https://viblo.asia/) – Bài viết kỹ thuật, lập trình, DevOps,...
-    - [Hoclaptrinh.vn](https://hoclaptrinh.vn/) – Khóa học lập trình cơ bản – nâng cao.
-    - [Codelearn.io](https://codelearn.io/) – Học lập trình qua thử thách (game hoá).
-    """)
-
-    # --- Sách & nguồn mở ---
-    st.subheader("📘 Sách lập trình miễn phí")
-    st.markdown("""
-    - [Free Programming Books (GitHub)](https://github.com/EbookFoundation/free-programming-books) – Hàng nghìn sách lập trình miễn phí, có cả tiếng Việt.
-    - [O'Reilly Online Learning](https://www.oreilly.com/) – Thư viện sách lập trình cao cấp (trả phí).
-    """)
-
-    st.subheader("🖥️ Một số trang web tự học")
-    st.markdown("""
-    - [Học Mãi](https://hocmai.vn/)
-    - [Học 10](https://www.hoc10.vn/)
-    - [Học 24h](https://hoc24.vn/)
-    """)
-
-    # --- Gợi ý ---
-    st.markdown("---")
-    st.info("💡 Mẹo: Dành 15 phút mỗi ngày học lập trình từ W3Schools hoặc FreeCodeCamp để duy trì thói quen!")
+    <h3>🛠️ Phần mềm thực hành tạo website lớp 12</h3>
+    <ul>
+      <li><a href="https://www.sublimetext.com" target="_blank">Hướng dẫn và cài đặt Sublime Text</a></li>
+      <li><a href="https://mobirise.com/" target="_blank">Link cài đặt Mobirise</a></li>
+    </ul>
+        
+    <h3>🖥️ Một số trang web tự học</h3>
+    <ul>
+      <li><a href="https://hocmai.vn/" target="_blank">Học Mãi</a></li>
+      <li><a href="https://www.hoc10.vn/" target="_blank">Học 10</a></li>
+      <li><a href="https://hoc24.vn/" target="_blank">Học 24h</a></li>
+    </ul>
+    
+    <hr>
+    
+    <blockquote style="border-left: 4px solid #00aaff; padding-left: 10px; margin-top: 20px;">
+    💡 <strong>Mẹo:</strong> Dành <strong>15 phút mỗi ngày</strong> học lập trình từ <a href="https://www.w3schools.com/" target="_blank">W3Schools</a> hoặc <a href="https://www.freecodecamp.org/" target="_blank">FreeCodeCamp</a> để duy trì thói quen!
+    </blockquote>
+    
+    </div>
+    """, unsafe_allow_html=True)
 
 # --- Góc chia sẻ ---
 with tabs[5]:
     st.header("📬 Góc chia sẻ - Gửi bài thực hành")
     
     st.markdown("""
-    **Chào bạn!** Đây là nơi bạn có thể gửi các bài thực hành, đề tài hoặc sản phẩm bạn đã hoàn thành trong quá trình học.
+    <div style='font-family: "Segoe UI", sans-serif; font-size: 20px;'>
     
-    Bằng cách gửi bài qua Google Forms, bạn sẽ nhận được:
-    - **Phản hồi từ giáo viên** giúp cải thiện kỹ năng.
-    - **Cơ hội nhận xét và đánh giá** từ cộng đồng.
-    - **Cải thiện kỹ năng thực hành** qua các bài tập thực tế.
+    <p><strong>👋 Chào bạn!</strong> Đây là nơi bạn có thể gửi các bài thực hành, đề tài hoặc sản phẩm bạn đã hoàn thành trong quá trình học.</p>
     
-    Để gửi bài, vui lòng điền vào biểu mẫu dưới đây.
-    """)
-
-    st.markdown("### 📝 Biểu mẫu gửi bài thực hành:")
-    st.markdown("[📎 Gửi bài qua Google Forms](https://forms.gle/dwQnECTG76BQAUXE6)")
-
-    st.markdown("""
-    **Lưu ý:**
-    - Hãy chắc chắn rằng bài thực hành của bạn đã được hoàn thiện và kiểm tra kỹ lưỡng trước khi gửi.
-    - Nếu bạn có bất kỳ câu hỏi nào hoặc gặp phải vấn đề khi gửi bài, đừng ngần ngại liên hệ với hỗ trợ kỹ thuật.
+    <p>Khi gửi bài qua Google Forms, bạn sẽ nhận được:</p>
+    <ul>
+      <li><strong>Phản hồi từ giáo viên</strong> giúp cải thiện kỹ năng.</li>
+      <li><strong>Cơ hội nhận xét và đánh giá</strong> từ cộng đồng.</li>
+      <li><strong>Cải thiện kỹ năng thực hành</strong> qua các bài tập thực tế.</li>
+    </ul>
     
-    **Chúc bạn học tốt và đạt kết quả xuất sắc!**
-    """)
+    <p>Để gửi bài, vui lòng điền vào biểu mẫu dưới đây.</p>
+    
+    <h3>📝 Biểu mẫu gửi bài thực hành:</h3>
+    <p>
+      <a href="https://forms.gle/dwQnECTG76BQAUXE6" target="_blank" style="font-weight: bold; color: #0066cc;">
+        📎 Gửi bài qua Google Forms
+      </a>
+    </p>
+    
+    <hr>
+    
+    <p><strong>Lưu ý:</strong></p>
+    <ul>
+      <li>Hãy chắc chắn rằng bài thực hành của bạn đã được hoàn thiện và kiểm tra kỹ lưỡng trước khi gửi.</li>
+      <li>Nếu bạn có bất kỳ câu hỏi nào hoặc gặp vấn đề khi gửi bài, đừng ngần ngại liên hệ với <em>hỗ trợ kỹ thuật</em>.</li>
+    </ul>
+    
+    <p><strong>🎓 Chúc bạn học tốt và đạt kết quả xuất sắc!</strong></p>
+    
+    </div>
+    """, unsafe_allow_html=True)
 
 # --- Kiểm tra mật khẩu ---
 with tabs[1]:
@@ -1418,14 +1575,21 @@ with tabs[1]:
     with tab1:
         st.markdown("### 🔍 Kiểm tra độ mạnh mật khẩu:")
         st.markdown("""
-        Mật khẩu mạnh là mật khẩu có độ dài tối thiểu 8 ký tự, bao gồm chữ hoa, chữ thường, số và ký tự đặc biệt.
-        """)
-        st.markdown("""
-        <div style='text-align: center; font-size:16px;'>
-            <p><strong>Vậy mật khẩu của bạn đã đủ mạnh chưa?</strong></p>
-            <p>Nhập mật khẩu của bạn vào ô bên dưới để kiểm tra độ mạnh.</p>
+        <div style='font-family: "Segoe UI", sans-serif; font-size: 20px;'>
+            <p>
+                🔐 <strong>Mật khẩu mạnh</strong> là mật khẩu có độ dài tối thiểu <strong>8 ký tự</strong>, 
+                bao gồm: chữ hoa, chữ thường, số và ký tự đặc biệt.
+            </p>
         </div>
-    """, unsafe_allow_html=True)
+        """, unsafe_allow_html=True)
+        
+        # Câu hỏi trung tâm căn giữa
+        st.markdown("""
+        <div style='text-align: center; font-size: 20px; font-family: "Segoe UI", sans-serif; margin-top: 20px;'>
+            <p><strong>🧐 Vậy mật khẩu của bạn đã đủ mạnh chưa?</strong></p>
+            <p>Hãy nhập mật khẩu vào ô bên dưới để kiểm tra độ mạnh.</p>
+        </div>
+        """, unsafe_allow_html=True)
     
         pwd = st.text_input("Nhập mật khẩu:", type="password")
         if st.button("Kiểm Tra"):
@@ -1439,7 +1603,7 @@ with tabs[1]:
                 st.warning("Vui lòng nhập mật khẩu để kiểm tra.")  # Nếu mật khẩu không được nhập
                 
         st.markdown("""
-    <div style='margin-top: 10px; font-size: 15px;'>
+    <div style='margin-top: 10px; font-family: "Segoe UI", sans-serif; font-size: 20px; line-height: 1.6;'>
         <p><strong>🔐 Mật khẩu bị đánh cắp là nguy cơ to lớn nhất</strong></p>
         <p>80% các vụ rò rỉ dữ liệu xảy ra do mật khẩu bị tấn công, và những sự cố này đã gây ra thất thoát hàng triệu đô la cho nhiều công ty. Theo IBM, trung bình một vụ rò rỉ dữ liệu gây thiệt hại lên đến <strong>3.86 triệu đô la</strong> trong năm 2020.</p>
         <p>Đối với cá nhân, mật khẩu bị lộ có thể khiến người dùng trở thành nạn nhân của các vụ lừa đảo, đánh cắp danh tính, v.v.</p>
@@ -1452,8 +1616,10 @@ with tabs[1]:
     with tab2:
         st.header("🔑 Tạo mật khẩu mạnh:")
         st.markdown("""
-        Sử dụng công cụ này để tạo mật khẩu ngẫu nhiên. Mật khẩu mạnh kết hợp chữ hoa, thường, số và ký tự đặc biệt.
-        """)
+        <div style='font-family: "Segoe UI", sans-serif; font-size: 20px; line-height: 1.5;'>
+            Sử dụng công cụ này để tạo mật khẩu ngẫu nhiên. Mật khẩu mạnh kết hợp chữ hoa, thường, số và ký tự đặc biệt.
+        </div>
+        """, unsafe_allow_html=True)
     
         length = st.slider("Chọn độ dài mật khẩu", 6, 50, 12)
     
@@ -1483,16 +1649,16 @@ with tabs[1]:
                 st.download_button("📥 Tải file mật khẩu", buffer, file_name="saved_password.txt", mime="text/plain")
             
         st.markdown("""
-            <div style='margin-top: 30px; font-size: 15px;'>
-                <p><strong>💡 Mẹo tạo mật khẩu mạnh để giữ an toàn cho tài khoản:</strong></p>
-                <ol>
-                    <li><strong>Không sử dụng tên tuổi, ngày tháng năm sinh trong mật khẩu:</strong> Những thông tin này dễ bị đoán trúng. Hãy dùng cụm từ cá nhân khó đoán như câu trong bài hát yêu thích hoặc tên thú cưng.</li>
-                    <li><strong>Không sử dụng các cụm từ phổ thông dễ đoán:</strong> Tránh các mật khẩu như "123456", "password", "iloveyou",...</li>
-                    <li><strong>Mật khẩu bao gồm chữ cái in thường, in hoa, số, ký tự đặc biệt:</strong> Ví dụ: <code>P@ssw0rd!2024</code></li>
-                    <li><strong>Mật khẩu có độ dài tối thiểu 12 ký tự:</strong> Độ dài càng lớn, mật khẩu càng khó bị phá.</li>
-                </ol>
-            </div>
-            """, unsafe_allow_html=True)
+        <div style='margin-top: 30px; font-family: "Segoe UI", sans-serif; font-size: 20px; line-height: 1.5;'>
+            <p><strong>💡 Mẹo tạo mật khẩu mạnh để giữ an toàn cho tài khoản:</strong></p>
+            <ol>
+                <li><strong>Không sử dụng tên tuổi, ngày tháng năm sinh trong mật khẩu:</strong> Những thông tin này dễ bị đoán trúng. Hãy dùng cụm từ cá nhân khó đoán như câu trong bài hát yêu thích hoặc tên thú cưng.</li>
+                <li><strong>Không sử dụng các cụm từ phổ thông dễ đoán:</strong> Tránh các mật khẩu như "123456", "password", "iloveyou",...</li>
+                <li><strong>Mật khẩu bao gồm chữ cái in thường, in hoa, số, ký tự đặc biệt:</strong> Ví dụ: <code>P@ssw0rd!2024</code></li>
+                <li><strong>Mật khẩu có độ dài tối thiểu 12 ký tự:</strong> Độ dài càng lớn, mật khẩu càng khó bị phá.</li>
+            </ol>
+        </div>
+        """, unsafe_allow_html=True)
 
 
 # 🔓 Đăng nhập (tab 6)
@@ -1531,4 +1697,3 @@ with tabs[7]:  # Đăng ký
             st.success("✅ Đăng ký thành công!")
     
     st.markdown("Bạn đã có tài khoản? [Đăng nhập.](#)")
-
