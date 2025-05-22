@@ -368,25 +368,113 @@ with tabs[3]:
     st.markdown("""
     <div style='font-family: "Segoe UI", sans-serif; font-size: 20px;'>
     
-    <h3>🛡️ Kiến thức cơ bản:</h3>
+    <h3>🔐 An toàn Thông tin là gì?</h3>
+    <p>An toàn thông tin (ATTT) là việc bảo vệ thông tin và hệ thống thông tin khỏi các truy cập trái phép, thay đổi, phá hoại hoặc đánh cắp, nhằm đảm bảo:</p>
     <ul>
-      <li><strong>Mật khẩu mạnh</strong> nên có chữ hoa, chữ thường, số và ký tự đặc biệt.</li>
-      <li><strong>Không chia sẻ mật khẩu</strong> qua email hay tin nhắn.</li>
-      <li><strong>Không nhấn vào liên kết lạ</strong> trong email từ người lạ.</li>
-      <li><strong>Cập nhật phần mềm thường xuyên</strong> để tránh lỗ hổng bảo mật.</li>
+      <li><strong>Tính bí mật (Confidentiality)</strong> – chỉ người được phép mới được truy cập.</li>
+      <li><strong>Tính toàn vẹn (Integrity)</strong> – dữ liệu không bị thay đổi trái phép.</li>
+      <li><strong>Tính sẵn sàng (Availability)</strong> – hệ thống luôn hoạt động và truy cập được khi cần.</li>
     </ul>
     
+    <h3>🧠 Kiến thức cơ bản cần nắm</h3>
+    
+    <h4>1. Mật khẩu an toàn</h4>
+    <ul>
+      <li>Dài ít nhất 8 ký tự.</li>
+      <li>Kết hợp chữ hoa, chữ thường, số và ký tự đặc biệt.</li>
+      <li>Không dùng thông tin cá nhân dễ đoán (ngày sinh, tên,...).</li>
+      <li>Sử dụng trình quản lý mật khẩu (Password Manager) để lưu trữ.</li>
+    </ul>
+    
+    <h4>2. Phân biệt lừa đảo (Phishing)</h4>
+    <ul>
+      <li>Email/mạng xã hội giả mạo ngân hàng, trường học, dịch vụ... để lừa lấy mật khẩu.</li>
+      <li>Dấu hiệu nhận biết: đường link lạ, ngôn ngữ khẩn cấp ("tài khoản của bạn bị khóa", "xác minh ngay").</li>
+      <li>Luôn kiểm tra địa chỉ email, liên kết trước khi nhấp.</li>
+    </ul>
+    
+    <h4>3. Cập nhật phần mềm thường xuyên</h4>
+    <ul>
+      <li>Hệ điều hành, ứng dụng và trình duyệt phải được cập nhật thường xuyên để vá lỗ hổng bảo mật.</li>
+    </ul>
+    
+    <h4>4. Không chia sẻ thông tin cá nhân công khai</h4>
+    <ul>
+      <li>Trên mạng xã hội: tránh đăng công khai số điện thoại, địa chỉ, ảnh giấy tờ tùy thân.</li>
+    </ul>
+    
+    <h4>5. Sử dụng mạng Wi-Fi an toàn</h4>
+    <ul>
+      <li>Không dùng Wi-Fi công cộng để đăng nhập các tài khoản quan trọng.</li>
+      <li>Nếu cần, hãy dùng VPN để mã hóa dữ liệu.</li>
+    </ul>
+    
+    <h4>6. Phòng chống phần mềm độc hại (malware)</h4>
+    <ul>
+      <li>Không tải phần mềm không rõ nguồn gốc.</li>
+      <li>Sử dụng phần mềm diệt virus uy tín.</li>
+    </ul>
+    
+    <h3>🎯 Những thói quen tốt để bảo vệ mình</h3>
+    <table border="1" cellpadding="8" cellspacing="0">
+      <thead>
+        <tr>
+          <th>✅ Việc nên làm</th>
+          <th>❌ Việc cần tránh</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Khóa màn hình thiết bị</td>
+          <td>Dùng 1 mật khẩu cho mọi tài khoản</td>
+        </tr>
+        <tr>
+          <td>Sử dụng xác thực 2 bước (2FA)</td>
+          <td>Click vào liên kết không rõ ràng</td>
+        </tr>
+        <tr>
+          <td>Sao lưu dữ liệu định kỳ</td>
+          <td>Cho người lạ mượn thiết bị không giám sát</td>
+        </tr>
+      </tbody>
+    </table>
+        
     <hr>
     
     <h3>📧 Tình huống:</h3>
-    <p>Bạn nhận được email từ một địa chỉ lạ với tiêu đề <strong>"Bạn đã trúng thưởng!"</strong> và tệp đính kèm là file <code>.exe</code>.<br>
-    <strong>Bạn nên làm gì?</strong></p>
+    <p>Khi bạn nhận được một email từ địa chỉ lạ với tiêu đề như <strong>"Bạn đã trúng thưởng!"</strong> và có file đính kèm là <code>.exe</code>, bạn nên hành động cẩn trọng vì rất có thể đây là email lừa đảo hoặc chứa phần mềm độc hại.</p>
+
+    <h4>✅ Bạn nên làm gì?</h4>
+    <ol>
+      <li>🔍 <strong>Không mở file đính kèm</strong><br>
+        → File <code>.exe</code> là file thực thi. Nếu mở, nó có thể cài phần mềm gián điệp, virus hoặc mã độc tống tiền vào máy bạn.
+      </li>
+      <li>🚫 <strong>Không nhấp vào liên kết nào trong email</strong><br>
+        → Các đường link có thể đưa bạn đến trang web giả mạo để đánh cắp thông tin cá nhân hoặc tài khoản.
+      </li>
+      <li>🗑️ <strong>Xóa email ngay lập tức</strong><br>
+        → Không trả lời, không tương tác. Việc giữ lại có thể khiến bạn hoặc người khác vô tình mở nhầm sau này.
+      </li>
+      <li>🛡️ <strong>Thông báo cho bộ phận CNTT</strong> (nếu dùng email trường/học/công ty)<br>
+        → Họ có thể kiểm tra và cảnh báo người dùng khác.
+      </li>
+      <li>🧼 <strong>Quét virus toàn bộ máy tính</strong> (nếu bạn lỡ nhấn mở)<br>
+        → Dùng phần mềm diệt virus như Windows Defender, Kaspersky, Bitdefender,...
+      </li>
+    </ol>
+    
+    <h4>⚠️ Dấu hiệu nhận biết email lừa đảo/trúng thưởng giả mạo:</h4>
     <ul>
-      <li>❌ Không mở tệp đính kèm</li>
-      <li>🔍 Kiểm tra địa chỉ người gửi</li>
-      <li>📢 Báo cáo cho giáo viên hoặc quản trị mạng</li>
+      <li>Gửi từ địa chỉ lạ hoặc không rõ ràng.</li>
+      <li>Có nội dung giật gân, hấp dẫn: “Trúng thưởng lớn!”, “Bạn là người may mắn!”.</li>
+      <li>Đính kèm file <code>.exe</code>, <code>.scr</code>, <code>.bat</code>, <code>.zip</code>, v.v.</li>
+      <li>Có lỗi chính tả hoặc ngôn ngữ không tự nhiên.</li>
+      <li>Hối thúc bạn phải hành động ngay ("trong vòng 24h").</li>
     </ul>
     
+    <h4>📌 Kết luận:</h4>
+    <p>❗ <strong>Tuyệt đối KHÔNG mở file .exe từ email lạ.</strong> Đây rất có thể là một cuộc tấn công lừa đảo hoặc phát tán virus.</p>
+        
     <hr>
     
     <h3>💡 Mẹo an toàn khi dùng Internet:</h3>
