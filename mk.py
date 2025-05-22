@@ -58,21 +58,25 @@ with tabs[0]:
 <div style='font-family: "Segoe UI", sans-serif; font-size: 20px;'>
 
 <h2>💡 Giới thiệu:</h2>
-<p>Trang web này được xây dựng nhằm hỗ trợ học sinh THPT học tập và thực hành các kỹ năng <strong>Tin học hiện đại</strong> như:</p>
+<p>Website này được xây dựng với mục tiêu hỗ trợ học sinh THPT Trường Lương Văn Tri tự học và rèn luyện các kỹ năng <strong>Tin học hiện đại</strong>. Tại đây, bạn có thể:</p>
 <ul>
-<li>Kiểm tra độ an toàn của mật khẩu</li>
-<li>Thiết kế Web cơ bản với HTML/CSS</li>
-<li>An toàn thông tin</li>
-<li>Tự học và kiểm tra kiến thức đã học</li>
+<li>Kiểm tra kiến thức với các bài tập và công cụ kiểm tra trực tuyến</li>
+<li>Học thiết kế web cơ bản và ứng dụng thực tế</li>
+<li>Trang bị kỹ năng an toàn thông tin trong môi trường số</li>
+<li>Truy cập kho tài liệu phong phú, dễ hiểu</li>
+<li>Chia sẻ và học hỏi trong góc chia sẻ cộng đồng</li>
 </ul>
+<p>🌐 Hãy chủ động khám phá và phát triển kỹ năng Tin học để tự tin bước vào kỷ nguyên số!</p>
 
 <hr>
 
 <h3>🎯 Mục tiêu:</h3>
 <ul>
-<li>Học qua thực hành</li>
-<li>Nâng cao tư duy logic và kỹ năng sử dụng máy tính</li>
-<li>Tự tin ứng dụng công nghệ trong học tập và đời sống</li>
+  <li>Giúp học sinh THPT nâng cao kỹ năng tự học và thực hành Tin học thông qua môi trường học tập trực tuyến.</li>
+  <li>Cung cấp các tài nguyên học tập phong phú, cập nhật phù hợp với chương trình Tin học THPT.</li>
+  <li>Tạo điều kiện để học sinh ứng dụng kiến thức Tin học vào thực tiễn như thiết kế website, bảo mật thông tin, và lập trình cơ bản.</li>
+  <li>Hình thành cho học sinh thói quen học tập chủ động, sáng tạo và an toàn trong môi trường số.</li>
+  <li>Xây dựng cộng đồng học sinh có niềm đam mê với công nghệ, sẵn sàng thích nghi và phát triển trong kỷ nguyên số.</li>
 </ul>
 
 <hr>
@@ -101,11 +105,24 @@ with tabs[0]:
 
 <hr>
 
-<h3>Hướng dẫn:</h3>
+<h3>🛠️ Hướng dẫn sử dụng:</h3>
+<p>Để sử dụng hiệu quả website Góc Tự Học Tin học, bạn thực hiện theo các bước sau:</p>
+
 <ul>
-<li>Chọn các chuyên mục ở đầu trang.</li>
-<li>Mỗi mục có hướng dẫn thực hiện, tài liệu và bài tập kèm theo.</li>
-<li>Đừng quên làm trắc nghiệm để kiểm tra kiến thức nhé!</li>
+  <li>🏠 <strong>Trang chủ:</strong> Cung cấp thông tin tổng quan về trang web, mục tiêu, hướng dẫn và các chuyên mục chính.</li>
+  <li>🔑 <strong>Kiểm tra mật khẩu:</strong> Là nơi giúp bạn luyện tập và kiểm tra kỹ năng bảo mật thông tin cá nhân bằng cách tạo và đánh giá mật khẩu an toàn.</li>
+  <li>🌐 <strong>Thiết kế Web cơ bản:</strong> Học cách tạo và chỉnh sửa một trang web HTML/CSS cơ bản thông qua bài học và ví dụ minh họa trực quan.</li>
+  <li>🛡️ <strong>An toàn thông tin:</strong> Cung cấp kiến thức cơ bản về an toàn trên mạng, phòng tránh rủi ro số và kỹ năng bảo vệ bản thân khi sử dụng Internet.</li>
+  <li>📚 <strong>Kho tài liệu:</strong> Nơi lưu trữ bài giảng, tài liệu tham khảo, bài tập thực hành và video hướng dẫn phục vụ cho việc tự học.</li>
+  <li>💬 <strong>Góc chia sẻ:</strong> Diễn đàn nhỏ giúp bạn đăng bài chia sẻ, trao đổi kinh nghiệm hoặc thắc mắc với thầy cô và bạn bè.</li>
+  <li>🔒 <strong>Đăng nhập / Đăng ký:</strong> Đăng nhập bằng tài khoản được cấp để sử dụng đầy đủ tính năng như lưu kết quả học tập, tham gia chia sẻ hoặc làm bài kiểm tra.</li>
+</ul>
+
+<p>📌 <strong>Lưu ý:</strong></p>
+<ul>
+  <li>Luôn học tập với tinh thần chủ động.</li>
+  <li>Không chia sẻ mật khẩu cá nhân.</li>
+  <li>Tôn trọng nội quy và văn hóa khi trao đổi trên website.</li>
 </ul>
 
 <blockquote>
