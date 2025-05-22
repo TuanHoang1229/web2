@@ -108,22 +108,31 @@ with tabs[0]:
 <h3>🛠️ Hướng dẫn sử dụng:</h3>
 <p>Để sử dụng hiệu quả website Góc Tự Học Tin học, bạn thực hiện theo các bước sau:</p>
 
-<ul>
-  <li>🏠 <strong>Trang chủ:</strong> Cung cấp thông tin tổng quan về trang web, mục tiêu, hướng dẫn và các chuyên mục chính.</li>
-  <li>🔑 <strong>Kiểm tra mật khẩu:</strong> Là nơi giúp bạn luyện tập và kiểm tra kỹ năng bảo mật thông tin cá nhân bằng cách tạo và đánh giá mật khẩu an toàn.</li>
-  <li>🌐 <strong>Thiết kế Web cơ bản:</strong> Học cách tạo và chỉnh sửa một trang web HTML/CSS cơ bản thông qua bài học và ví dụ minh họa trực quan.</li>
-  <li>🛡️ <strong>An toàn thông tin:</strong> Cung cấp kiến thức cơ bản về an toàn trên mạng, phòng tránh rủi ro số và kỹ năng bảo vệ bản thân khi sử dụng Internet.</li>
-  <li>📚 <strong>Kho tài liệu:</strong> Nơi lưu trữ bài giảng, tài liệu tham khảo, bài tập thực hành và video hướng dẫn phục vụ cho việc tự học.</li>
-  <li>💬 <strong>Góc chia sẻ:</strong> Diễn đàn nhỏ giúp bạn đăng bài chia sẻ, trao đổi kinh nghiệm hoặc thắc mắc với thầy cô và bạn bè.</li>
-  <li>🔒 <strong>Đăng nhập / Đăng ký:</strong> Đăng nhập bằng tài khoản được cấp để sử dụng đầy đủ tính năng như lưu kết quả học tập, tham gia chia sẻ hoặc làm bài kiểm tra.</li>
-</ul>
+<p>🏠 <strong>Trang chủ:</strong><br>
+Cung cấp thông tin tổng quan về trang web, mục tiêu, hướng dẫn và các chuyên mục chính.</p>
 
-<p>📌 <strong>Lưu ý:</strong></p>
-<ul>
-  <li>Luôn học tập với tinh thần chủ động.</li>
-  <li>Không chia sẻ mật khẩu cá nhân.</li>
-  <li>Tôn trọng nội quy và văn hóa khi trao đổi trên website.</li>
-</ul>
+<p>🔑 <strong>Kiểm tra mật khẩu:</strong><br>
+Là nơi giúp bạn luyện tập và kiểm tra kỹ năng bảo mật thông tin cá nhân bằng cách tạo và đánh giá mật khẩu an toàn.</p>
+
+<p>🌐 <strong>Thiết kế Web cơ bản:</strong><br>
+Học cách tạo và chỉnh sửa một trang web HTML/CSS cơ bản thông qua bài học và ví dụ minh họa trực quan.</p>
+
+<p>🛡️ <strong>An toàn thông tin:</strong><br>
+Cung cấp kiến thức cơ bản về an toàn trên mạng, phòng tránh rủi ro số và kỹ năng bảo vệ bản thân khi sử dụng Internet.</p>
+
+<p>📚 <strong>Kho tài liệu:</strong><br>
+Nơi lưu trữ bài giảng, tài liệu tham khảo, bài tập thực hành và video hướng dẫn phục vụ cho việc tự học.</p>
+
+<p>💬 <strong>Góc chia sẻ:</strong><br>
+Diễn đàn nhỏ giúp bạn đăng bài chia sẻ, trao đổi kinh nghiệm hoặc thắc mắc với thầy cô và bạn bè.</p>
+
+<p>🔒 <strong>Đăng nhập / Đăng ký:</strong><br>
+Đăng nhập bằng tài khoản được cấp để sử dụng đầy đủ tính năng như lưu kết quả học tập, tham gia chia sẻ hoặc làm bài kiểm tra.</p>
+
+<p>📌 <strong>Lưu ý:</strong><br>
+- Luôn học tập với tinh thần chủ động.<br>
+- Không chia sẻ mật khẩu cá nhân.<br>
+- Tôn trọng nội quy và văn hóa khi trao đổi trên website.</p>
 
 <blockquote>
 <p><strong>“Công nghệ là công cụ. Trong việc tạo động lực và giảng dạy, giáo viên vẫn là yếu tố quan trọng nhất.”</strong><br>
